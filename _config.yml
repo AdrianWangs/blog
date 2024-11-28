@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: "小王的blog"
+subtitle: "Adrian Wang's blog"
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Adrian Wang
+language: cn
 timezone: ''
 
 # URL
