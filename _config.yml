@@ -102,7 +102,7 @@ theme: hexo-theme-peomas
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:AdrianWangs/AdrianWangs.github.io.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: main
+  type: "git"
+  repo: "git@github.com:AdrianWangs/AdrianWangs.github.io.git" # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: "main"
   message: "更新页面"

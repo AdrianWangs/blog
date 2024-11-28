@@ -25,6 +25,7 @@ jobs:
     - name: Setup Hexo Dependencies
       run: |
         npm install hexo-cli -g
+        npm install hexo-deployer-git --save
         npm install
     
     # 设置 Hexo 部署的私钥
