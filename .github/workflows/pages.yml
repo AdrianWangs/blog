@@ -1,50 +1,51 @@
-name: Pages
+# 工作流的名称
+name: Hexo Blog CI
 
+# 指定触发的条件，这里是打标签才触发该工作流，你也可以改成 on: push，只要提交代码就触发
 on:
-  push:
-    branches:
-      - main # default branch
+  push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build: 
+    runs-on: ubuntu-latest 
+        
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.HEXO_DEPLOY_PRI }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
-          submodules: recursive
-      - name: Use Node.js 16
-        uses: actions/setup-node@v4
-        with:
-          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
-          # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: "16"
-      - name: Cache NPM dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    
+    # 检查工作流是否可以访问 actions
+    - name: Checkout Repository master branch
+      uses: actions/checkout@master 
+      
+    # 安装 NodeJs
+    - name: Setup Node.js 16.x 
+      uses: actions/setup-node@master
+      with:
+        node-version: "16.x"
+    
+    # 安装 Hexo 的依赖库
+    - name: Setup Hexo Dependencies
+      run: |
+        npm install hexo-cli -g
+        npm install
+    
+    # 设置 Hexo 部署的私钥
+    - name: Setup Deploy Private Key
+      env:
+        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRI }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+    
+    # 设置 Git 信息
+    - name: Setup Git Infomation
+      run: | 
+        git config --global user.name "AdrianWang" 
+        git config --global user.email "wyz17601402786@gmail.com"
+
+    # 部署 Hexo 静态文件到博客所在的分支
+    - name: Deploy Hexo 
+      run: |
+        hexo clean
+        hexo generate 
+        hexo deploy
