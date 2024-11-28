@@ -1,49 +1,50 @@
-name: Hexo Deploy
-# 只监听 source 分支的改动
+name: Pages
+
 on:
   push:
     branches:
-      - main
-
-# 自定义环境变量，这个GIT_USER和GIT_EMAIL配置成你自己的，GIT_EMAIL尽量和上面的`ssh-keygen -f hexo-deploy-key -C "your email"`中的your email保持一致
-env:
-  GIT_USER: AdrianWang
-  GIT_EMAIL: wyz17601402786@gmail.com
+      - main # default branch
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # 获取博客源码和主题
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      # 这里用的是 Node.js 13.x，14.x 生成 Hexo 静态页面会有问题
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
         with:
-          node-version: '16'
-
-      # 安装依赖
+          token: ${{ secrets.HEXO_DEPLOY_PRI }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 16
+        uses: actions/setup-node@v4
+        with:
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: "16"
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: |
-          npm install
-
-      # 从之前设置的 secret 获取部署私钥
-      - name: Setup SSH Keys and known_hosts
-        env:
-          HEXO_DEPLOY_PRI: ${{ secrets.HEXO_DEPLOY_PRI }} 
-        run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
-          mkdir -p ~/.ssh
-          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name $GIT_USER
-          git config --global user.email $GIT_EMAIL
-
-      # 生成并部署 `npx hexo clean && npx hexo g -d` or `npm run deploy`
-      - name: Deploy
-        run: |
-          npx hexo clean && npx hexo g -d
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
