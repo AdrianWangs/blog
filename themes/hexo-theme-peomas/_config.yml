@@ -1,7 +1,7 @@
 favicon: /img/favicon.png
 
 # Logo Mark
-mark: Peomas
+mark: "Adrian's Blog"
 logo_mark: null
 
 # Scroll button
@@ -9,17 +9,17 @@ scroll_top_btn:
   enable: true
 
 # NProgress
-nprogress: 
+nprogress:
   enable: true
-  color: "#131313"
+  color: '#131313'
 
 # Navigation menu
 menu:
-  Home: /
-  Archives: /archives
-  Category: /categories
-  Tag: /tags
-  About: /about
+  首页: /
+  归档: /archives
+  分类: /categories
+  标签: /tags
+  关于我: /about
 
 # Index Page config
 index:
@@ -33,21 +33,20 @@ tagcloud:
   min_font: 15
   max_font: 30
   unit: px
-  start_color: "#337ab7"
-  end_color: "#0d6efd"
+  start_color: '#337ab7'
+  end_color: '#0d6efd'
 
 # About Page config
 about:
-  avatar: 
+  avatar:
     enable: true
     link: /img/avatar.png
-  title: Thomas Yu
-  subTitle: Front-End Developer - Labcorp
+  title: 小王的Blog
+  subTitle: Golang后端开发
   icon:
-  - { class: "fab fa-github", url: "https://github.com/thomasyu929", info: "Thomas Yu's Github" }
-  - { class: "fas fa-envelope", url: "mailto:yby4301955@gmail.com", info: "Mail to me" }
-  - { class: "fab fa-linkedin", url: "https://linkedin.com", info: "LinkedIn" }
-  - { class: "fas fa-rss", url: "/atom.xml", info: "Subscribe Thomas's blog"}
+    - { class: 'fab fa-github', url: 'https://github.com/AdrianWangs', info: "Adrian Wang's Github" }
+    - { class: 'fas fa-envelope', url: 'mailto:wyz17601402786@gmail.com', info: 'Mail to me' }
+    - { class: 'fas fa-rss', url: '/atom.xml', info: "Subscribe Thomas's blog" }
 
 # Post Page config
 toc:

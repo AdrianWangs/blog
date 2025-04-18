@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "小王的blog"
+title: '小王的blog'
 subtitle: "Adrian Wang's blog"
 description: ''
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://adrianwangs.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,7 +102,7 @@ theme: hexo-theme-peomas
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: "git"
-  repo: "git@github.com:AdrianWangs/AdrianWangs.github.io.git" # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: "main"
-  message: "更新页面"
+  type: 'git'
+  repo: 'git@github.com:AdrianWangs/AdrianWangs.github.io.git' # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: 'main'
+  message: '更新页面'
