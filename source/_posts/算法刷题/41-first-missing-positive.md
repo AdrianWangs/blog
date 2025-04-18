@@ -1,6 +1,7 @@
 ---
 title: LeetCode 41 - 缺失的第一个正数（First Missing Positive）
 date: 2024-04-18 10:00:00
+top: True
 categories:
   - 算法刷题
 tags:
@@ -87,6 +88,7 @@ func firstMissingPositive(nums []int) int {
    - i=3: nums[3]=4，已在正确位置，跳过
 
 2. 第二阶段：
+
    - nums[0]=1，正确
    - nums[1]=-1，不等于 2，返回 2
 
