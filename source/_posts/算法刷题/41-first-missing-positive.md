@@ -1,7 +1,7 @@
 ---
 title: LeetCode 41 - 缺失的第一个正数（First Missing Positive）
-date: 2024-04-18 10:00:00
-top: True
+date: 2024-04-18T10:00:00.000Z
+top: true
 categories:
   - 算法刷题
 tags:
