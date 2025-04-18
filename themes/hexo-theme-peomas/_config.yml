@@ -48,6 +48,11 @@ about:
     - { class: 'fas fa-envelope', url: 'mailto:wyz17601402786@gmail.com', info: 'Mail to me' }
     - { class: 'fas fa-rss', url: '/atom.xml', info: "Subscribe Thomas's blog" }
 
+footer:
+  copyright: '©2025 Adrian Wang'
+  powered: '由 Hexo 强力驱动 | 主题 Peomas'
+  custom: '联系邮箱：wyz17601402786@gmail.com'
+
 # Post Page config
 toc:
   enable: true
