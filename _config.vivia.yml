@@ -38,6 +38,9 @@ links:
   - name: GitHub
     icon: fa-brands fa-github
     url: https://github.com/AdrianWangs
+  - name: Mail
+    icon: fa-solid fa-envelope
+    url: mailto:wyz17601402786@gmail.com
 
 # Sidebar
 sidebar:
