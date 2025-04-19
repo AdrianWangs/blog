@@ -3,10 +3,10 @@ title: LeetCode 41 - 缺失的第一个正数（First Missing Positive）
 date: 2024-04-18T10:00:00.000Z
 categories:
   - 算法刷题
+  - LeetCode
 tags:
   - 数组
   - 哈希
-  - LeetCode
   - Hard
 ---
 
@@ -73,6 +73,7 @@ nums[i] = i+1
    - 继续检查交换后的 nums[i]，直到不需要交换为止
 
 2. **查找缺失的最小正数**：
+
    - 再次遍历数组，找到第一个不满足 nums[i] = i+1 的位置
    - 该位置的索引 +1 就是答案
 
@@ -170,6 +171,7 @@ func firstMissingPositive(nums []int) int {
    - 因为数组可能还没有完全排好序
 
 3. **边界处理**：
+
    - 注意处理负数和超出数组长度的值，它们不需要参与交换
 
 ## 相关题目
