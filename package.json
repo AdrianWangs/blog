@@ -6,7 +6,10 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "git-commit": "git add . && git commit -m",
+    "git-push": "git push origin main",
+    "publish": "npm run deploy && npm run git-commit \"Publish new post\" && npm run git-push"
   },
   "hexo": {
     "version": "7.3.0"

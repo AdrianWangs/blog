@@ -2,7 +2,7 @@
 title: LeetCode 73 - 矩阵置零（Matrix Zeroes）解题思路与错误分析
 date: 2025-04-19 11:33:48
 categories:
-  - 算法
+  - 算法刷题
   - LeetCode
 tags:
   - 数组
@@ -172,37 +172,42 @@ func setZeroes(matrix [][]int) {
 
 ```go
 func setZeroes(matrix [][]int) {
-    row := len(matrix)
-    col := len(matrix[0])
+	row := len(matrix)
+	col := len(matrix[0])
 
-    for i := 0; i < row; i++ {
-        for j := 0; j < col; j++ {
-            if matrix[i][j] == 0 {
-                matrix[i][0] = 0
-                for k := 0; k < row; k++ {
-                    matrix[k][j] = 0
-                }
-            }
-        }
-    }
+	for i := 0; i < row; i++ {
+		for j := 0; j < col; j++ {
+			if matrix[i][j] == 0 {
+				matrix[i][0] = 0
+				matrix[0][j] = 0
+			}
+		}
+	}
 
-    for i := 0; i < row; i++ {
-        if matrix[i][0] == 0 {
-            for j := 0; j < col; j++ {
-                matrix[i][j] = 0
-            }
-        }
-    }
+	for i := 0; i < row; i++ {
+		if matrix[i][0] == 0 {
+			for j := 0; j < col; j++ {
+				matrix[i][j] = 0
+			}
+		}
+	}
+	for i := 0; i < col; i++ {
+		if matrix[0][i] == 0 {
+			for j := 0; j < row; j++ {
+				matrix[j][i] = 0
+			}
+		}
+	}
 }
 ```
 
 主要问题：
 
-1. **边遍历边修改导致错误传播**：在第一次遍历时，我直接将列置零，这会导致后续遍历时遇到这些新的零，从而错误地将更多行列置零。
+1. **没有保存首行和首列的原始状态**：我的代码使用第一行和第一列作为标记，但没有事先保存它们的原始状态。如果原矩阵的第一行或第一列中本来就有 0，会导致错误的标记传播。
 
-2. **标记系统不完整**：我只使用第一列作为行的标记，但没有正确处理第一列本身的情况。例如，如果 matrix[0][0] 原始值为 0，算法无法正确标记第一行和第一列。
+2. **标记和置零顺序错误**：在没有保存原始状态的情况下，我直接根据首行首列的值进行置零操作，但这些值可能已经在第一次遍历过程中被修改了。
 
-3. **处理顺序问题**：应该先标记所有需要置零的行和列，然后再进行置零操作，而我的实现混合了这两个步骤。
+3. **处理第一行和第一列的交叉点问题**：matrix[0][0]同时表示第一行和第一列的标记，会导致信息冲突。正确做法是使用额外变量分别记录第一行和第一列是否需要置零。
 
 ## 总结
 
