@@ -9,7 +9,9 @@
     "server": "hexo server",
     "git-commit": "git add . && git commit -m",
     "git-push": "git push origin main",
-    "publish": "npm run deploy && npm run git-commit \"Publish new post\" && npm run git-push"
+    "publish": "npm run deploy && npm run git-commit \"Publish new post\" && npm run git-push",
+    "update-algo-dir": "node scripts/update-algorithm-directory.js",
+    "new-algo": "hexo new post $1 && npm run update-algo-dir"
   },
   "hexo": {
     "version": "7.3.0"
@@ -30,6 +32,8 @@
     "hexo-server": "^3.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-landscape": "^1.0.0",
+    "js-yaml": "^4.1.0",
+    "moment": "^2.30.1",
     "stylus": "^0.64.0"
   }
 }
