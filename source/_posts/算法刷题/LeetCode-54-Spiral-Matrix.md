@@ -187,10 +187,136 @@ func spiralOrder(matrix [][]int) []int {
 8. 改变方向为左，移动到 (2,1)：值为 8，添加到结果
 9. 继续按照左方向移动到 (2,0)：值为 7，添加到结果
 10. 继续按照左方向尝试移动到 (2,-1)，但这超出了边界
-11. 改变方向为上，移动到 (1,0)：值为 4，添加到结果
-12. 继续按照上方向移动到 (0,0)：值为 1，添加到结果 - **这里出现了问题！**
+11. 改变方向为上，移动到 (1,0)：值为 4，添加到结果 - **这里出现了问题！**
 
 我们再次访问了 (0,0)，造成了死循环！因为代码只检查了边界条件，没有检查是否已经访问过该位置。正确的做法应该是使用一个额外的数组来标记已访问的位置。
+
+## 我的另一个错误实现及分析
+
+在尝试实现边界法的过程中，我还犯了另一个常见错误：
+
+```go
+func spiralOrder(matrix [][]int) []int {
+    row := len(matrix)
+    col := len(matrix[0])
+
+    res := make([]int, row*col)
+    cnt := 0
+
+    left, right, top, bottom := 0, col-1, 0, row-1
+
+    for cnt < row*col {
+        // 向右遍历
+        for i := left; i <= right; i++ {
+            res[cnt] = matrix[top][i]
+            cnt++
+        }
+        top++
+
+        // 向下遍历
+        for i := top; i <= bottom; i++ {
+            res[cnt] = matrix[i][right]
+            cnt++
+        }
+        right--
+
+        // 向左遍历
+        for i := right; i >= left; i-- {
+            res[cnt] = matrix[bottom][i]
+            cnt++
+        }
+        bottom--
+
+        // 向上遍历
+        for i := bottom; i >= top; i-- {
+            res[cnt] = matrix[i][left]
+            cnt++
+        }
+        left++
+    }
+
+    return res
+}
+```
+
+### 错误分析：
+
+这段代码的主要问题是**缺少边界检查**。以矩阵 `[[1,2,3],[4,5,6]]`（2 行 3 列）为例，分析执行过程：
+
+1. 初始状态：`left=0, right=2, top=0, bottom=1, cnt=0`
+2. 向右遍历：添加 `[1,2,3]`，`cnt=3, top=1`
+3. 向下遍历：添加 `[6]`，`cnt=4, right=1`
+4. 向左遍历：添加 `[5,4]`，`cnt=6, bottom=0`
+5. **问题出现**：此时 `top=1, bottom=0`，已经交叉，但代码没有检查就继续执行向上遍历
+
+当 `top > bottom` 或 `left > right` 时，说明当前层已经遍历完毕，应该结束循环。但这个实现中缺少了这一关键检查，导致在单行或单列等特殊情况下会重复访问元素，甚至可能发生数组越界。
+
+另一个问题是，当矩阵只有一行或一列时，执行完一个方向的遍历后，立即执行下一个方向的遍历可能会重复处理元素。例如，对于一个单行矩阵 `[[1,2,3]]`：
+
+1. 向右遍历后 `top` 增加，此时 `top > bottom`
+2. 但代码仍会执行向下、向左和向上遍历，导致越界或重复访问
+
+### 修复方法：
+
+在每个方向遍历后，需要检查更新后的边界条件是否仍然有效：
+
+```go
+func spiralOrderFixed(matrix [][]int) []int {
+    if len(matrix) == 0 {
+        return []int{}
+    }
+
+    row := len(matrix)
+    col := len(matrix[0])
+
+    res := make([]int, 0, row*col)
+    left, right, top, bottom := 0, col-1, 0, row-1
+
+    for left <= right && top <= bottom {
+        // 向右遍历
+        for i := left; i <= right; i++ {
+            res = append(res, matrix[top][i])
+        }
+        top++
+
+        // 向下遍历（需要先检查边界）
+        if top <= bottom {
+            for i := top; i <= bottom; i++ {
+                res = append(res, matrix[i][right])
+            }
+            right--
+        }
+
+        // 向左遍历（需要先检查边界）
+        if left <= right && top <= bottom {
+            for i := right; i >= left; i-- {
+                res = append(res, matrix[bottom][i])
+            }
+            bottom--
+        }
+
+        // 向上遍历（需要先检查边界）
+        if left <= right && top <= bottom {
+            for i := bottom; i >= top; i-- {
+                res = append(res, matrix[i][left])
+            }
+            left++
+        }
+    }
+
+    return res
+}
+```
+
+### 错误的根本原因：
+
+这个错误的根本原因是**没有考虑边界条件**。在处理矩阵类问题时，尤其需要注意：
+
+1. **边界交叉检查**：确保索引边界（如 `left <= right` 和 `top <= bottom`）始终有效
+2. **特殊情况处理**：矩阵可能是单行、单列、甚至空矩阵
+3. **方向转换条件**：每次改变遍历方向前需要验证还有元素需要遍历
+
+这是矩阵遍历问题中最容易被忽视的细节，也是导致代码出错的常见原因。
 
 ## 正确实现
 
