@@ -1,8 +1,8 @@
 # Header
 menu: # Links in the navigation bar
   首页: /
-  算法刷题: /categories/算法刷题
-  算法目录: /algorithms
+  Leetcode题解: /algorithms
+  # 算法刷题: /categories/算法刷题
   归档: /archives
   关于我: /about
 # rss: /atom.xml

@@ -40,8 +40,26 @@ comments: false
 
 ### 数组
 
-- [LeetCode 1: Two Sum](/2023/07/15/LeetCode-1-Two-Sum/) - Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+- [LeetCode 73: 矩阵置零](/2025/04/19/leetcode-73-matrix-zeroes/) - 给定一个矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。要求使用原地算法。
+- [LeetCode 42: 接雨水](/2024/04/18/42-trapping-rain-water/) - 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算下雨之后能接多少雨水。
+- [LeetCode 41: 缺失的第一个正数](/2024/04/18/41-first-missing-positive/) - 给定一个未排序的整数数组，找出其中没有出现的最小的正整数。
+
+### 双指针
+
+- [LeetCode 42: 接雨水](/2024/04/18/42-trapping-rain-water/) - 使用双指针法从两端向中间移动，记录左右两侧遇到的最大高度来计算雨水量。
+
+### 动态规划
+
+- [LeetCode 42: 接雨水](/2024/04/18/42-trapping-rain-water/) - 使用动态规划预处理每个位置左右两侧的最大高度，计算每个位置能接的雨水量。
+
+### 单调栈
+
+- [LeetCode 42: 接雨水](/2024/04/18/42-trapping-rain-water/) - 维护一个单调递减栈，当遇到比栈顶高的柱子时计算积水量。
 
 ### 哈希表
 
-- [LeetCode 1: Two Sum](/2023/07/15/LeetCode-1-Two-Sum/) - Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+- [LeetCode 41: 缺失的第一个正数](/2024/04/18/41-first-missing-positive/) - 利用原地哈希的思想，将值 x 放到索引 x-1 的位置，找出第一个不满足 nums[i]=i+1 的位置。
+
+### 矩阵
+
+- [LeetCode 73: 矩阵置零](/2025/04/19/leetcode-73-matrix-zeroes/) - 使用矩阵首行和首列记录需要置零的行列信息，实现 O(1)空间复杂度的解法。
