@@ -69,6 +69,8 @@ deploy:
   repo: git@github.com:AdrianWangs/AdrianWangs.github.io.git
   branch: main
   message: 更新页面
+hexo_graph:
+  theme: 'dark' # light/dark，默认是 light
 # ai_summary:
 #   enable: true
 #   cache_path: './ai-summary-cache.json'

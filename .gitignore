@@ -10,3 +10,4 @@ _multiconfig.yml
 .vscode/
 .idea/
 .cursor/
+package-lock.json
