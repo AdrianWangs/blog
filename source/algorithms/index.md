@@ -15,6 +15,8 @@ comments: false
 
 ### 链表
 
+- [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
+
 ### 栈与队列
 
 ### 树
@@ -38,6 +40,7 @@ comments: false
 ### 双指针
 
 - [LeetCode 42: 接雨水（Trapping Rain Water）](/2024/04/18/LeetCode-42-trapping-rain-water/) - 使用双指针、动态规划和单调栈三种方法解决
+- [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
 
 ### 动态规划
 
