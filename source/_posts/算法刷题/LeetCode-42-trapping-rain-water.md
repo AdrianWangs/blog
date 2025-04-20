@@ -1,6 +1,6 @@
 ---
 title: LeetCode 42 - 接雨水（Trapping Rain Water）
-date: 2024-04-18T17:56:00
+date: 2025-04-18T17:56:00
 categories:
   - 算法刷题
   - LeetCode
@@ -11,7 +11,6 @@ tags:
   - 动态规划
   - Hard
 ---
-
 ## 问题描述
 
 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
@@ -241,23 +240,19 @@ func trap(height []int) int {
    - leftMax = max(0, 0) = 0
    - result += 0 - 0 = 0
    - left = 1
-
 2. height[1] = 1 = height[11] = 1 (相等，任选一边)
 
    - leftMax = max(0, 1) = 1
    - left = 2
-
 3. height[2] = 0 < height[11] = 1
 
    - result += 1 - 0 = 1
    - left = 3
-
 4. height[3] = 2 > height[11] = 1
 
    - rightMax = max(0, 1) = 1
    - result += 1 - 1 = 0
    - right = 10
-
 5. height[3] = 2 = height[10] = 2
 
    - rightMax = max(1, 2) = 2
@@ -277,7 +272,7 @@ func trap(height []int) int {
 | 实现复杂度 | 简单             | 中等                   | 较复杂               |
 | 优点       | 思路清晰         | 空间效率最高           | 能处理多种地形       |
 | 缺点       | 需要额外空间     | 思路不够直观           | 实现复杂             |
-| 推荐度     | ★★★★☆            | ★★★★★                  | ★★★☆☆                |
+| 推荐度     | ★★★★☆       | ★★★★★             | ★★★☆☆           |
 
 ## 复杂度分析
 
@@ -286,7 +281,6 @@ func trap(height []int) int {
   - 动态规划：O(n)，需要三次遍历数组
   - 双指针：O(n)，只需一次遍历
   - 单调栈：O(n)，每个元素最多入栈出栈各一次
-
 - **空间复杂度**：
 
   - 动态规划：O(n)，需要两个额外数组
