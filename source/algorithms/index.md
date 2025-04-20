@@ -49,6 +49,8 @@ comments: false
 
 ### 二分查找
 
+- [LeetCode 2563: 统计公平数对的数目（Count the Number of Fair Pairs）](/2025/04/20/LeetCode-2563-统计公平数对的数目/) - 利用排序和二分查找高效计算满足条件的数对
+
 ### 分治算法
 
 ### 回溯算法
