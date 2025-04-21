@@ -108,17 +108,23 @@ func reverseList(head *ListNode) *ListNode {
  * 迭代
  */
 func reverseList(head *ListNode) *ListNode {
-	var prev *ListNode
-	curr := head
-	
-	for curr != nil {
-		next := curr.Next    // 临时保存下一个节点
-		curr.Next = prev     // 反转当前节点的指针
-		prev = curr          // 移动 prev 指针
-		curr = next          // 移动 curr 指针
+
+	if head == nil || head.Next == nil {
+		return head
 	}
-	
-	return prev  // prev 现在指向新的头节点
+
+	var cur, prev *ListNode
+	prev = head
+	cur = head.Next
+	prev.Next = nil
+	for cur != nil {
+		tmp := cur.Next
+		cur.Next = prev
+		prev = cur
+		cur = tmp
+	}
+
+	return prev
 }
 ```
 
@@ -128,11 +134,11 @@ func reverseList(head *ListNode) *ListNode {
 
 1. **初始化指针**：标准的做法是将 `prev` 初始化为 `nil`，`cur` 初始化为 `head`，这样可以更简洁地处理各种情况，包括空链表和只有一个节点的链表。
 
-2. **特殊情况处理**：迭代法中对 `head == nil || head.Next == nil` 的特殊情况处理可以省略，因为优化后的初始化方式会自然地处理这些情况。
+2. **特殊情况处理**：虽然代码中有对 `head == nil || head.Next == nil` 的特殊情况处理，但使用标准的初始化方式后，这个特殊处理是不必要的，因为迭代过程会自然地处理这些情况。
 
-3. **代码简化**：可以减少初始化和迭代过程中的不必要步骤。
+3. **代码简化**：可以将初始化和迭代过程简化，减少不必要的步骤。
 
-优化后的迭代版本：
+优化后的迭代版本如下：
 
 ```go
 func reverseList(head *ListNode) *ListNode {
@@ -153,7 +159,7 @@ func reverseList(head *ListNode) *ListNode {
 这个优化版本的特点是：
 - 代码更简洁，逻辑更清晰
 - 不需要特殊处理空链表或单节点链表的情况
-- 变量命名更规范，使用 `curr` 和 `next` 更易理解
+- 变量命名更规范，使用 `curr` 和 `next` 更容易理解
 
 ## 复杂度分析
 
