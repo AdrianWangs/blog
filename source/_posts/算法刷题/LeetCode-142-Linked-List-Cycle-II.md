@@ -102,7 +102,61 @@ tags:
 
 那么环的总长度为 `b + c` 步。
 
-![环形链表示意图](https://leetcode.com/problems/linked-list-cycle-ii/Figures/142/142_cycle.png)
+#### 环形链表示意图
+
+##### Mermaid 图示
+```mermaid
+graph LR
+    Head((Head)) --> A((A))
+    A --> B((B))
+    B --> C((C))
+    C --> D((D))
+    D --> E((E))
+    E --> F((F))
+    F --> C
+    
+    style C fill:#f96,stroke:#333
+    style F fill:#69f,stroke:#333
+    
+    Head -.-> |"链表头"|A
+    C -.-> |"环入口点"|C
+    F -.-> |"相遇点"|F
+    
+    A -.-> |"距离 a"|C
+    C -.-> |"距离 b"|F
+    F -.-> |"距离 c"|C
+```
+
+##### 纯文本图示
+```
+                 环入口
+                    ↓
+head → A → B → C → D → E
+                ↑       ↓
+                ↑       ↓
+                ↑       ↓
+                G ← F ← F ← 相遇点
+                
+距离标记:
+head到环入口C的距离: a
+环入口C到相遇点F的距离: b
+相遇点F返回环入口C的距离: c
+```
+
+另一种表示方式:
+```
+      a         b
+    +---+     +---+
+    ↓   ↓     ↓   ↓
+head → → → → → → → +
+            ↑     ↓
+            ↑     ↓
+            ↑     ↓
+            + ← ← +
+            ↑
+            +
+            c
+```
 
 当 `slow` 和 `fast` 指针相遇时：
 - `slow` 走了 `a + b` 步
