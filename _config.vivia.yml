@@ -93,4 +93,4 @@ baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? 
 
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true  # default true
-  version: "7.1.2" # default v7.1.2
+  version: "11.6.0" # default v7.1.2
