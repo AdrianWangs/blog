@@ -52,7 +52,7 @@ sidebar:
       - category
       - tag
 #      - archive
-#      - recent_posts
+      - recent_posts
 
 # Sidebar Widget behavior
 archive_type: 'monthly'
@@ -83,6 +83,8 @@ comment:
   waline:
     enable: false # Enable Waline comment system
     serverURL:
+
+language: zh-CN
 
 #Analytics
 gauges_analytics: false
