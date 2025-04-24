@@ -14,6 +14,7 @@ comments: false
 
 ### 链表
 
+- [LeetCode 24: 两两交换链表中的节点（Swap Nodes in Pairs）](/2025/04/24/算法刷题/LeetCode-24-Swap-Nodes-in-Pairs/) - 链表节点两两交换的递归和迭代解法比较
 - [LeetCode 2: 两数相加（Add Two Numbers）](/2025/04/23/算法刷题/LeetCode-2-两数相加/) - 链表表示的两数相加问题的代码优化与分析
 - [LeetCode 142: 环形链表 II（Linked List Cycle II）](/2025/04/22/算法刷题/LeetCode-142-Linked-List-Cycle-II/) - Floyd 判圈算法数学原理详解与实现
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
