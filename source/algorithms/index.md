@@ -20,6 +20,7 @@ comments: false
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
 - [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/算法刷题/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
 - [LeetCode 206: 反转链表](/2025/04/21/算法刷题/LeetCode-206-Reverse-Linked-List) - 经典链表反转问题，包含递归和迭代两种解法
+- [❌ LeetCode 25: K 个一组翻转链表（Reverse Nodes in k-Group）](/2025/04/24/算法刷题/LeetCode-25-Reverse-Nodes-in-k-Group/) - 分析了循环终止条件中的微妙错误
 
 ### 数组操作
 
