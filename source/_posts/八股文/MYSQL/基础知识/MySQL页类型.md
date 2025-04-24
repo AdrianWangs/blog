@@ -4,6 +4,7 @@ date: 2025-04-22 20:23:49
 categories:
   - 八股文
   - MYSQL
+  - 基础知识
 tags:
   - MYSQL
   - 八股文
