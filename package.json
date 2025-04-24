@@ -19,6 +19,7 @@
   "dependencies": {
     "colorjs.io": "^0.5.2",
     "hexo": "^7.3.0",
+    "hexo-asset-image": "^0.0.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-ai-summary": "^1.0.0",
