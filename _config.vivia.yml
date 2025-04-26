@@ -34,7 +34,7 @@ hue:
 avatar: https://avatars.githubusercontent.com/u/72337244
 # Path to the avatar image relative to /source
 author: 'Adrian Wang'
-subtitle: This is the subtitle
+subtitle: '未来的你一定会感谢现在奋斗的你'
 links:
   - name: GitHub
     icon: fa-brands fa-github

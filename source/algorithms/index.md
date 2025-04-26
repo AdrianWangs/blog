@@ -14,6 +14,7 @@ comments: false
 
 ### 链表
 
+- [LeetCode 148: 排序链表（Sort List）](/2025/04/26/算法刷题/LeetCode-148-Sort-List/) - 归并排序在链表中的两种实现：自底向上与自顶向下
 - [LeetCode 24: 两两交换链表中的节点（Swap Nodes in Pairs）](/2025/04/24/算法刷题/LeetCode-24-Swap-Nodes-in-Pairs/) - 链表节点两两交换的递归和迭代解法比较
 - [LeetCode 2: 两数相加（Add Two Numbers）](/2025/04/23/算法刷题/LeetCode-2-两数相加/) - 链表表示的两数相加问题的代码优化与分析
 - [LeetCode 142: 环形链表 II（Linked List Cycle II）](/2025/04/22/算法刷题/LeetCode-142-Linked-List-Cycle-II/) - Floyd 判圈算法数学原理详解与实现
@@ -43,3 +44,7 @@ comments: false
 
 - [LeetCode 240: 搜索二维矩阵 II（Search a 2D Matrix II）](/2025/04/20/算法刷题/LeetCode-240-Search-a-2D-Matrix-II/) - 角落搜索法、二分查找法和分治法三种解法比较
 - [LeetCode 2563: 统计公平数对的数目（Count the Number of Fair Pairs）](/2025/04/20/算法刷题/LeetCode-2563-统计公平数对的数目/) - 利用排序和二分查找高效计算满足条件的数对
+
+### 排序
+
+- [LeetCode 148: 排序链表（Sort List）](/2025/04/26/算法刷题/LeetCode-148-Sort-List/) - 归并排序在链表中的两种实现：自底向上与自顶向下
