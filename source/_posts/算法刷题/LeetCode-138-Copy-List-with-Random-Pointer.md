@@ -33,7 +33,7 @@ tags:
 
 **示例 1:**
 
-![1745570173396](image/LeetCode-138-Copy-List-with-Random-Pointer/1745570173396.png)
+![1745570173396](LeetCode-138-Copy-List-with-Random-Pointer/1745570173396.png)
 
 ```
 输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
@@ -42,7 +42,7 @@ tags:
 
 **示例 2:**
 
-![1745570189622](image/LeetCode-138-Copy-List-with-Random-Pointer/1745570189622.png)
+![1745570189622](LeetCode-138-Copy-List-with-Random-Pointer/1745570189622.png)
 
 ```
 输入：head = [[1,1],[2,1]]
@@ -51,7 +51,7 @@ tags:
 
 **示例 3:**
 
-![1745570225789](image/LeetCode-138-Copy-List-with-Random-Pointer/1745570225789.png)
+![1745570225789](LeetCode-138-Copy-List-with-Random-Pointer/1745570225789.png)
 
 ```
 输入：head = [[3,null],[3,0],[3,null]]
