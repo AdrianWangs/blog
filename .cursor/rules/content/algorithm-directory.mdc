@@ -3,24 +3,24 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Algorithm Directory Management Guide
+# 算法目录管理指南
 
-## Algorithm Directory Structure
+## 算法目录结构
 
-The blog includes a dedicated [algorithms index page](mdc:source/algorithms/index.md) that organizes algorithm knowledge and problem-solving records.
+本博客包含一个专门的[算法索引页面](mdc:source/algorithms/index.md)，用于组织算法知识和解题记录。
 
-## Updating the Algorithm Directory
+## 更新算法目录
 
-After creating a new algorithm post, you MUST update the [algorithms directory page](mdc:source/algorithms/index.md):
+创建新的算法文章后，您必须更新[算法目录页面](mdc:source/algorithms/index.md)：
 
-1. Find the appropriate section based on algorithm type (e.g., 动态规划, 深度优先搜索, etc.)
-2. Create a new section if needed for the algorithm type
-3. Add a link to your new post:
+1. 根据算法类型找到适当的部分（例如，动态规划、深度优先搜索等）
+2. 如果需要，为算法类型创建一个新的部分
+3. 添加到您新文章的链接：
 ```markdown
-- [[Problem ID] Problem Title](/path/to/post) - Brief description
+- [[问题ID] 问题标题](/path/to/post) - 简短描述
 ```
 
-4. Maintain chronological order (newest posts at the top)
-5. For posts with the "❌错题集" tag, add a "❌" prefix to the link description
+4. 保持时间顺序（最新的文章放在顶部）
+5. 对于带有"❌错题集"标签的文章，在链接描述前添加"❌"前缀
 
-The algorithm directory is available at: https://adrianwangs.github.io/algorithms/
+算法目录可通过以下网址访问：https://adrianwangs.github.io/algorithms/

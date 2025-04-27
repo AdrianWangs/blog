@@ -32,6 +32,7 @@ comments: false
 
 ### 哈希表
 
+- [LeetCode 146: LRU Cache](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存
 - [LeetCode 41: 缺失的第一个正数（First Missing Positive）](/2025/04/18/算法刷题/LeetCode-41-first-missing-positive/) - ❌ 使用原地哈希解决的 Hard 难度问题
 
 ### 双指针
@@ -48,3 +49,7 @@ comments: false
 ### 排序
 
 - [LeetCode 148: 排序链表（Sort List）](/2025/04/26/算法刷题/LeetCode-148-Sort-List/) - 归并排序在链表中的两种实现：自底向上与自顶向下
+
+### 设计
+
+- [LeetCode 146: LRU Cache](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存

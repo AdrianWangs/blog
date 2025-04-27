@@ -3,26 +3,26 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Hexo Blog Rules Index
+# Hexo 博客规则索引
 
-## Blog Structure and Setup
-- [Project Structure](mdc:.cursor/rules/blog/project-structure.mdc) - Overview of the Hexo blog structure
-- [Theme Customization](mdc:.cursor/rules/blog/theme-customization.mdc) - Guide for customizing the Vivia theme
+## 博客结构与设置
+- [项目结构](mdc:hexo-blog/.cursor/rules/blog/project-structure.mdc) - Hexo 博客结构概述
+- [主题自定义](mdc:hexo-blog/.cursor/rules/blog/theme-customization.mdc) - Vivia 主题自定义指南
 
-## Blog Publishing Workflow
-- [Blog Automation](mdc:.cursor/rules/blog/blog-automation.mdc) - How blog publishing is automated with GitHub Actions
-- [Blog Post Guide](mdc:.cursor/rules/blog/blog-post-guide.mdc) - Basic guide for creating blog posts
-- [Deployment Guide](mdc:.cursor/rules/development/deployment-guide.mdc) - How the blog is deployed
-- [Git Workflow](mdc:.cursor/rules/development/git-workflow.mdc) - Git commands for managing the blog
+## 博客发布工作流
+- [博客自动化](mdc:hexo-blog/.cursor/rules/blog/blog-automation.mdc) - 如何使用 GitHub Actions 自动化博客发布
+- [博客文章指南](mdc:hexo-blog/.cursor/rules/blog/blog-post-guide.mdc) - 创建博客文章的基本指南
+- [部署指南](mdc:hexo-blog/.cursor/rules/development/deployment-guide.mdc) - 博客部署方式
+- [Git 工作流](mdc:hexo-blog/.cursor/rules/development/git-workflow.mdc) - 管理博客的 Git 命令
 
-## Content Creation Guidelines
-- [Generic Article Template](mdc:.cursor/rules/content/generic-article-template.mdc) - Template for general blog articles
-- [Technical Article Template](mdc:.cursor/rules/content/technical-article-template.mdc) - Template for technical interview articles (八股文)
-- [Algorithm Post Template](mdc:.cursor/rules/content/algorithm-post-template.mdc) - Template for algorithm solution posts
-- [Algorithm Directory](mdc:.cursor/rules/content/algorithm-directory.mdc) - How to update the algorithm directory
-- [Algorithm Error Analysis](mdc:.cursor/rules/content/algorithm-error-analysis.mdc) - Guidelines for analyzing algorithm errors
+## 内容创建指南
+- [通用文章模板](mdc:hexo-blog/.cursor/rules/content/generic-article-template.mdc) - 通用博客文章模板
+- [技术文章模板](mdc:hexo-blog/.cursor/rules/content/technical-article-template.mdc) - 技术面试文章模板（八股文）
+- [算法文章模板](mdc:hexo-blog/.cursor/rules/content/algorithm-post-template.mdc) - 算法解题文章模板
+- [算法目录](mdc:hexo-blog/.cursor/rules/content/algorithm-directory.mdc) - 如何更新算法目录
+- [算法错误分析](mdc:hexo-blog/.cursor/rules/content/algorithm-error-analysis.mdc) - 算法错误分析指南
 
-## Quick Links
-- [Hexo Configuration](mdc:_config.yml) - Main Hexo configuration file
-- [Vivia Theme Configuration](mdc:_config.vivia.yml) - Theme-specific configuration
-- [Package.json](mdc:package.json) - NPM dependencies and scripts
+## 快速链接
+- [Hexo 配置](mdc:hexo-blog/_config.yml) - 主 Hexo 配置文件
+- [Vivia 主题配置](mdc:hexo-blog/_config.vivia.yml) - 主题特定配置
+- [Package.json](mdc:hexo-blog/package.json) - NPM 依赖和脚本
