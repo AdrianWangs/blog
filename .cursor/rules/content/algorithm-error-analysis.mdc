@@ -1,0 +1,44 @@
+---
+description: When user‘s context has error problem and request to add new article, use this rule
+globs: 
+alwaysApply: false
+---
+# Algorithm Error Analysis Rule
+
+When generating or updating algorithm solution articles:
+
+1. Always review the context for any code implementations related to the problem
+2. If errors are detected in the user's code implementation:
+   - Include the incorrect code snippet in the article
+   - Provide a detailed error analysis section explaining:
+     - What the specific error is
+     - Why it occurs
+     - How to fix it
+   - Label this section clearly as "Common Mistakes" or "Error Analysis"
+
+3. For LeetCode problems specifically:
+   - Check for linter errors, compilation issues, or logical errors
+   - Compare against the expected solution approach
+   - Highlight edge cases the implementation might miss
+
+4. Structure the error analysis section:
+   ```markdown
+   ## Common Mistakes and Error Analysis
+   
+   ### Incorrect Implementation
+   ```code
+   // Problematic code here
+   ```
+   
+   ### Error Analysis
+   The above implementation has the following issues:
+   1. [Specific error description]
+   2. [Another error if applicable]
+   
+   ### Corrected Approach
+   ```code
+   // Corrected code here
+   ```
+   ```
+
+This ensures articles serve as comprehensive learning resources that not only provide correct solutions but also help readers understand common pitfalls and how to avoid them.

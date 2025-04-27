@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Algorithm Directory Management Guide
+
+## Algorithm Directory Structure
+
+The blog includes a dedicated [algorithms index page](mdc:source/algorithms/index.md) that organizes algorithm knowledge and problem-solving records.
+
+## Updating the Algorithm Directory
+
+After creating a new algorithm post, you MUST update the [algorithms directory page](mdc:source/algorithms/index.md):
+
+1. Find the appropriate section based on algorithm type (e.g., 动态规划, 深度优先搜索, etc.)
+2. Create a new section if needed for the algorithm type
+3. Add a link to your new post:
+```markdown
+- [[Problem ID] Problem Title](/path/to/post) - Brief description
+```
+
+4. Maintain chronological order (newest posts at the top)
+5. For posts with the "❌错题集" tag, add a "❌" prefix to the link description
+
+The algorithm directory is available at: https://adrianwangs.github.io/algorithms/

@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Hexo Blog Rules Index
+
+## Blog Structure and Setup
+- [Project Structure](mdc:.cursor/rules/blog/project-structure.mdc) - Overview of the Hexo blog structure
+- [Theme Customization](mdc:.cursor/rules/blog/theme-customization.mdc) - Guide for customizing the Vivia theme
+
+## Blog Publishing Workflow
+- [Blog Automation](mdc:.cursor/rules/blog/blog-automation.mdc) - How blog publishing is automated with GitHub Actions
+- [Blog Post Guide](mdc:.cursor/rules/blog/blog-post-guide.mdc) - Basic guide for creating blog posts
+- [Deployment Guide](mdc:.cursor/rules/development/deployment-guide.mdc) - How the blog is deployed
+- [Git Workflow](mdc:.cursor/rules/development/git-workflow.mdc) - Git commands for managing the blog
+
+## Content Creation Guidelines
+- [Generic Article Template](mdc:.cursor/rules/content/generic-article-template.mdc) - Template for general blog articles
+- [Technical Article Template](mdc:.cursor/rules/content/technical-article-template.mdc) - Template for technical interview articles (八股文)
+- [Algorithm Post Template](mdc:.cursor/rules/content/algorithm-post-template.mdc) - Template for algorithm solution posts
+- [Algorithm Directory](mdc:.cursor/rules/content/algorithm-directory.mdc) - How to update the algorithm directory
+- [Algorithm Error Analysis](mdc:.cursor/rules/content/algorithm-error-analysis.mdc) - Guidelines for analyzing algorithm errors
+
+## Quick Links
+- [Hexo Configuration](mdc:_config.yml) - Main Hexo configuration file
+- [Vivia Theme Configuration](mdc:_config.vivia.yml) - Theme-specific configuration
+- [Package.json](mdc:package.json) - NPM dependencies and scripts

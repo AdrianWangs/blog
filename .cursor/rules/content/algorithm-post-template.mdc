@@ -1,0 +1,116 @@
+---
+description: when user want to write an article about algorithm
+globs: 
+alwaysApply: false
+---
+# Algorithm Post Template & Directory Update Guide
+
+## Creating New Algorithm Solution Posts
+
+When creating a new algorithm solution post:
+
+1. Create a new Markdown file manually in the `source/_posts/` directory:
+```bash
+# File should be named in this format:
+LeetCode-xxx-Problem-Title.md
+```
+
+2. Add the front matter to include algorithm-specific metadata:
+```yaml
+---
+title: "LeetCode xxx - 问题标题（Problem Title）"
+date: YYYY-MM-DD HH:MM:SS
+categories:
+  - 算法刷题
+  - LeetCode
+tags:
+  - 算法类型 (e.g., 数组, 双指针, 动态规划, etc.)
+  - 难度 (Easy/Medium/Hard)
+---
+```
+
+**重要提示**: 请确保始终包含 LeetCode 标签和难度标签 (Easy/Medium/Hard)，这对于文章分类和检索非常重要。
+
+3. Structure your post with these enhanced sections:
+
+   ### Problem Description
+   - Include the original problem statement
+   - Add examples with input and output
+   - Include visual representations of examples using ASCII art when applicable:
+     ```
+      → → →
+      ↑   ↓
+      ↑ ← ↓
+     ```
+   - List all constraints and edge cases
+
+   ### Solution Approach
+   - Start with a clear explanation of the core algorithm concept
+   - Use bold text for key points: **key insight**
+   - Include visual aids (diagrams, flowcharts) when helpful
+   - Break down the approach into numbered steps with detailed explanations
+   - For complex algorithms, use subsections with headings (#### Step Details)
+
+   ### Implementation Details
+   - Include detailed step-by-step explanations for the implementation
+   - Use comments in the code to explain key steps
+   - For incorrect approaches, provide thorough analysis of why they fail
+   - Use concrete examples to demonstrate algorithm execution
+
+   ### Code Implementation
+   - Provide well-formatted code with clear comments
+   - For multiple solutions, clearly label and separate them
+   - Include execution process analysis for important examples
+
+   ### Comparison of Approaches
+   - Use formatted tables to compare different solutions:
+     ```
+     | 方面       | 方法一              | 方法二                  |
+     | ---------- | ------------------- | ----------------------- |
+     | 时间复杂度 | O(n)                | O(n²)                   |
+     | 空间复杂度 | O(1)                | O(n)                    |
+     | 优点       | 更高效              | 更容易理解              |
+     | 缺点       | 实现复杂            | 运行较慢                |
+     | 推荐度     | ★★★★★               | ★★★☆☆                   |
+     ```
+
+   ### Complexity Analysis
+   - Provide detailed time and space complexity analysis
+   - Explain the reasoning behind the complexity
+
+   ### Key Learnings
+   - Summarize the important algorithm concepts
+   - List common pitfalls and how to avoid them
+   - Mention related problems or applications
+
+4. Enhancement tips:
+   - Use properly spaced punctuation for readability (e.g., "右 → 下 → 左 → 上")
+   - Format numerical values in explanations with spaces (e.g., "值为 1" instead of "值为1")
+   - Include alternative implementations when applicable
+   - Add execution traces for examples to help readers understand the algorithm step by step
+
+## Algorithm Directory Update Process
+
+After creating a new algorithm solution post, you MUST update the [algorithms directory page](mdc:source/algorithms/index.md):
+
+1. Add your new post to the appropriate section under "刷题记录"
+2. Create a new section if needed based on algorithm type
+3. Format your entry as:
+```markdown
+- [LeetCode xxx: Problem Title](mdc:YYYY/MM/DD/LeetCode-xxx-Problem-Title) - Brief description
+```
+
+4. Maintain chronological order with newest posts at the top
+
+Example directory organization:
+
+```markdown
+### 动态规划
+- [LeetCode 70: Climbing Stairs](mdc:2023/07/18/LeetCode-70-Climbing-Stairs) - 经典DP问题，计算爬楼梯的方法数
+- [LeetCode 53: Maximum Subarray](mdc:2023/07/15/LeetCode-53-Maximum-Subarray) - 求最大子数组和
+
+### 深度优先搜索
+- [LeetCode 200: Number of Islands](mdc:2023/07/10/LeetCode-200-Number-of-Islands) - 计算岛屿数量的DFS解法
+```
+
+Remember to commit and push both your new post and the updated algorithm directory.
