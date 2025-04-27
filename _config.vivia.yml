@@ -2,6 +2,7 @@
 menu: # Links in the navigation bar
   首页: /
   Leetcode题解: /algorithms
+  MySQL: /mysql
   # 算法刷题: /categories/算法刷题
   归档: /archives
   关于我: /about
