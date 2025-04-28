@@ -1,0 +1,50 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Blog Publishing Automation
+
+## GitHub Actions Workflow
+
+This blog uses GitHub Actions for automated deployment, which means you don't need to run any local npm or npx commands. The entire build and deployment process happens in the cloud.
+
+### Simplified Workflow
+
+Your workflow is simplified to just these git commands:
+
+```bash
+# Add all changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Add new post: My Great Article"
+
+# Push to GitHub to trigger deployment
+git push origin main
+```
+
+### Benefits
+
+- No need for local Node.js environment
+- No need to install npm packages locally
+- No need to run hexo commands (new, generate, deploy, etc.)
+- Consistent build environment in the cloud
+- Automatic deployment on every push
+
+### Git Aliases (Optional)
+
+If you want to streamline your workflow even further, you can set up git aliases:
+
+```bash
+# Set up a git alias for quick commit and push
+git config --global alias.cap '!f() { git add . && git commit -m "$@" && git push origin main; }; f'
+```
+
+Then you can publish with a single command:
+
+```bash
+git cap "Add new post: My Great Article"
+```
+
+This ensures your blog content is pushed to GitHub where the Actions workflow will handle the build and deployment automatically.

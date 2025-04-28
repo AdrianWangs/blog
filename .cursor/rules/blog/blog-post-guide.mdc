@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Hexo Blog Post Guide
+
+## Post Format
+Blog posts use Markdown with YAML front matter at the top.
+
+### Essential Front Matter
+```yaml
+---
+title: Your Post Title
+date: YYYY-MM-DD HH:MM:SS
+categories: 
+  - Category1
+  - Category2
+tags:
+  - Tag1
+  - Tag2
+---
+```
+
+### Publication Date Requirement
+When creating a new post, the publication date (`date` field in front matter) must be set to the current network time rather than local system time to ensure consistency across all posts.
+
+You can get the current network time using online services or the MCP time tool:
+```
+// Use MCP time tool to get accurate network time
+mcp_time-mcp_current_time format="YYYY-MM-DD HH:mm:ss"
+```
+
+### Optional Front Matter
+```yaml
+---
+updated: YYYY-MM-DD HH:MM:SS
+description: Short description of the post
+permalink: custom-url
+thumbnail: path/to/image.jpg
+pin: true  # Pin post to top of index
+---
+```
+
+## Manual Post Creation
+Since we're using GitHub Actions for deployment and don't need to run local Hexo commands:
+
+1. Create a new Markdown file manually in the `source/_posts/` directory
+2. File should be named: `YYYY-MM-DD-post-title.md` or similar format
+3. Include proper front matter at the top
+4. Write your content in Markdown format
+5. Commit and push to GitHub to trigger the deployment
+
+GitHub Actions will handle the Hexo commands (generate, deploy) on the server side.

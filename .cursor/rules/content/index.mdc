@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Content Creation Rules Index
+
+This index provides links to various templates and guidelines for creating content for the Hexo blog.
+
+## Templates
+- [Generic Article Template](mdc:hexo-blog/hexo-blog/.cursor/rules/content/generic-article-template.mdc) - Base template for any blog post.
+- [Technical Article Template](mdc:hexo-blog/hexo-blog/.cursor/rules/content/technical-article-template.mdc) - Template specifically for technical interview articles (八股文).
+- [Algorithm Post Template](mdc:hexo-blog/hexo-blog/.cursor/rules/content/algorithm-post-template.mdc) - Template for writing up algorithm problem solutions.
+
+## Guides & Directories
+- [Algorithm Directory Guide](mdc:hexo-blog/hexo-blog/.cursor/rules/content/algorithm-directory.mdc) - Instructions on how to update the algorithm directory.
+- [Algorithm Error Analysis Guide](mdc:hexo-blog/hexo-blog/.cursor/rules/content/algorithm-error-analysis.mdc) - Guide for analyzing and documenting errors encountered during algorithm problem solving.
+- [MySQL Directory Guide](mdc:hexo-blog/hexo-blog/.cursor/rules/content/mysql-directory.mdc) - Instructions for managing MySQL related content.

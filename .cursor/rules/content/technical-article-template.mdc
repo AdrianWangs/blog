@@ -1,0 +1,146 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Technical Interview Article (八股文) Template
+
+## Article Structure for Technical Interview Content
+
+When creating a new technical interview article (八股文):
+
+1. Create a new Markdown file manually in the `source/_posts/` directory:
+```bash
+# File should be named in this format:
+YYYY-MM-DD-技术八股-Topic-Title.md
+```
+
+2. Add the front matter to include appropriate metadata:
+```yaml
+---
+title: "技术八股: Topic Title"
+date: YYYY-MM-DD HH:MM:SS
+categories:
+  - 技术八股
+tags:
+  - 相关技术 (e.g., Java, Python, React, etc.)
+  - 八股文
+  - 面试题
+  - 相关领域 (e.g., 后端, 前端, 数据库, etc.)
+---
+```
+
+3. Structure your post with these sections:
+
+   ### Topic Overview
+   - Provide a clear definition of the concept
+   - Explain why this topic is important in interviews
+   - Include a brief history or context if relevant
+
+   ### Core Concepts
+   - Break down the fundamental principles
+   - Use bold text for key terms: **important term**
+   - Include diagrams or flowcharts when helpful
+   - Structure concepts in a logical progression
+
+   ### Key Points to Remember
+   - List interview-ready points in bullet format
+   - Focus on frequently asked aspects
+   - Include code snippets where appropriate
+   - Emphasize common misconceptions and correct answers
+
+   ### Comparison of Approaches/Implementations
+   - Use tables to compare different methods or technologies:
+     ```
+     | 方面 | 技术一 | 技术二 |
+     | ---- | ---- | ----- |
+     | 优点 | 内容 | 内容 |
+     | 缺点 | 内容 | 内容 |
+     | 适用场景 | 内容 | 内容 |
+     ```
+
+   ### Common Interview Questions & Answers
+   - Format as Q&A pairs
+   - Include both basic and advanced questions
+   - Provide concise but comprehensive answers
+   - Add follow-up points interviewers might ask
+
+   ### Best Practices & Optimizations
+   - List industry-standard practices
+   - Explain performance considerations
+   - Mention scalability aspects
+   - Include real-world application examples
+
+   ### Example Implementation
+   - Provide clean, well-commented code examples
+   - Include step-by-step explanations
+   - Show alternative implementations if applicable
+   - Point out potential pitfalls in implementation
+
+   ### Related Topics
+   - Link to related concepts
+   - Mention how this topic connects to broader themes
+   - Suggest follow-up study areas
+
+4. Enhancement tips:
+   - Use consistent formatting throughout
+   - Include diagrams where concepts are visual
+   - Add memory aids or mnemonics where helpful
+   - Provide references to authoritative sources
+   - Consider including interview experiences related to this topic
+
+## Example Template Structure
+
+```markdown
+---
+title: "技术八股: Java线程池详解"
+date: 2023-01-15 14:30:00
+categories:
+  - 技术八股
+tags:
+  - Java
+  - 八股文
+  - 面试题
+  - 多线程
+  - 后端
+---
+
+## Java线程池概述
+
+线程池是...（概述定义和重要性）
+
+## 核心概念
+
+### 1. 线程池参数
+**核心线程数**：...
+**最大线程数**：...
+
+### 2. 工作队列类型
+...
+
+## 关键记忆点
+- ThreadPoolExecutor 的七个参数及其作用
+- 四种常见的线程池类型及其特点
+- 线程池的生命周期状态
+
+## 线程池类型对比
+| 特性 | FixedThreadPool | CachedThreadPool | ScheduledThreadPool | SingleThreadExecutor |
+| ---- | ---- | ---- | ---- | ---- |
+| 核心线程数 | 固定值 | 0 | 固定值 | 1 |
+| 最大线程数 | 同核心线程数 | Integer.MAX_VALUE | Integer.MAX_VALUE | 1 |
+| 适用场景 | ... | ... | ... | ... |
+
+## 常见面试题与答案
+
+**Q: 线程池的优势是什么？**
+A: 线程池主要有以下优势：
+1. 降低资源消耗...
+
+...（更多内容）
+```
+
+Remember to set the correct publication date using the network time rather than local system time:
+```
+// Use MCP time tool to get accurate network time
+mcp_time-mcp_current_time format="YYYY-MM-DD HH:mm:ss"
+```
