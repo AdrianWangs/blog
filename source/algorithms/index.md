@@ -53,3 +53,6 @@ comments: false
 ### 设计
 
 - [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存
+
+### 二叉树
+- [LeetCode 101: Symmetric Tree](/2025/04/28/算法刷题/LeetCode-101-Symmetric-Tree) - 使用递归和迭代方法判断二叉树是否对称
