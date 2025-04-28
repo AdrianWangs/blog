@@ -1,8 +1,9 @@
 ---
-description: 
+description: 内容规则索引，提供所有内容创建相关规则的概览
 globs: 
 alwaysApply: false
 ---
+
 # Content Creation Rules Index
 
 This index provides links to various templates and guidelines for creating content for the Hexo blog.

@@ -1,8 +1,9 @@
 ---
-description: 
+description: 使用 GitHub Actions 自动化博客发布的完整指南
 globs: 
 alwaysApply: false
 ---
+
 # Blog Publishing Automation
 
 ## GitHub Actions Workflow

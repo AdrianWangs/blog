@@ -1,8 +1,9 @@
 ---
-description:
-globs:
+description: MySQL 相关文章的目录结构和组织方法
+globs: 
 alwaysApply: false
 ---
+
 # MySQL 知识目录管理指南
 
 ## MySQL 目录结构

@@ -1,8 +1,9 @@
 ---
-description: 
+description: 如何更新和组织算法相关文章的目录结构
 globs: 
 alwaysApply: false
 ---
+
 # 算法目录管理指南
 
 ## 算法目录结构

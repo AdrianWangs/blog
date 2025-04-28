@@ -1,8 +1,9 @@
 ---
-description: 
+description: 技术面试文章模板（八股文），用于创建技术知识点详解
 globs: 
 alwaysApply: false
 ---
+
 # Technical Interview Article (八股文) Template
 
 ## Article Structure for Technical Interview Content

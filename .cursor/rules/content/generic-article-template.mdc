@@ -1,8 +1,9 @@
 ---
-description: 
+description: 通用博客文章模板，适用于创建一般性博客文章
 globs: 
 alwaysApply: false
 ---
+
 # Generic Article Template
 
 ## Article Structure for Generic Blog Content

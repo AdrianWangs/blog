@@ -1,8 +1,9 @@
 ---
-description: 
+description: Vivia 主题自定义指南，提供主题定制和样式调整的方法
 globs: 
 alwaysApply: false
 ---
+
 # Theme Customization Guide
 
 The blog uses the Vivia theme with configuration in [_config.vivia.yml](mdc:hexo-blog/_config.vivia.yml).

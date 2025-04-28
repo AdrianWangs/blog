@@ -1,8 +1,9 @@
 ---
-description: when user want to write an article about algorithm
+description: 算法解题文章模板，用于创建算法题解文章
 globs: 
 alwaysApply: false
 ---
+
 # 算法题解文章模板与目录更新指南
 
 ## 创建新的算法解题文章

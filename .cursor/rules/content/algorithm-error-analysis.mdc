@@ -1,8 +1,9 @@
 ---
-description: When user‘s context has error problem and request to add new article, use this rule
+description: 算法错误分析指南，帮助分析和解决算法问题中的错误
 globs: 
 alwaysApply: false
 ---
+
 # 算法错误分析指南
 
 当你在解决算法问题时遇到错误或困难，可以通过编写错误分析文章来记录和分享你的学习过程。这不仅有助于巩固自己的理解，也能帮助其他遇到类似问题的开发者。

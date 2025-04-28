@@ -1,8 +1,9 @@
 ---
-description: 
+description: 博客部署方式指南，包括部署流程和相关配置
 globs: 
 alwaysApply: false
 ---
+
 # Deployment Guide
 
 This Hexo blog is configured to deploy automatically through GitHub Actions.

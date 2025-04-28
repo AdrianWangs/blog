@@ -1,8 +1,9 @@
 ---
-description: 
+description: 创建博客文章的基本指南，包括文章格式和元数据设置
 globs: 
 alwaysApply: false
 ---
+
 # Hexo Blog Post Guide
 
 ## Post Format

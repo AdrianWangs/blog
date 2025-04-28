@@ -1,8 +1,9 @@
 ---
-description: 
+description: 管理博客的 Git 工作流程和常用命令
 globs: 
 alwaysApply: false
 ---
+
 # Git Workflow Guide
 
 ## Blog Repository Management with GitHub Actions

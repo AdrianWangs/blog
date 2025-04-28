@@ -10,3 +10,4 @@ _multiconfig.yml
 .vscode/
 .idea/
 package-lock.json
+pnpm-lock.yaml
