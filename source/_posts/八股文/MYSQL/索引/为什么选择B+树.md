@@ -1,3 +1,19 @@
+---
+title: 为什么 MySQL 采用 B+ 树作为索引？
+date: 2025-04-29 16:48:42
+categories:
+  - 八股文
+  - MYSQL
+  - 索引
+tags:
+  - MYSQL
+  - 索引
+  - B+树
+  - B树
+  - 数据结构
+  - 数据库
+---
+
 # 为什么 MySQL 采用 B+ 树作为索引？
 
 
