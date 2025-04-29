@@ -55,6 +55,7 @@ comments: false
 - [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存
 
 ### 二叉树
+- [❌ LeetCode 114: 二叉树展开为链表 (Flatten Binary Tree to Linked List)](/2025/04/29/算法刷题/LeetCode-114-Binary-Tree-Flatten/) - 分析树转链表过程中的指针操作错误
 - [LeetCode 230: 二叉搜索树中第K小的元素（Kth Smallest Element in a BST）](/2025/06/01/算法刷题/LeetCode-230-Kth-Smallest-Element-in-BST/) - 中序遍历解法与进阶优化方案
 - [LeetCode 101: Symmetric Tree](/2025/04/28/算法刷题/LeetCode-101-Symmetric-Tree) - 使用递归和迭代方法判断二叉树是否对称
 - [❌ LeetCode 98: 验证二叉搜索树（Validate Binary Search Tree）](/2025/04/29/算法刷题/LeetCode-98-validate-binary-search-tree/) - 分析二叉搜索树验证中的比较运算符错误
