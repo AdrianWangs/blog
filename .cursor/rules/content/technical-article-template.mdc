@@ -3,7 +3,6 @@ description: 技术面试文章模板（八股文），用于创建技术知识�
 globs: 
 alwaysApply: false
 ---
-
 # Technical Interview Article (八股文) Template
 
 ## Article Structure for Technical Interview Content
@@ -20,7 +19,7 @@ YYYY-MM-DD-技术八股-Topic-Title.md
 ```yaml
 ---
 title: "技术八股: Topic Title"
-date: YYYY-MM-DD HH:MM:SS
+date: YYYY-MM-DD HH:MM:SS  # 使用time-mcp工具获取当前时间
 categories:
   - 技术八股
 tags:
@@ -30,6 +29,8 @@ tags:
   - 相关领域 (e.g., 后端, 前端, 数据库, etc.)
 ---
 ```
+
+> **重要提示**: 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
 
 3. Structure your post with these sections:
 
@@ -90,58 +91,11 @@ tags:
    - Provide references to authoritative sources
    - Consider including interview experiences related to this topic
 
-## Example Template Structure
+## 使用time-mcp工具获取当前时间
 
-```markdown
----
-title: "技术八股: Java线程池详解"
-date: 2023-01-15 14:30:00
-categories:
-  - 技术八股
-tags:
-  - Java
-  - 八股文
-  - 面试题
-  - 多线程
-  - 后端
----
+在设置文章的日期时，使用以下工具获取准确的网络时间：
 
-## Java线程池概述
-
-线程池是...（概述定义和重要性）
-
-## 核心概念
-
-### 1. 线程池参数
-**核心线程数**：...
-**最大线程数**：...
-
-### 2. 工作队列类型
-...
-
-## 关键记忆点
-- ThreadPoolExecutor 的七个参数及其作用
-- 四种常见的线程池类型及其特点
-- 线程池的生命周期状态
-
-## 线程池类型对比
-| 特性 | FixedThreadPool | CachedThreadPool | ScheduledThreadPool | SingleThreadExecutor |
-| ---- | ---- | ---- | ---- | ---- |
-| 核心线程数 | 固定值 | 0 | 固定值 | 1 |
-| 最大线程数 | 同核心线程数 | Integer.MAX_VALUE | Integer.MAX_VALUE | 1 |
-| 适用场景 | ... | ... | ... | ... |
-
-## 常见面试题与答案
-
-**Q: 线程池的优势是什么？**
-A: 线程池主要有以下优势：
-1. 降低资源消耗...
-
-...（更多内容）
 ```
-
-Remember to set the correct publication date using the network time rather than local system time:
-```
-// Use MCP time tool to get accurate network time
-mcp_time-mcp_current_time format="YYYY-MM-DD HH:mm:ss"
-```
+<function_calls>
+<invoke name="mcp_time-mcp_current_time">
+<parameter name="format">YYYY-MM-DD HH:mm:ss

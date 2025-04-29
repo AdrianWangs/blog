@@ -3,7 +3,6 @@ description: 通用博客文章模板，适用于创建一般性博客文章
 globs: 
 alwaysApply: false
 ---
-
 # Generic Article Template
 
 ## Article Structure for Generic Blog Content
@@ -20,7 +19,7 @@ YYYY-MM-DD-Article-Title.md
 ```yaml
 ---
 title: "Article Title"
-date: YYYY-MM-DD HH:MM:SS
+date: YYYY-MM-DD HH:MM:SS  # Always use time-mcp tools to get current time
 categories:
   - Primary Category
   - Secondary Category (optional)
@@ -32,6 +31,8 @@ description: "A brief description of the article (150-200 characters)"
 thumbnail: "/images/path-to-thumbnail.jpg" # Optional
 ---
 ```
+
+> **Important**: Always use the time-mcp tools to get the current date and time for the `date` field. Refer to the [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) rule for details.
 
 3. Structure your post with these sections:
 
@@ -128,8 +129,11 @@ Markdown's simplicity and versatility make it an essential skill for technical w
 - [Our Previous Article: Documentation Best Practices](mdc:2022/12/10/documentation-best-practices)
 ```
 
-Remember to set the correct publication date using the network time rather than local system time:
+## Using time-mcp Tools for Timestamps
+
+When setting the date in your front matter, always use the time-mcp tool to get the current time:
+
 ```
-// Use MCP time tool to get accurate network time
-mcp_time-mcp_current_time format="YYYY-MM-DD HH:mm:ss"
-```
+<function_calls>
+<invoke name="mcp_time-mcp_current_time">
+<parameter name="format">YYYY-MM-DD HH:mm:ss

@@ -3,7 +3,6 @@ description: 算法解题文章模板，用于创建算法题解文章
 globs: 
 alwaysApply: false
 ---
-
 # 算法题解文章模板与目录更新指南
 
 ## 创建新的算法解题文章
@@ -20,7 +19,7 @@ LeetCode-xxx-问题标题.md
 ```yaml
 ---
 title: "LeetCode xxx - 问题标题（Problem Title）"
-date: YYYY-MM-DD HH:MM:SS
+date: YYYY-MM-DD HH:MM:SS  # 使用time-mcp工具获取当前时间
 categories:
   - 算法刷题
   - LeetCode
@@ -31,7 +30,9 @@ tags:
 ---
 ```
 
-**重要提示**: 请确保始终包含 LeetCode 标签和难度标签 (Easy/Medium/Hard)，这对于文章分类和检索非常重要。
+> **重要提示**: 
+> 1. 请确保始终包含 LeetCode 标签和难度标签 (Easy/Medium/Hard)，这对于文章分类和检索非常重要。
+> 2. 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
 
 3. 按照以下增强结构组织你的文章：
 
@@ -90,6 +91,16 @@ tags:
    - 在解释中为数值添加空格（例如，"值为 1" 而不是 "值为1"）
    - 在适用情况下包含替代实现
    - 添加示例的执行跟踪，帮助读者逐步理解算法
+
+## 使用time-mcp工具获取当前时间
+
+在设置文章的日期时，使用以下工具获取准确的网络时间：
+
+```
+<function_calls>
+<invoke name="mcp_time-mcp_current_time">
+<parameter name="format">YYYY-MM-DD HH:mm:ss
+```
 
 ## 算法目录更新流程
 

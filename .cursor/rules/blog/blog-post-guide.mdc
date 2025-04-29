@@ -3,7 +3,6 @@ description: 创建博客文章的基本指南，包括文章格式和元数据�
 globs: 
 alwaysApply: false
 ---
-
 # Hexo Blog Post Guide
 
 ## Post Format
@@ -26,30 +25,12 @@ tags:
 ### Publication Date Requirement
 When creating a new post, the publication date (`date` field in front matter) must be set to the current network time rather than local system time to ensure consistency across all posts.
 
-You can get the current network time using online services or the MCP time tool:
+#### Important: Using time-mcp Tools
+Always use the time-mcp tools to get the current time when creating or updating posts. This ensures consistency and accuracy in post timestamps.
+
+For example, when using Claude in Cursor, you should use:
+
 ```
-// Use MCP time tool to get accurate network time
-mcp_time-mcp_current_time format="YYYY-MM-DD HH:mm:ss"
-```
-
-### Optional Front Matter
-```yaml
----
-updated: YYYY-MM-DD HH:MM:SS
-description: Short description of the post
-permalink: custom-url
-thumbnail: path/to/image.jpg
-pin: true  # Pin post to top of index
----
-```
-
-## Manual Post Creation
-Since we're using GitHub Actions for deployment and don't need to run local Hexo commands:
-
-1. Create a new Markdown file manually in the `source/_posts/` directory
-2. File should be named: `YYYY-MM-DD-post-title.md` or similar format
-3. Include proper front matter at the top
-4. Write your content in Markdown format
-5. Commit and push to GitHub to trigger the deployment
-
-GitHub Actions will handle the Hexo commands (generate, deploy) on the server side.
+<function_calls>
+<invoke name="mcp_time-mcp_current_time">
+<parameter name="format">YYYY-MM-DD HH:mm:ss
