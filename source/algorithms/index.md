@@ -56,4 +56,5 @@ comments: false
 
 ### 二叉树
 - [LeetCode 101: Symmetric Tree](/2025/04/28/算法刷题/LeetCode-101-Symmetric-Tree) - 使用递归和迭代方法判断二叉树是否对称
+- [❌ LeetCode 98: 验证二叉搜索树（Validate Binary Search Tree）](/2025/04/29/算法刷题/LeetCode-98-validate-binary-search-tree/) - 分析二叉搜索树验证中的比较运算符错误
 - [❌ LeetCode 543: 二叉树的直径（Binary Tree Diameter）](/2025/05/29/算法刷题/LeetCode-543-Binary-Tree-Diameter/) - 在DFS计算树深度的同时维护全局最大直径
