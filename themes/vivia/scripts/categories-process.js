@@ -3,17 +3,31 @@ const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 function build_tag_tree(tree, currDepth, maxDepth) {
     let ret = '<div class="category-box">';
     for(let item of tree) {
+        // Check if the item has children
+        const hasChildren = 'children' in item && item.children.length > 0 && currDepth < maxDepth;
+        
+        ret += '<div class="category-item">';
+        // Add arrow for categories with children
+        if (hasChildren) {
+            ret += '<span class="category-arrow collapsed"></span>';
+        } else {
+            ret += '<span class="category-arrow-placeholder"></span>';
+        }
+        
         ret += `
             <a class="category-link" href="${(url_for(item.path))}">
                 ${item.name}
                 <div class="category-count">${item.length}</div>
             </a>
         `;
-        if ('children' in item && item.children.length>0 && currDepth < maxDepth) {
-            ret += '<div class="children">'
+        
+        if (hasChildren) {
+            ret += '<div class="children collapsed">'
             ret += build_tag_tree(item.children, currDepth+1, maxDepth);
             ret += '</div>'
         }
+        
+        ret += '</div>'; // Close category-item
     }
     ret += "</div>";
     return ret;

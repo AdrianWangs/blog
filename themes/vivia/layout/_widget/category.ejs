@@ -1,5 +1,3 @@
-
-
 <% if (site.categories.length){ %>
   <div class="widget-wrap">
     <div class="widget">
@@ -7,4 +5,162 @@
       <%- categories_tree() %>
     </div>
   </div>
+
+  <style>
+    .widget-wrap .widget-title {
+      margin-bottom: 15px;
+      position: relative;
+    }
+    .widget-wrap .widget-title:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      border-radius: 1.5px;
+    }
+    .category-box {
+      margin-left: 0;
+    }
+    .category-item {
+      position: relative;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .category-arrow {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .category-arrow {
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(140, 178, 230, 0.15);
+    }
+    .category-arrow:hover {
+      background-color: rgba(140, 178, 230, 0.3);
+      transform: scale(1.05);
+    }
+    .category-arrow:before, .category-arrow:after {
+      content: '';
+      position: absolute;
+      background-color: #4a89dc;
+      transition: all 0.3s ease;
+    }
+    .category-arrow:before {
+      width: 10px;
+      height: 2px;
+      left: 5px;
+      top: 9px;
+    }
+    .category-arrow:after {
+      width: 2px;
+      height: 10px;
+      left: 9px;
+      top: 5px;
+    }
+    .category-arrow.collapsed:after {
+      transform: rotate(0);
+    }
+    .category-arrow.expanded:after {
+      transform: rotate(90deg);
+    }
+    .category-link {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      font-size: 1em;
+    }
+    .category-link:hover {
+      background-color: rgba(140, 178, 230, 0.1);
+      transform: translateX(3px);
+    }
+    .category-count {
+      min-width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #a5c2f0;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: 500;
+      border-radius: 15px;
+      margin-left: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+    .category-link:hover .category-count {
+      background-color: #4a89dc;
+      transform: scale(1.05);
+    }
+    .children.collapsed {
+      display: none;
+      max-height: 0;
+      opacity: 0;
+    }
+    .children.expanded {
+      display: block;
+      width: 100%;
+      margin-left: 10px;
+      margin-top: 5px;
+      padding-left: 10px;
+      border-left: 2px solid rgba(140, 178, 230, 0.3);
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const arrows = document.querySelectorAll('.category-arrow');
+      
+      // Initialize all arrows as collapsed
+      arrows.forEach(arrow => {
+        arrow.classList.add('collapsed');
+        arrow.classList.remove('expanded');
+        
+        // Ensure children are collapsed initially
+        const categoryItem = arrow.parentElement;
+        const children = categoryItem.querySelector('.children');
+        if (children) {
+          children.classList.add('collapsed');
+          children.classList.remove('expanded');
+        }
+        
+        // Add click event listener
+        arrow.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Toggle arrow state
+          this.classList.toggle('collapsed');
+          this.classList.toggle('expanded');
+          
+          // Toggle children visibility
+          const categoryItem = this.parentElement;
+          const children = categoryItem.querySelector('.children');
+          if (children) {
+            children.classList.toggle('collapsed');
+            children.classList.toggle('expanded');
+          }
+        });
+      });
+    });
+  </script>
 <% } %>
