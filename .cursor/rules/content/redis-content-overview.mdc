@@ -1,0 +1,64 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Redis 内容概览
+
+本文档提供了博客中 Redis 相关内容的概览和管理指南。
+
+## 内容组织结构
+
+Redis 内容按照以下层次结构组织：
+
+1. **基础知识**
+   - 数据结构（String、List、Hash、Set、Sorted Set等）
+   - 持久化机制（RDB、AOF）
+   - 事务特性
+
+2. **高级特性**
+   - 分布式锁实现
+   - 消息队列应用
+   - 缓存设计与优化（缓存穿透、击穿、雪崩等）
+
+3. **集群架构**
+   - 主从复制
+   - 哨兵模式
+   - 集群模式
+
+## 文章创建流程
+
+1. 确定文章主题及所属分类
+2. 使用模板创建文章：
+   ```bash
+   hexo new post "八股文/REDIS/[分类]/[文章名]"
+   ```
+3. 按照 [Redis文章模板](mdc:hexo-blog/.cursor/rules/content/redis-post-template.mdc) 编写内容
+4. 将文章链接添加到 [Redis知识体系](mdc:hexo-blog/source/_posts/八股文/REDIS/index.md) 索引中
+
+## 图片与资源管理
+
+1. 每篇文章的图片应放置在与文章同名的目录中
+2. 图片命名使用时间戳格式，如 `1746123456789.png`
+3. 代码示例应尽量简洁且包含注释
+
+## 内容质量要求
+
+1. **准确性**：内容必须准确反映 Redis 的特性和最佳实践
+2. **深度**：不只介绍使用方法，还要深入分析原理
+3. **实用性**：提供实际可用的代码示例和应用场景
+4. **结构清晰**：使用合理的标题层级和段落结构
+
+## 内容更新计划
+
+当前优先编写的内容：
+
+1. 核心数据结构（String、List、Hash、Set、Sorted Set）
+2. 缓存设计相关（缓存更新策略、缓存穿透/击穿/雪崩）
+3. 分布式锁实现
+
+## 参考资源
+
+- [Redis官方文档](https://redis.io/documentation)
+- [Redis设计与实现](https://redisbook.readthedocs.io/en/latest/)
+- [Redis开发与运维](https://book.douban.com/subject/26971561/)
