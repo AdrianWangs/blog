@@ -1,6 +1,6 @@
 ---
 title: "❌ LeetCode 543 - 二叉树的直径"
-date: 2025-05-29 10:00:00
+date: 2025-04-29 10:00:00
 categories:
   - 算法刷题
   - LeetCode
@@ -11,7 +11,6 @@ tags:
   - LeetCode
   - ❌错题集
 ---
-
 ## 问题描述
 
 给你一棵二叉树的根节点，返回该树的**直径**。
@@ -46,6 +45,7 @@ tags:
 **输出：** 1
 
 **提示：**
+
 - 树中节点数目在范围 [1, 10^4] 内
 - -100 <= Node.val <= 100
 
@@ -59,10 +59,10 @@ func diameterOfBinaryTree(root *TreeNode) int {
     if root == nil {
         return 0
     }
-    
+  
     leftHeight := maxDepth(root.Left)
     rightHeight := maxDepth(root.Right)
-    
+  
     return leftHeight + rightHeight // 错误：没有与当前已知最大直径做比较
 }
 
@@ -70,7 +70,7 @@ func maxDepth(root *TreeNode) int {
     if root == nil {
         return 0
     }
-    
+  
     return max(maxDepth(root.Left), maxDepth(root.Right)) + 1
 }
 ```
@@ -112,14 +112,14 @@ func dfsDiameterOfBinaryTree(node *TreeNode, res *int) int {
     if node == nil {
         return 0
     }
-    
+  
     // 递归计算左右子树的深度
     leftDepth := dfsDiameterOfBinaryTree(node.Left, res)
     rightDepth := dfsDiameterOfBinaryTree(node.Right, res)
-    
+  
     // 更新全局最大直径（左子树深度 + 右子树深度）
     *res = max(*res, leftDepth + rightDepth)
-    
+  
     // 返回当前节点为根的子树的最大深度
     return max(leftDepth, rightDepth) + 1
 }
@@ -183,4 +183,4 @@ func max(a, b int) int {
 3. **全局变量在递归中的使用**：通过传递指针，在递归过程中维护全局状态。
 4. **问题转化思想**：将直径问题转化为"以每个节点为拐点的最长路径"问题。
 
-这个问题提醒我，在解决树相关问题时，要注意考虑可能的路径是否需要经过根节点，以及如何在递归过程中高效地收集和更新全局信息。 
+这个问题提醒我，在解决树相关问题时，要注意考虑可能的路径是否需要经过根节点，以及如何在递归过程中高效地收集和更新全局信息。
