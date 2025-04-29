@@ -37,3 +37,8 @@ MySQL 是最流行的关系型数据库管理系统之一，本专题整理了�
 ## 优化
 
 *暂无文章，敬请期待* 
+
+
+---
+
+版权声明：本文基于 [小林coding](https://www.xiaolincoding.com/) 的 [MySQL 知识体系](https://www.xiaolincoding.com/mysql/) 整理而成。
