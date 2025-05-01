@@ -55,6 +55,7 @@ comments: false
 - [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存
 
 ### 二叉树
+- [LeetCode 236: 二叉树的最近公共祖先（Lowest Common Ancestor of a Binary Tree）](/2025/04/30/算法刷题/LeetCode-236-二叉树的最近公共祖先/) - 递归、父节点映射和路径比较法解决LCA问题
 - [❌ LeetCode 437: 路径总和 III（Path Sum III）](/2025/04/30/算法刷题/LeetCode-437-路径总和-III/) - 双重递归和前缀和优化对比，详解树路径问题的递归设计
 - [LeetCode 105: 从前序与中序遍历序列构造二叉树（Construct Binary Tree from Preorder and Inorder Traversal）](/2025/04/30/算法刷题/LeetCode-105-从前序与中序遍历序列构造二叉树/) - 递归和哈希表结合重建二叉树的两种优化方法
 - [❌ LeetCode 114: 二叉树展开为链表 (Flatten Binary Tree to Linked List)](/2025/04/29/算法刷题/LeetCode-114-Binary-Tree-Flatten/) - 分析树转链表过程中的指针操作错误
