@@ -27,10 +27,13 @@ tags:
   - 八股文
   - 面试题
   - 相关领域 (e.g., 后端, 前端, 数据库, etc.)
+description: "技术知识点的简要描述，包括核心概念和面试要点（150-200字符）"
 ---
 ```
 
-> **重要提示**: 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
+> **重要提示**: 
+> 1. 务必填写 `description` 字段，简要描述技术知识点的核心概念和面试要点，这对于SEO和文章列表展示很重要。
+> 2. 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
 
 3. Structure your post with these sections:
 

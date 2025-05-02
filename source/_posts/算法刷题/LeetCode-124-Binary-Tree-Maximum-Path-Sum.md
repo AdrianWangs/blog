@@ -11,10 +11,10 @@ tags:
   - Hard
   - LeetCode
   - ❌错题集
----
 
+---
 {% note danger %}
-**重点难题**：本题是二叉树路径问题中的经典难题，需要理解后序遍历与递归返回值的巧妙设计。
+**重点难题**：本题是二叉树路径问题中的经典难题，需要理解后序遍历与递归返true回值的巧妙设计。
 {% endnote %}
 
 ## 问题描述
@@ -48,15 +48,18 @@ tags:
 ## 解题思路
 
 这道题的关键在于理解二叉树中的"路径"概念。路径可以是：
+
 1. 只包含一个节点
 2. 从一个节点向下到其子节点
 3. 从左子树某节点，经过父节点，再到右子树某节点（形成"倒V"形状）
 
 **核心思想**：使用后序遍历（左-右-根）自底向上计算路径和，针对每个节点，我们需要考虑两个关键值：
+
 - **当前节点的贡献值**：节点自身值加上左右子树中较大的贡献值（如果子树贡献为负，则不选取）
 - **经过当前节点的最大路径和**：节点值加上左右子树的贡献值（如为负则视为0）
 
 关键在于区分这两个概念：
+
 - 贡献值用于向上传递给父节点，只能选择一条路径（左或右）
 - 最大路径和用于更新全局最大值，可以同时包含左右路径
 
@@ -75,40 +78,40 @@ tags:
 func maxPathSum(root *TreeNode) int {
     // 初始化最大和为最小整数
     maxSum := math.MinInt32
-    
+  
     // 定义递归函数计算节点的最大贡献值
     var maxGain func(node *TreeNode) int
-    
+  
     maxGain = func(node *TreeNode) int {
         if node == nil {
             return 0
         }
-        
+      
         // 递归计算左右子树的最大贡献值
         leftVal := maxGain(node.Left)
         rightVal := maxGain(node.Right)
-        
+      
         // 如果子树贡献为负，则不选取
         if leftVal < 0 {
             leftVal = 0
         }
-        
+      
         if rightVal < 0 {
             rightVal = 0
         }
-        
+      
         // 计算经过当前节点的路径和，并更新全局最大值
         priceVal := leftVal + rightVal + node.Val
         if priceVal > maxSum {
             maxSum = priceVal
         }
-        
+      
         // 返回节点的最大贡献值（只能选左或右子树中的一条）
         return max(leftVal, rightVal) + node.Val
     }
-    
+  
     maxGain(root)
-    
+  
     return maxSum
 }
 ```
@@ -126,5 +129,6 @@ func maxPathSum(root *TreeNode) int {
 4. **路径选择策略**：对于负贡献值的子树，选择不纳入路径可以获得更大的路径和。
 
 相关问题：
+
 - LeetCode 543: 二叉树的直径
-- LeetCode 687: 最长同值路径 
+- LeetCode 687: 最长同值路径

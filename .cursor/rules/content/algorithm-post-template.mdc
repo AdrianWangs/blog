@@ -27,12 +27,14 @@ tags:
   - 算法类型 (例如：数组, 双指针, 动态规划, 等)
   - 难度 (Easy/Medium/Hard)
   - LeetCode
+description: "算法题解的简要描述，包括核心思路和关键技术点（150-200字符）"
 ---
 ```
 
 > **重要提示**: 
 > 1. 请确保始终包含 LeetCode 标签和难度标签 (Easy/Medium/Hard)，这对于文章分类和检索非常重要。
-> 2. 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
+> 2. 务必填写 `description` 字段，简要描述算法的核心思路和解题方法，这对于SEO和文章列表展示很重要。
+> 3. 使用 time-mcp 工具获取当前时间，确保时间戳准确。参见 [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) 规则。
 
 3. 按照以下增强结构组织你的文章：
 

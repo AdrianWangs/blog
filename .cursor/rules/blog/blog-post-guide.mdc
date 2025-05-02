@@ -19,8 +19,12 @@ categories:
 tags:
   - Tag1
   - Tag2
+description: "A concise summary of the post content (150-200 characters)"
 ---
 ```
+
+### Required Fields
+All posts **must** include the `description` field in the front matter. This is used for SEO purposes and for providing summaries on index pages. The description should be a concise summary of the post's content, ideally between 150-200 characters.
 
 ### Publication Date Requirement
 When creating a new post, the publication date (`date` field in front matter) must be set to the current network time rather than local system time to ensure consistency across all posts.
