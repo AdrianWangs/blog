@@ -10,7 +10,6 @@ tags:
   - 工具集成
   - AI架构
 ---
-
 # Model Context Protocol (MCP) 介绍
 
 ## 为什么我们需要MCP
@@ -30,6 +29,7 @@ Model Context Protocol (MCP)正是为解决这些问题而诞生的技术标准�
 Model Context Protocol (MCP) 是一种用于构建LLM（大型语言模型）应用程序的客户端-服务器架构协议，它允许AI模型与外部数据源和工具进行交互。
 
 > **名词解释**：
+>
 > - **客户端-服务器架构**：一种计算模型，其中一个程序(客户端)请求服务，另一个程序(服务器)提供服务。就像餐厅中顾客(客户端)点餐，厨房(服务器)准备食物。
 > - **协议**：一套规则，定义了系统间如何交换信息。类似于人们交流的语言和礼仪规范。
 > - **API(应用程序接口)**：软件组件之间的连接点，允许不同程序相互通信。就像电源插座是电器与电网的接口。
@@ -49,6 +49,7 @@ MCP的核心思想是通过标准化的协议，让语言模型能够安全、�
 **问题**：王先生有大量存储在本地电脑上的工作文档，他想让AI助手帮忙整理和总结，但又担心文档内容上传到云端会有安全风险。
 
 **MCP解决方案**：
+
 1. 王先生在电脑上安装了支持MCP的Claude Desktop应用和文件系统MCP服务器
 2. 当他询问"帮我总结所有2025年第一季度的会议记录"时
 3. Claude会通过MCP服务器安全地搜索本地文件系统
@@ -62,6 +63,7 @@ MCP的核心思想是通过标准化的协议，让语言模型能够安全、�
 **问题**：张女士是一名软件开发人员，使用AI助手编写代码，但发现AI无法访问她的本地代码库、运行测试或执行Git操作。
 
 **MCP解决方案**：
+
 1. 张女士在IDE中使用支持MCP的AI编码助手
 2. IDE运行多个MCP服务器，分别处理代码访问、测试运行和版本控制
 3. 当张女士要求"根据单元测试结果修复这个bug"时
@@ -105,7 +107,7 @@ flowchart LR
         S3["MCP服务器 C"]
         D1[("本地\n数据源 A")]
         D2[("本地\n数据源 B")]
-        
+      
         Host --- Client
         Client <-->|"请求/响应"| S1
         Client <-->|"请求/响应"| S2
@@ -113,11 +115,11 @@ flowchart LR
         S1 <-->|"数据访问"| D1
         S2 <-->|"数据访问"| D2
     end
-    
+  
     subgraph "互联网"
         S3 <-->|"API调用"| D3[("远程\n服务 C")]
     end
-    
+  
     User((用户)) -->|"交互"| Host
     LLM[/"大型语言模型\n(如Claude)"/] <-->|"请求/响应"| Host
 ```
@@ -134,18 +136,18 @@ sequenceDiagram
     participant Client as MCP客户端
     participant Server as MCP服务器
     participant DataSource as 数据源
-    
+  
     User->>Host: 提出请求
     Host->>LLM: 转发用户请求
     LLM-->>Host: 需要访问外部资源
-    
+  
     Host->>Client: 资源请求
     Client->>Server: 发送MCP请求
     Server->>DataSource: 数据访问
     DataSource-->>Server: 返回数据
     Server-->>Client: MCP响应
     Client-->>Host: 返回资源
-    
+  
     Host->>LLM: 提供资源
     LLM-->>Host: 基于资源的响应
     Host->>User: 显示结果
@@ -163,24 +165,24 @@ classDiagram
         +Metadata metadata
         +request(parameters)
     }
-    
+  
     class FileResource {
         +String path
         +readContent()
         +writeContent(data)
     }
-    
+  
     class DatabaseResource {
         +String connectionString
         +query(sql)
         +update(sql)
     }
-    
+  
     class APIResource {
         +String endpoint
         +call(parameters)
     }
-    
+  
     Resource <|-- FileResource
     Resource <|-- DatabaseResource
     Resource <|-- APIResource
@@ -206,11 +208,11 @@ sequenceDiagram
     participant App as 应用程序
     participant LLM as 语言模型
     participant Functions as 函数库
-    
+  
     User->>App: 提出请求
     App->>LLM: 请求(包含函数定义)
     Note over App,LLM: 函数定义占用上下文空间
-    
+  
     LLM->>App: 函数调用JSON
     App->>Functions: 执行函数
     Functions->>App: 返回结果
@@ -240,10 +242,10 @@ sequenceDiagram
     participant ServerB as MCP服务器B
     participant DataA as 数据源A
     participant DataB as 数据源B
-    
+  
     User->>Host: 提出请求
     Host->>LLM: 转发请求
-    
+  
     LLM->>Host: 需要资源A
     Host->>Client: 请求资源A
     Client->>ServerA: MCP请求
@@ -252,7 +254,7 @@ sequenceDiagram
     ServerA-->>Client: MCP响应
     Client-->>Host: 返回资源A
     Host->>LLM: 提供资源A
-    
+  
     LLM->>Host: 需要资源B
     Host->>Client: 请求资源B
     Client->>ServerB: MCP请求
@@ -261,7 +263,7 @@ sequenceDiagram
     ServerB-->>Client: MCP响应
     Client-->>Host: 返回资源B
     Host->>LLM: 提供资源B
-    
+  
     LLM->>Host: 生成最终响应
     Host->>User: 显示结果
 ```
@@ -341,4 +343,4 @@ MCP正在形成活跃的开发者社区：
 
 Model Context Protocol (MCP) 代表了LLM工具集成的一种新方向，它通过标准化、分布式架构解决了许多传统方法的限制。通过将功能拆分到专用服务器，同时保持统一的协议接口，MCP为构建更强大、更安全、更灵活的AI应用程序提供了坚实的基础。
 
-MCP的出现标志着AI工具集成从简单的函数调用向成熟的分布式系统架构演进，为构建下一代AI应用提供了更完善的基础设施支持。随着LLM继续融入各种应用程序和工作流程，MCP这样的标准将变得越来越重要，它使开发人员能够在保持数据安全的同时，充分发挥语言模型的潜力。	
+MCP的出现标志着AI工具集成从简单的函数调用向成熟的分布式系统架构演进，为构建下一代AI应用提供了更完善的基础设施支持。随着LLM继续融入各种应用程序和工作流程，MCP这样的标准将变得越来越重要，它使开发人员能够在保持数据安全的同时，充分发挥语言模型的潜力。

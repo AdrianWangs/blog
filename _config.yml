@@ -63,7 +63,7 @@ search:
   field: post
   content: true
   format: html
-theme: vivia
+theme: next
 deploy:
   type: git
   repo: git@github.com:AdrianWangs/AdrianWangs.github.io.git
