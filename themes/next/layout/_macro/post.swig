@@ -191,21 +191,27 @@
         {% elif post.excerpt %}
           {{ post.excerpt }}
           <!--noindex-->
-          {%- if theme.read_more_btn %}
-            <div class="post-button">
-              <a class="btn" href="{{ url_for(post.path) }}#more" rel="contents">
-                {{ __('post.read_more') }} &raquo;
-              </a>
-            </div>
-          {%- endif %}
+          
           <!--/noindex-->
         {% else %}
-          {{ post.content }}
+          <div class="post-excerpt">
+            {{ post.content | striptags | truncate(5000, '...') }}
+          </div>
+        {%- endif %}
+        {%- if theme.read_more_btn %}
+          <div class="post-button">
+            <a class="btn" href="{{ url_for(post.path) }}#more" rel="contents">
+              {{ __('post.read_more') }} &raquo;
+            </a>
+          </div>
         {%- endif %}
       {% else %}
         {{ post.content }}
       {%- endif %}
+      
     </div>
+
+    
 
     {#####################}
     {### END POST BODY ###}

@@ -45,3 +45,13 @@ for $inject_mixin in hexo-config('injects.mixin')
 // --------------------------------------------------
 for $inject_style in hexo-config('injects.style')
   @import $inject_style;
+
+
+.post-excerpt {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important; /* 显示3行，超出部分省略号 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  word-break: break-all !important;
+}
