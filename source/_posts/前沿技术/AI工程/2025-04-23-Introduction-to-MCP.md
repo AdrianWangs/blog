@@ -9,6 +9,7 @@ tags:
   - LLM
   - 工具集成
   - AI架构
+hidden: true
 ---
 # Model Context Protocol (MCP) 介绍
 
@@ -100,14 +101,14 @@ MCP采用客户端-服务器架构，其中：
 ```mermaid
 flowchart LR
     subgraph "本地环境"
-        Host["主机应用\n(如Claude Desktop)"]
+        Host["主机应用(如Claude Desktop)"]
         Client["MCP客户端"]
         S1["MCP服务器 A"]
         S2["MCP服务器 B"]
         S3["MCP服务器 C"]
-        D1[("本地\n数据源 A")]
-        D2[("本地\n数据源 B")]
-      
+        D1[("本地数据源 A")]
+        D2[("本地数据源 B")]
+  
         Host --- Client
         Client <-->|"请求/响应"| S1
         Client <-->|"请求/响应"| S2
@@ -117,11 +118,13 @@ flowchart LR
     end
   
     subgraph "互联网"
-        S3 <-->|"API调用"| D3[("远程\n服务 C")]
+        S3 <-->|"API调用"| D3[("远程服务 C")]
     end
   
     User((用户)) -->|"交互"| Host
-    LLM[/"大型语言模型\n(如Claude)"/] <-->|"请求/响应"| Host
+    LLM["大型语言模型(如Claude)"]
+    LLM <-->|"请求/响应"| Host
+
 ```
 
 ## MCP通信流程
