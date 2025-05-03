@@ -55,6 +55,7 @@ comments: false
 - [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的LRU缓存
 
 ### 二叉树
+
 - [❌ LeetCode 124: 二叉树中的最大路径和（Binary Tree Maximum Path Sum）](/2025/05/02/算法刷题/LeetCode-124-Binary-Tree-Maximum-Path-Sum/) - 后序遍历与递归返回值设计解决树路径问题
 - [LeetCode 236: 二叉树的最近公共祖先（Lowest Common Ancestor of a Binary Tree）](/2025/04/30/算法刷题/LeetCode-236-二叉树的最近公共祖先/) - 递归、父节点映射和路径比较法解决LCA问题
 - [❌ LeetCode 437: 路径总和 III（Path Sum III）](/2025/04/30/算法刷题/LeetCode-437-路径总和-III/) - 双重递归和前缀和优化对比，详解树路径问题的递归设计
@@ -64,3 +65,7 @@ comments: false
 - [LeetCode 101: Symmetric Tree](/2025/04/28/算法刷题/LeetCode-101-Symmetric-Tree) - 使用递归和迭代方法判断二叉树是否对称
 - [❌ LeetCode 98: 验证二叉搜索树（Validate Binary Search Tree）](/2025/04/29/算法刷题/LeetCode-98-validate-binary-search-tree/) - 分析二叉搜索树验证中的比较运算符错误
 - [❌ LeetCode 543: 二叉树的直径（Binary Tree Diameter）](/2025/05/29/算法刷题/LeetCode-543-Binary-Tree-Diameter/) - 在DFS计算树深度的同时维护全局最大直径
+
+### 图
+
+- [LeetCode 207: 课程表（Course Schedule）](/2025/05/03/算法刷题/LeetCode-207-课程表/) - 使用BFS拓扑排序和DFS检测环两种方法解决课程依赖问题
