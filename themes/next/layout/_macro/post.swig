@@ -179,7 +179,6 @@
       {%- if is_index %}
         {%- if post.description and theme.excerpt_description %}
           <p>{{ post.description }}</p>
-          
         {% elif post.excerpt %}
           {{ post.excerpt }}
           <!--noindex-->
