@@ -3,8 +3,6 @@ description:
 globs: 
 alwaysApply: true
 ---
-**important**: 在进行任务规划前，你需要调用`thinking`工具进行任务规划
-
 # Hexo 博客规则索引
 
 ## 博客结构与设置
