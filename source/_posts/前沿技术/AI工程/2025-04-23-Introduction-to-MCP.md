@@ -9,7 +9,6 @@ tags:
   - LLM
   - 工具集成
   - AI架构
-hidden: true
 ---
 # Model Context Protocol (MCP) 介绍
 
@@ -98,34 +97,7 @@ MCP采用客户端-服务器架构，其中：
 
 这种架构可以通过以下Mermaid图表表示：
 
-```mermaid
-flowchart LR
-    subgraph "本地环境"
-        Host["主机应用(如Claude Desktop)"]
-        Client["MCP客户端"]
-        S1["MCP服务器 A"]
-        S2["MCP服务器 B"]
-        S3["MCP服务器 C"]
-        D1[("本地数据源 A")]
-        D2[("本地数据源 B")]
-  
-        Host --- Client
-        Client <-->|"请求/响应"| S1
-        Client <-->|"请求/响应"| S2
-        Client <-->|"请求/响应"| S3
-        S1 <-->|"数据访问"| D1
-        S2 <-->|"数据访问"| D2
-    end
-  
-    subgraph "互联网"
-        S3 <-->|"API调用"| D3[("远程服务 C")]
-    end
-  
-    User((用户)) -->|"交互"| Host
-    LLM["大型语言模型(如Claude)"]
-    LLM <-->|"请求/响应"| Host
 
-```
 
 ## MCP通信流程
 
@@ -347,3 +319,4 @@ MCP正在形成活跃的开发者社区：
 Model Context Protocol (MCP) 代表了LLM工具集成的一种新方向，它通过标准化、分布式架构解决了许多传统方法的限制。通过将功能拆分到专用服务器，同时保持统一的协议接口，MCP为构建更强大、更安全、更灵活的AI应用程序提供了坚实的基础。
 
 MCP的出现标志着AI工具集成从简单的函数调用向成熟的分布式系统架构演进，为构建下一代AI应用提供了更完善的基础设施支持。随着LLM继续融入各种应用程序和工作流程，MCP这样的标准将变得越来越重要，它使开发人员能够在保持数据安全的同时，充分发挥语言模型的潜力。
+言模型的潜力。
