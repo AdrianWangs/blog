@@ -28,6 +28,10 @@ comments: false
 - [❌ LeetCode 25: K 个一组翻转链表（Reverse Nodes in k-Group）](/2025/04/24/算法刷题/LeetCode-25-Reverse-Nodes-in-k-Group/) - 分析了循环终止条件中的微妙错误
 - [❌ LeetCode 138: 随机链表的复制](/2025/04/25/LeetCode-138-Copy-List-with-Random-Pointer/) - 链表深拷贝，处理random指针
 
+### 回溯
+
+- [❌ LeetCode 46: 全排列（Permutations）错误分析](/2025/05/05/算法刷题/LeetCode-46-全排列-错误分析/) - 分析在Go语言实现全排列时的切片复制误区
+
 ### 数组操作
 
 - [LeetCode 48: 旋转图像（Rotate Image）](/2025/04/19/算法刷题/LeetCode-48-Rotate-Image/) - 矩阵顺时针旋转 90 度的高效实现
