@@ -22,7 +22,7 @@
     "hexo-asset-image": "github:xcodebuild/hexo-asset-image",
     "hexo-butterfly-git-gitcalendar": "^1.1.0",
     "hexo-deployer-git": "^4.0.0",
-    "hexo-filter-mermaid-diagrams": "^1.0.5",
+    "hexo-filter-mermaid-diagrams": "github:AdrianWangs/hexo-filter-mermaid-diagrams",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index-pin-top": "^0.2.2",
