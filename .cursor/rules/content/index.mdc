@@ -28,3 +28,9 @@ alwaysApply: false
 - [Redis目录](mdc:hexo-blog/hexo-blog/.cursor/rules/content/redis-directory.mdc) - Redis文章目录结构
 - [Redis文章模板](mdc:hexo-blog/hexo-blog/.cursor/rules/content/redis-post-template.mdc) - Redis文章模板
 - [Redis内容概览](mdc:hexo-blog/hexo-blog/.cursor/rules/content/redis-content-overview.mdc) - Redis内容概览与管理
+
+## 系统设计文章规则
+
+- [系统设计目录](mdc:hexo-blog/hexo-blog/.cursor/rules/content/system-design-directory.mdc) - 系统设计文章目录结构
+- [系统设计文章模板](mdc:hexo-blog/hexo-blog/.cursor/rules/content/system-design-post-template.mdc) - 系统设计文章模板
+- [幂等性文章模板](mdc:hexo-blog/hexo-blog/.cursor/rules/content/idempotency-article-template.mdc) - 幂等性相关文章的专用模板
