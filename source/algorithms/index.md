@@ -77,3 +77,7 @@ comments: false
 ### 图
 
 - [LeetCode 207: 课程表（Course Schedule）](/2025/05/03/算法刷题/LeetCode-207-课程表/) - 使用BFS拓扑排序和DFS检测环两种方法解决课程依赖问题
+
+### 动态规划
+
+- [❌ LeetCode 790: 多米诺和托米诺平铺（Domino and Tromino Tiling）](/2025/05/06/算法刷题/LeetCode-790-多米诺和托米诺平铺/) - 状态定义与转移方程解决瓷砖平铺的组合计数问题
