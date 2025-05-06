@@ -14,6 +14,7 @@ alwaysApply: true
 - [博客文章指南](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/blog/blog-post-guide.mdc) - 创建博客文章的基本指南
 - [部署指南](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/development/deployment-guide.mdc) - 博客部署方式
 - [Git 工作流](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/development/git-workflow.mdc) - 管理博客的 Git 命令
+- [任务管理](mdc:.cursor/rules/development/task-management.mdc) - 任务管理和跟踪指南
 
 ## 内容创建指南
 - [通用文章模板](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/content/generic-article-template.mdc) - 通用博客文章模板
@@ -38,3 +39,4 @@ alwaysApply: true
 - [Hexo 配置](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/_config.yml) - 主 Hexo 配置文件
 - [Vivia 主题配置](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/_config.vivia.yml) - 主题特定配置
 - [Package.json](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/package.json) - NPM 依赖和脚本
+- [任务列表](mdc:task.md) - 博客开发与内容任务管理
