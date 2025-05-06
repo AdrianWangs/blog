@@ -32,7 +32,9 @@ thumbnail: "/images/path-to-thumbnail.jpg" # Optional
 ---
 ```
 
-> **Important**: Always use the time-mcp tools to get the current date and time for the `date` field. Refer to the [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) rule for details.
+> **Important**: 
+> 1. Always use the time-mcp tools to get the current date and time for the `date` field. Refer to the [Time Tools Usage](mdc:hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) rule for details.
+> 2. If your article includes mathematical formulas, follow the [Math Formulas Guide](mdc:hexo-blog/.cursor/rules/content/math-formula-guide.mdc) for proper formatting.
 
 3. Structure your post with these sections:
 
@@ -48,6 +50,15 @@ thumbnail: "/images/path-to-thumbnail.jpg" # Optional
    - Include images, code snippets, or diagrams where helpful
    - Use bullet points or numbered lists for easy reading
    - Include real-world examples or case studies
+   - For mathematical concepts, use proper formula formatting:
+     ```markdown
+     内联公式示例: $y = mx + b$ 表示一条直线
+     
+     块级公式示例:
+     $$
+     E = mc^2
+     $$
+     ```
 
    ### Conclusion
    - Summarize key points
@@ -66,6 +77,7 @@ thumbnail: "/images/path-to-thumbnail.jpg" # Optional
    - Include at least one relevant image
    - Use bold and italics for emphasis, but sparingly
    - Preview the article to check formatting before publishing
+   - For mathematical content, ensure formulas are properly rendered using the guidelines in the [Math Formulas Guide](mdc:hexo-blog/.cursor/rules/content/math-formula-guide.mdc)
 
 ## Example Template Structure
 

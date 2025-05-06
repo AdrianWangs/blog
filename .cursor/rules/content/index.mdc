@@ -11,6 +11,7 @@ alwaysApply: false
 
 - [通用文章模板](mdc:hexo-blog/hexo-blog/.cursor/rules/content/generic-article-template.mdc) - 用于一般博客文章的模板
 - [时间工具使用指南](mdc:hexo-blog/hexo-blog/.cursor/rules/blog/time-tools-usage.mdc) - 如何在文章中使用时间工具
+- [数学公式展示指南](mdc:hexo-blog/hexo-blog/.cursor/rules/content/math-formula-guide.mdc) - 如何在文章中规范使用数学公式
 
 ## 算法文章规则
 
