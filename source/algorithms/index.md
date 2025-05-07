@@ -30,6 +30,7 @@ comments: false
 
 ### 回溯
 
+- [❌ LeetCode 131: 分割回文串（Palindrome Partitioning）](/2025/05/06/算法刷题/LeetCode-131-分割回文串/) - 动态规划预处理和记忆化搜索两种方法解决分割回文串问题
 - [LeetCode 22: 括号生成（Generate Parentheses）](/2025/05/06/算法刷题/LeetCode-22-括号生成/) - 回溯法和动态规划解决括号生成问题详解
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比
 - [❌ LeetCode 46: 全排列（Permutations）错误分析](/2025/05/05/算法刷题/LeetCode-46-全排列-错误分析/) - 分析在Go语言实现全排列时的切片复制误区
@@ -82,6 +83,7 @@ comments: false
 
 ### 动态规划
 
+- [❌ LeetCode 131: 分割回文串（Palindrome Partitioning）](/2025/05/06/算法刷题/LeetCode-131-分割回文串/) - 动态规划预处理和记忆化搜索两种方法解决分割回文串问题
 - [LeetCode 22: 括号生成（Generate Parentheses）](/2025/05/06/算法刷题/LeetCode-22-括号生成/) - 回溯法和动态规划解决括号生成问题详解
 - [❌ LeetCode 790: 多米诺和托米诺平铺（Domino and Tromino Tiling）](/2025/05/06/算法刷题/LeetCode-790-多米诺和托米诺平铺/) - 状态定义与转移方程解决瓷砖平铺的组合计数问题
 
