@@ -12,7 +12,6 @@ tags:
   - LeetCode
 description: "本文详细讲解了LeetCode第22题括号生成问题的解决方案，通过回溯算法（深度优先搜索）和动态规划两种方法，生成所有可能的有效括号组合。"
 ---
-
 ## 问题描述
 
 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且**有效的**括号组合。
@@ -20,18 +19,21 @@ description: "本文详细讲解了LeetCode第22题括号生成问题的解决�
 ### 示例：
 
 **示例 1：**
+
 ```
 输入：n = 3
 输出：["((()))","(()())","(())()","()(())","()()()"]
 ```
 
 **示例 2：**
+
 ```
 输入：n = 1
 输出：["()"]
 ```
 
 ### 提示：
+
 - 1 <= n <= 8
 
 ## 解题思路
@@ -73,7 +75,9 @@ description: "本文详细讲解了LeetCode第22题括号生成问题的解决�
 
 具体来说，我们可以通过以下公式来生成 `dp[n]`：
 
-$$dp[n] = \sum_{i=0}^{n-1} "(" + dp[i] + ")" + dp[n-1-i]$$
+$$
+dp[n] = \sum_{i=0}^{n-1} (dp[i]) + dp[n-1-i]
+$$
 
 其中 i 表示左括号内部包含的括号对数，n-1-i 表示右括号后面的括号对数。
 
@@ -86,7 +90,7 @@ func generateParenthesis(n int) []string {
     result := []string{}
     // 创建一个临时数组来存储当前构建的括号字符串
     tmpArray := make([]byte, 2*n)
-    
+  
     // 定义 DFS 函数
     var dfs func(index, left, right int)
     dfs = func(index, left, right int) {
@@ -95,23 +99,23 @@ func generateParenthesis(n int) []string {
             result = append(result, string(tmpArray))
             return
         }
-        
+      
         // 如果左括号数量小于 n，可以放置左括号
         if left < n {
             tmpArray[index] = '('
             dfs(index+1, left+1, right)
         }
-        
+      
         // 如果右括号数量小于左括号数量，可以放置右括号
         if right < left {
             tmpArray[index] = ')'
             dfs(index+1, left, right+1)
         }
     }
-    
+  
     // 从第一个位置、零个左右括号开始 DFS
     dfs(0, 0, 0)
-    
+  
     return result
 }
 ```
@@ -123,11 +127,11 @@ func generateParenthesis(n int) []string {
     if n == 0 {
         return []string{""}
     }
-    
+  
     // dp[i] 表示 i 对括号的所有有效组合
     dp := make([][]string, n+1)
     dp[0] = []string{""}
-    
+  
     for i := 1; i <= n; i++ {
         dp[i] = []string{}
         for j := 0; j < i; j++ {
@@ -140,7 +144,7 @@ func generateParenthesis(n int) []string {
             }
         }
     }
-    
+  
     return dp[n]
 }
 ```
@@ -162,21 +166,23 @@ func generateParenthesis(n int) []string {
 
 ## 方法比较
 
-| 方面       | 回溯算法（DFS）     | 动态规划               |
-| ---------- | ------------------- | ---------------------- |
-| 时间复杂度 | O(4^n / sqrt(n))   | O(4^n / n^(3/2))      |
-| 空间复杂度 | O(n)               | O(4^n / n^(3/2))      |
-| 优点       | 直观，易于理解      | 避免重复计算           |
-| 缺点       | 可能有重复计算      | 需要额外的存储空间     |
-| 推荐度     | ★★★★★               | ★★★☆☆                  |
+| 方面       | 回溯算法（DFS）             | 动态规划           |
+| ---------- | --------------------------- | ------------------ |
+| 时间复杂度 | $O(\frac{4^n}{\sqrt(n)})$ | $O(\frac{4^n}{n^{3/2}})$   |
+| 空间复杂度 | O(n)                        | $O(\frac{4^n}{n^{3/2}})$   |
+| 优点       | 直观，易于理解              | 避免重复计算       |
+| 缺点       | 可能有重复计算              | 需要额外的存储空间 |
+| 推荐度     | ★★★★★                  | ★★★☆☆         |
 
 ## 复杂度分析
 
 ### 回溯算法（DFS）
+
 - **时间复杂度**：$O(\frac{4^n}{\sqrt{n}})$，这是第 n 个卡特兰数的近似值，表示长度为 2n 的合法括号序列的数量。
 - **空间复杂度**：$O(n)$，递归的深度最多为 2n，而我们需要一个长度为 2n 的数组来存储当前构建的括号字符串。
 
 ### 动态规划
+
 - **时间复杂度**：$O(\frac{4^n}{n^{3/2}})$，同样是卡特兰数的近似值。
 - **空间复杂度**：$O(\frac{4^n}{n^{3/2}})$，需要存储所有中间结果。
 
@@ -188,6 +194,7 @@ func generateParenthesis(n int) []string {
 4. 这个问题是**卡特兰数**在计算机科学中的一个应用实例，卡特兰数描述了许多组合问题中的计数。
 
 相关问题：
+
 - LeetCode 20: 有效的括号
 - LeetCode 32: 最长有效括号
-- LeetCode 301: 删除无效的括号 
+- LeetCode 301: 删除无效的括号
