@@ -30,6 +30,8 @@ comments: false
 
 ### 回溯
 
+- [LeetCode 52: N皇后 II（N-Queens II）](/2025/05/07/算法刷题/LeetCode-52-N皇后-II/) - 使用位运算优化N皇后问题的空间复杂度，求解方案数量
+- [LeetCode 51: N皇后（N-Queens）](/2025/05/07/算法刷题/LeetCode-51-N皇后/) - 利用回溯算法和对角线数学特性高效求解N皇后问题
 - [❌ LeetCode 131: 分割回文串（Palindrome Partitioning）](/2025/05/06/算法刷题/LeetCode-131-分割回文串/) - 动态规划预处理和记忆化搜索两种方法解决分割回文串问题
 - [LeetCode 22: 括号生成（Generate Parentheses）](/2025/05/06/算法刷题/LeetCode-22-括号生成/) - 回溯法和动态规划解决括号生成问题详解
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比
@@ -89,4 +91,5 @@ comments: false
 
 ### 位运算
 
+- [LeetCode 52: N皇后 II（N-Queens II）](/2025/05/07/算法刷题/LeetCode-52-N皇后-II/) - 使用位运算优化N皇后问题的空间复杂度，求解方案数量
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比

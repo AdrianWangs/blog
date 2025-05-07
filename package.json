@@ -31,7 +31,7 @@
     "hexo-graph": "^1.0.13",
     "hexo-hide-posts": "^0.4.3",
     "hexo-related-popular-posts": "^5.0.1",
-    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-symbols-count-time": "^0.7.1",
