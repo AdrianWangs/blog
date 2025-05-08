@@ -56,6 +56,7 @@ comments: false
 
 ### 二分查找
 
+- [❌ LeetCode 33: 搜索旋转排序数组（Search in Rotated Sorted Array）](/2025/05/08/算法刷题/LeetCode-33-搜索旋转排序数组-错误分析/) - 分析旋转排序数组中查找旋转点的错误及其优雅解法
 - [❌ LeetCode 74: 搜索二维矩阵（Search a 2D Matrix）](/2025/05/08/算法刷题/LeetCode-74-搜索二维矩阵-错误分析/) - 分析二分查找在矩阵搜索中的边界条件处理错误
 - [LeetCode 35: 搜索插入位置（Search Insert Position）](/2025/05/08/算法刷题/LeetCode-35-搜索插入位置/) - Go语言中二分搜索函数全解析与应用场景详解
 - [LeetCode 240: 搜索二维矩阵 II（Search a 2D Matrix II）](/2025/04/20/算法刷题/LeetCode-240-Search-a-2D-Matrix-II/) - 角落搜索法、二分查找法和分治法三种解法比较
