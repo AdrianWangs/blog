@@ -56,6 +56,7 @@ comments: false
 
 ### 二分查找
 
+- [LeetCode 35: 搜索插入位置（Search Insert Position）](/2025/05/08/算法刷题/LeetCode-35-搜索插入位置/) - Go语言中二分搜索函数全解析与应用场景详解
 - [LeetCode 240: 搜索二维矩阵 II（Search a 2D Matrix II）](/2025/04/20/算法刷题/LeetCode-240-Search-a-2D-Matrix-II/) - 角落搜索法、二分查找法和分治法三种解法比较
 - [LeetCode 2563: 统计公平数对的数目（Count the Number of Fair Pairs）](/2025/04/20/算法刷题/LeetCode-2563-统计公平数对的数目/) - 利用排序和二分查找高效计算满足条件的数对
 
