@@ -96,5 +96,6 @@ comments: true
 
 ### 位运算
 
+- [LeetCode 136: 只出现一次的数字（Single Number）](/2025/05/10/算法刷题/LeetCode-136-只出现一次的数字/) - 使用异或运算解决的数组元素查找问题，详解位运算特性
 - [LeetCode 52: N皇后 II（N-Queens II）](/2025/05/07/算法刷题/LeetCode-52-N皇后-II/) - 使用位运算优化N皇后问题的空间复杂度，求解方案数量
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比
