@@ -39,6 +39,7 @@ comments: true
 
 ### 数组操作
 
+- [LeetCode 169: 多数元素（Majority Element）](/2025/05/10/算法刷题/LeetCode-169-多数元素/) - 使用摩尔投票算法高效找出数组中的多数元素
 - [LeetCode 48: 旋转图像（Rotate Image）](/2025/04/19/算法刷题/LeetCode-48-Rotate-Image/) - 矩阵顺时针旋转 90 度的高效实现
 - [LeetCode 54: 螺旋矩阵（Spiral Matrix）](/2025/04/19/算法刷题/LeetCode-54-Spiral-Matrix/) - ❌ 螺旋顺序遍历矩阵的解题思路与错误分析
 - [LeetCode 73: 矩阵置零（Matrix Zeroes）](/2025/04/19/算法刷题/LeetCode-73-matrix-zeroes/) - ❌ 原地算法实现矩阵置零的多种方法
@@ -99,3 +100,9 @@ comments: true
 - [LeetCode 136: 只出现一次的数字（Single Number）](/2025/05/10/算法刷题/LeetCode-136-只出现一次的数字/) - 使用异或运算解决的数组元素查找问题，详解位运算特性
 - [LeetCode 52: N皇后 II（N-Queens II）](/2025/05/07/算法刷题/LeetCode-52-N皇后-II/) - 使用位运算优化N皇后问题的空间复杂度，求解方案数量
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比
+
+### 分治算法
+
+- [LeetCode 169: 多数元素（Majority Element）](/2025/05/10/算法刷题/LeetCode-169-多数元素/) - 使用摩尔投票算法高效找出数组中的多数元素
+- [LeetCode 240: 搜索二维矩阵 II（Search a 2D Matrix II）](/2025/04/20/算法刷题/LeetCode-240-Search-a-2D-Matrix-II/) - 角落搜索法、二分查找法和分治法三种解法比较
+- [LeetCode 4: 寻找两个正序数组的中位数（Median of Two Sorted Arrays）](/2025/05/11/算法刷题/LeetCode-4-寻找两个正序数组的中位数/) - 深入理解二分思想解决两个有序数组中位数问题
