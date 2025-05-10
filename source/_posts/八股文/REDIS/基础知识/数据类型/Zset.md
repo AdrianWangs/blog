@@ -1,24 +1,23 @@
 ---
-title: "Redis 数据结构：Zset (有序集合) 深度解析与实战"
+title: "Redis 数据类型：Zset (有序集合) 深度解析与实战"
 date: "2025-05-10 23:15:52"
 categories:
   - 八股文
   - REDIS
   - 基础知识
-  - 数据结构
+  - 数据类型
 tags:
   - Redis
   - Zset
   - Sorted Set
   - 有序集合
   - 排行榜
-  - 数据结构
+  - 数据类型
   - 跳表
   - 压缩列表
   - listpack
 description: "全面解析 Redis Zset (有序集合) 的内部实现、核心命令及排行榜、电话/姓名排序等经典应用场景。助你深入理解 Zset 并灵活运用于实际项目中。"
 ---
-
 ## Zset
 
 ### 介绍
@@ -34,6 +33,7 @@ description: "全面解析 Redis Zset (有序集合) 的内部实现、核心命
 Zset 如何做到既能存储唯一元素又能排序呢？Redis 在底层使用了两种精巧的数据结构：**跳表 (Skip List)** 和 **列表打包 (Listpack)**。
 
 简单来说：
+
 - 当你的 Zset 元素不多（默认小于128个），并且每个元素的值也不大（默认小于64字节）时，Redis 会优先使用 **listpack**。它是一种更紧凑的存储方式，非常节省内存。
 - 而当 Zset 元素增多，或者元素值较大，不满足上述条件时，Redis 则会切换到 **跳表**。跳表是一种非常高效的动态排序数据结构，可以快速进行添加、删除和查找操作，其平均时间复杂度接近 O(logN)。
 
@@ -69,7 +69,7 @@ ZINCRBY key increment member
 # ZREM key member [member...]
 # 解释：从名为 key 的有序集合中删除一个或多个指定的元素 member。
 # 示例：ZREM myzset "apple"
-ZREM key member [member...]                 
+ZREM key member [member...]               
 
 # ZCARD key 
 # 解释：获取名为 key 的有序集合中的元素总数 (Cardinality)。
@@ -277,6 +277,7 @@ Zset 类型（Sorted Set，有序集合）可以根据元素的权重来排序�
 *2、姓名排序*
 
 同样，将姓名作为 member 存入 Zset，分数统一设为 0：
+
 ```shell
 > zadd names 0 Toumas 0 Jake 0 Bluetuo 0 Gaodeng 0 Aimini 0 Aidehua 
 (integer) 6

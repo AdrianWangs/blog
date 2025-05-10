@@ -1,20 +1,19 @@
 ---
-title: "Redis 数据结构：Hash详解"
+title: "Redis 数据类型：Hash详解"
 date: 2025-05-10 23:02:07
 categories:
   - 八股文
   - REDIS
   - 基础知识
-  - 数据结构
+  - 数据类型
 tags:
   - Redis
   - Hash
-  - 数据结构
+  - 数据类型
   - 缓存
   - 八股文
-description: "深入解析 Redis 的 Hash 数据结构，包括其内部实现（压缩列表/哈希表及 listpack 的演进）、常用命令以及在缓存对象和购物车等场景中的应用。"
+description: "深入解析 Redis 的 Hash 数据类型，包括其内部实现（压缩列表/哈希表及 listpack 的演进）、常用命令以及在缓存对象和购物车等场景中的应用。"
 ---
-
 ## 一、Hash 类型简介
 
 Redis 中的 Hash 类型是一个键值对（key-value pair）集合，其特殊之处在于它的值（value）本身也是一个键值对的集合，形式如：`value=[{field1, value1}, {field2, value2}, ..., {fieldN, valueN}]`。这种结构使得 Hash 类型非常适合用来存储对象及其属性。
@@ -30,16 +29,17 @@ Redis 中的 Hash 类型是一个键值对（key-value pair）集合，其特殊
 
 Hash 类型的底层数据结构主要依赖于两种实现方式：**压缩列表（ziplist）/ listpack** 和 **哈希表（hashtable）**。Redis 会根据存储的数据规模动态选择：
 
-1.  **压缩列表 (ziplist) / listpack**:
-    *   当哈希对象中包含的键值对数量较少，并且所有键（field）和值（value）的字符串长度都较短时，Redis 会采用压缩列表（ziplist）来存储 Hash。
-    *   具体阈值由以下两个配置参数决定：
-        *   `hash-max-ziplist-entries`：哈希对象包含的键值对数量上限（默认值为 `512`）。
-        *   `hash-max-ziplist-value`：哈希对象中每个值（value）的字节长度上限（默认值为 `64` 字节）。
-    *   **重要演进**：在 Redis 7.0 及更高版本中，`ziplist` 已被更优化的 `listpack` 数据结构所取代。`listpack` 解决了 `ziplist` 在更新操作时可能引发连锁更新（cascade update）的问题，提高了性能和空间效率。因此，在现代 Redis 版本中，当满足上述条件时，底层使用的是 `listpack`。
+1. **压缩列表 (ziplist) / listpack**:
 
-2.  **哈希表 (hashtable)**:
-    *   如果哈希对象中的键值对数量超过 `hash-max-ziplist-entries`，或者任一键或值的长度超过 `hash-max-ziplist-value`，Redis 则会自动将底层数据结构转换为哈希表（也称为字典，dict）。
-    *   哈希表通过链式哈希解决冲突，并在负载因子达到一定阈值时进行动态扩容（rehash），以保证查询效率。
+   * 当哈希对象中包含的键值对数量较少，并且所有键（field）和值（value）的字符串长度都较短时，Redis 会采用压缩列表（ziplist）来存储 Hash。
+   * 具体阈值由以下两个配置参数决定：
+     * `hash-max-ziplist-entries`：哈希对象包含的键值对数量上限（默认值为 `512`）。
+     * `hash-max-ziplist-value`：哈希对象中每个值（value）的字节长度上限（默认值为 `64` 字节）。
+   * **重要演进**：在 Redis 7.0 及更高版本中，`ziplist` 已被更优化的 `listpack` 数据结构所取代。`listpack` 解决了 `ziplist` 在更新操作时可能引发连锁更新（cascade update）的问题，提高了性能和空间效率。因此，在现代 Redis 版本中，当满足上述条件时，底层使用的是 `listpack`。
+2. **哈希表 (hashtable)**:
+
+   * 如果哈希对象中的键值对数量超过 `hash-max-ziplist-entries`，或者任一键或值的长度超过 `hash-max-ziplist-value`，Redis 则会自动将底层数据结构转换为哈希表（也称为字典，dict）。
+   * 哈希表通过链式哈希解决冲突，并在负载因子达到一定阈值时进行动态扩容（rehash），以保证查询效率。
 
 这种动态切换底层数据结构的设计，旨在平衡内存使用和操作效率。对于小型 Hash 对象，`listpack`（或早期的 `ziplist`）能有效节省内存；而对于大型 Hash 对象，哈希表则能提供更高效的查找、插入和删除操作。
 
@@ -89,6 +89,7 @@ HSTRLEN key field
 ```
 
 **注意事项**:
+
 - `HMSET` 在较新版本的 Redis 中已被 `HSET` 取代（`HSET` 现在可以一次设置多个字段）。但为了兼容性，`HMSET` 仍然可用。
 - `HGETALL` 命令在哈希对象很大时可能会阻塞 Redis 服务器，因为它需要遍历整个哈希表。对于大型哈希，应谨慎使用，或考虑使用 `HSCAN` 命令进行分批迭代。
 
@@ -139,11 +140,13 @@ Redis Hash 存储其结构如下图所示：
 **与 String + JSON 对比**:
 
 虽然将对象序列化为 JSON 字符串后存储在 String 类型中也是一种常见的缓存对象的方式，但 Hash 类型在以下方面具有优势：
+
 - **部分更新**: 如果只需要修改对象的某个属性，使用 Hash 可以直接通过 `HSET` 更新该字段，而无需读取、反序列化、修改再序列化、写回整个 JSON 对象。
 - **字段级原子操作**: Hash 提供了如 `HINCRBY` 这样的原子操作，可以直接对对象属性进行原子增减。
 - **可读性**: 直接存储字段名和值，在 Redis 客户端中查看数据时可能更直观。
 
 **选择策略**:
+
 - 对于需要频繁更新对象部分属性，或者需要对属性进行原子操作的场景，Hash 类型是更好的选择。
 - 如果对象属性不常变动，或者总是需要整体读写对象，String + JSON 的方式可能更简单，序列化/反序列化的开销在某些情况下也可以接受。
 - 一种混合策略是：将对象的主要、不常变动的属性用 String + JSON 存储，而将频繁变动或需要原子操作的属性（如计数器）单独用 Hash 存储，或者存储在同一个 Hash 的不同字段中。
