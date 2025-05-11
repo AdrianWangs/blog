@@ -1,0 +1,26 @@
+---
+description: Vivia 主题自定义指南，提供主题定制和样式调整的方法
+globs: 
+alwaysApply: false
+---
+
+# Theme Customization Guide
+
+The blog uses the Vivia theme with configuration in [_config.vivia.yml](mdc:hexo-blog/_config.vivia.yml).
+
+## Key Configuration Areas
+
+- **Site Information**: Title, description, author information
+- **Navigation**: Menu items and links
+- **Sidebar**: Widgets and display options
+- **Post Display**: How posts are displayed, excerpts, thumbnails
+- **Comments**: Comment system configuration
+- **Analytics**: Visitor tracking options
+- **Social Links**: Social media profile links
+
+## Theme Structure
+- `themes/vivia/layout/` - EJS templates for page structure
+- `themes/vivia/source/css/` - Theme styling (Stylus)
+- `themes/vivia/source/js/` - JavaScript functionality
+
+For any site-wide changes, modify the [_config.yml](mdc:hexo-blog/_config.yml) file instead.
