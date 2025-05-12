@@ -13,7 +13,8 @@ comments: true
 
 ### 栈与队列
 
-- [LeetCode 394 - 字符串解码 (String Decode)](/2025/05/11/算法刷题/LeetCode-394-字符串解码/) - 详细解析LeetCode第394题字符串解码，通过栈辅助实现，并提供优化思路和代码。
+- [LeetCode 739 - 每日温度 (Daily Temperatures)](/2025/05/12/算法刷题/LeetCode-739-每日温度/) - 详细解析 LeetCode 739 题「每日温度」的解题思路，使用单调栈巧妙解决，并探讨代码优化，让你的代码更简洁。
+- [LeetCode 394 - 字符串解码 (String Decode)](/2025/05/11/算法刷题/LeetCode-394-字符串解码/) - 详细解析 LeetCode 第 394 题字符串解码，通过栈辅助实现，并提供优化思路和代码。
 - [LeetCode 155: 最小栈 (Min Stack)](/2025/05/11/算法刷题/LeetCode-155-最小栈/) - 设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
 
 ### 树结构与前缀树
