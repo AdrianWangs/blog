@@ -13,6 +13,7 @@ comments: true
 
 ### 堆与优先队列
 
+- [LeetCode 295 - 数据流的中位数 (Find Median from Data Stream)](/2025/05/14/算法刷题/LeetCode-295-数据流的中位数/) - 使用两个堆（最大堆与最小堆）维护数据流的中位数，实现 O(log n) 插入和 O(1) 查询
 - [LeetCode 347 - 前 K 个高频元素 (Top K Frequent Elements)](/2025/05/13/算法刷题/LeetCode-347-前K个高频元素/) - 使用哈希表和堆解决前 K 个高频元素问题
 
 ### 栈与队列
