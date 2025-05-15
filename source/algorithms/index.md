@@ -53,6 +53,7 @@ comments: true
 ### 数组操作
 
 - [❌ LeetCode 215: 数组中的第 K 个最大元素](/2025/05/13/算法刷题/LeetCode-215-数组中的第K个最大元素-超时分析与优化/) - 分析 Quick Select 算法的超时原因，并提供针对重复元素和分区优化的正确实现
+- [LeetCode 45: 跳跃游戏 II (Jump Game II)](/2025/05/15/算法刷题/LeetCode-45-跳跃游戏-II/) - 通过贪心算法高效解决最少跳跃次数问题，详细分析贪心策略的原理与实现
 - [LeetCode 169: 多数元素（Majority Element）](/2025/05/10/算法刷题/LeetCode-169-多数元素/) - 使用摩尔投票算法高效找出数组中的多数元素
 - [LeetCode 48: 旋转图像（Rotate Image）](/2025/04/19/算法刷题/LeetCode-48-Rotate-Image/) - 矩阵顺时针旋转 90 度的高效实现
 - [LeetCode 54: 螺旋矩阵（Spiral Matrix）](/2025/04/19/算法刷题/LeetCode-54-Spiral-Matrix/) - ❌ 螺旋顺序遍历矩阵的解题思路与错误分析
@@ -115,6 +116,10 @@ comments: true
 - [LeetCode 136: 只出现一次的数字（Single Number）](/2025/05/10/算法刷题/LeetCode-136-只出现一次的数字/) - 使用异或运算解决的数组元素查找问题，详解位运算特性
 - [LeetCode 52: N 皇后 II（N-Queens II）](/2025/05/07/算法刷题/LeetCode-52-N皇后-II/) - 使用位运算优化 N 皇后问题的空间复杂度，求解方案数量
 - [LeetCode 78: 子集（Subsets）](/2025/05/06/算法刷题/LeetCode-78-子集/) - 位运算与回溯两种方法生成所有子集的详细对比
+
+### 贪心算法
+
+- [LeetCode 45: 跳跃游戏 II (Jump Game II)](/2025/05/15/算法刷题/LeetCode-45-跳跃游戏-II/) - 通过贪心算法高效解决最少跳跃次数问题，详细分析贪心策略的原理与实现
 
 ### 分治算法
 
