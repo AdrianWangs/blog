@@ -3,28 +3,29 @@ title: MySQL 页类型详解
 date: 2025-04-22 20:23:49
 categories:
   - 八股文
-  - MYSQL
+  - MySQL
   - 基础知识
 tags:
-  - MYSQL
+  - MySQL
   - 八股文
   - 记录存储方式
 description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作用
 ---
-## MySQL页的概念
 
-在InnoDB存储引擎中，页(Page)是数据存储的基本单位，默认大小为16KB。MySQL以页为单位进行磁盘与内存之间的数据交换，这种设计可以显著减少I/O操作次数，提高数据库性能。
+## MySQL 页的概念
 
-## InnoDB页的通用结构
+在 InnoDB 存储引擎中，页(Page)是数据存储的基本单位，默认大小为 16KB。MySQL 以页为单位进行磁盘与内存之间的数据交换，这种设计可以显著减少 I/O 操作次数，提高数据库性能。
 
-每个InnoDB页都包含以下几个部分：
+## InnoDB 页的通用结构
 
-- **文件头(File Header)**: 记录页的控制信息，占38字节
-- **页头(Page Header)**: 记录页的状态信息，占56字节
+每个 InnoDB 页都包含以下几个部分：
+
+- **文件头(File Header)**: 记录页的控制信息，占 38 字节
+- **页头(Page Header)**: 记录页的状态信息，占 56 字节
 - **主体数据区(Body)**: 存储实际数据
-- **文件尾(File Trailer)**: 用于页面完整性检查，占8字节
+- **文件尾(File Trailer)**: 用于页面完整性检查，占 8 字节
 
-## MySQL中的主要页类型
+## MySQL 中的主要页类型
 
 ### 1. 数据页(B-tree Node)
 
@@ -32,7 +33,7 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 **特点**：
 
-- 使用B+树结构组织
+- 使用 B+树结构组织
 - 包含多条记录
 - 记录按主键顺序排列
 - 叶子节点包含完整的用户数据
@@ -66,13 +67,13 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 **特点**：
 
-- 也使用B+树结构
+- 也使用 B+树结构
 - 非聚集索引的叶子节点存储主键值
 - 非叶子节点存储索引键值和指向子页的指针
 
 ### 3. 撤销页(Undo Log Page)
 
-撤销页用于存储撤销日志记录，支持事务回滚和MVCC(多版本并发控制)。
+撤销页用于存储撤销日志记录，支持事务回滚和 MVCC(多版本并发控制)。
 
 **特点**：
 
@@ -82,7 +83,7 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 ### 4. 系统页(System Page)
 
-系统页用于存储InnoDB内部系统信息。
+系统页用于存储 InnoDB 内部系统信息。
 
 **主要系统页**：
 
@@ -97,7 +98,7 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 **特点**：
 
-- 用于存储大字段(如TEXT, BLOB)
+- 用于存储大字段(如 TEXT, BLOB)
 - 通过指针从主数据页链接
 - 可能有多个连续的溢出页形成链表
 
@@ -108,7 +109,7 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 **特点**：
 
 - 节省磁盘空间
-- 支持1KB, 2KB, 4KB, 8KB等多种压缩页大小
+- 支持 1KB, 2KB, 4KB, 8KB 等多种压缩页大小
 - 包含额外的解压缩信息
 
 ### 7. 临时页(Temporary Page)
@@ -119,7 +120,7 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 - 存储在临时表空间
 - 仅在会话期间有效
-- 不写入redo日志
+- 不写入 redo 日志
 
 ### 8. 碎片页(Fragment Page)
 
@@ -133,30 +134,30 @@ description: 详细介绍MySQL InnoDB存储引擎中的各种页类型及其作�
 
 ## 页类型对性能的影响
 
-不同类型的页在MySQL性能中扮演着重要角色：
+不同类型的页在 MySQL 性能中扮演着重要角色：
 
 1. **数据页和索引页**: 直接影响查询性能，缓冲池中的这些页越多，命中率越高，性能越好
 2. **撤销页**: 过多的撤销页可能表明有长时间运行的事务，可能影响并发性能
-3. **压缩页**: 减少I/O但增加CPU开销，需权衡
-4. **溢出页**: 访问大字段时可能导致额外I/O，影响性能
+3. **压缩页**: 减少 I/O 但增加 CPU 开销，需权衡
+4. **溢出页**: 访问大字段时可能导致额外 I/O，影响性能
 
 ## 如何查看页信息
 
-可以使用InnoDB监控工具和性能模式查看页的使用情况：
+可以使用 InnoDB 监控工具和性能模式查看页的使用情况：
 
 ```sql
 -- 查看InnoDB buffer pool中的页统计信息
 SHOW ENGINE INNODB STATUS;
 
 -- 查看表的页信息(MySQL 8.0+)
-SELECT * FROM information_schema.INNODB_TABLES 
+SELECT * FROM information_schema.INNODB_TABLES
 WHERE NAME = 'database_name/table_name';
 
 -- 查看索引的页信息
-SELECT * FROM information_schema.INNODB_INDEXES 
+SELECT * FROM information_schema.INNODB_INDEXES
 WHERE TABLE_ID = xxx;
 ```
 
 ## 总结
 
-MySQL的页是其存储系统的核心组件，不同类型的页协同工作，确保数据的完整性、一致性和高效访问。理解这些页类型有助于优化数据库设计和性能调优。对于大型数据库系统，优化页的使用和配置(如缓冲池大小、页压缩等)可以显著提高性能。
+MySQL 的页是其存储系统的核心组件，不同类型的页协同工作，确保数据的完整性、一致性和高效访问。理解这些页类型有助于优化数据库设计和性能调优。对于大型数据库系统，优化页的使用和配置(如缓冲池大小、页压缩等)可以显著提高性能。
