@@ -1,6 +1,6 @@
 ---
 title: 'MySQL中update不带索引的危险：全表锁定详解'
-date: 2025-05-16 10:00:00
+date: 2025-05-16 18:00:00
 categories:
   - 八股文
   - MySQL
