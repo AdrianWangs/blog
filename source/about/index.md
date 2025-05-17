@@ -43,3 +43,12 @@ date: 2024-04-18 10:00:00
 ---
 
 > “持续学习，持续成长。”
+
+
+
+
+{% heatmapchart charcoal %}文章热力图{% endheatmapchart %}
+
+{% piechart tags %}标签饼图{% endpiechart %}
+
+{% radarchart tags %}标签雷达图{% endradarchart %}
