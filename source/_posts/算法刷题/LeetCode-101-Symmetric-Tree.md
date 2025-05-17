@@ -1,17 +1,19 @@
 ---
-title: "LeetCode 101 - 对称二叉树（Symmetric Tree）"
+title: LeetCode 101 - 对称二叉树（Symmetric Tree）
 date: 2025-04-28 21:29:45
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 递归
-  - 迭代
-  - 深度优先搜索
-  - 广度优先搜索
-  - Easy
-  - LeetCode
+- 二叉树
+- 递归
+- 迭代
+- 深度优先搜索
+- 广度优先搜索
+- Easy
+- LeetCode
+- Hot100
 ---
 ## 问题描述
 

@@ -1,17 +1,18 @@
 ---
-title: "LeetCode 790 - 多米诺和托米诺平铺"
+title: LeetCode 790 - 多米诺和托米诺平铺
 date: 2025-05-06 12:21:52
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 动态规划
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "本文解析LeetCode 790多米诺和托米诺平铺问题，通过状态定义和转移方程，详细说明如何使用动态规划解决瓷砖平铺的组合计数问题。"
+- 动态规划
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 本文解析LeetCode 790多米诺和托米诺平铺问题，通过状态定义和转移方程，详细说明如何使用动态规划解决瓷砖平铺的组合计数问题。
 ---
-
 ## 问题描述
 
 有两种形状的瓷砖：一种是 2 x 1 的多米诺形，另一种是形如 "L" 的托米诺形。两种形状都可以旋转。

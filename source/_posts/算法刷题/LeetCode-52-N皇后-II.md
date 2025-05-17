@@ -1,18 +1,19 @@
 ---
-title: "LeetCode 52 - N皇后 II（N-Queens II）"
+title: LeetCode 52 - N皇后 II（N-Queens II）
 date: 2025-05-07 17:28:03
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 回溯
-  - 深度优先搜索
-  - 位运算
-  - Hard
-  - LeetCode
-description: "N皇后问题的进阶优化，使用位运算降低空间复杂度，回溯算法高效计算N皇后问题的解决方案数量，时间复杂度O(N!)，位运算优化空间复杂度至O(1)"
+- 回溯
+- 深度优先搜索
+- 位运算
+- Hard
+- LeetCode
+- Hot100
+description: N皇后问题的进阶优化，使用位运算降低空间复杂度，回溯算法高效计算N皇后问题的解决方案数量，时间复杂度O(N!)，位运算优化空间复杂度至O(1)
 ---
-
 ## 问题描述
 
 N皇后 II 是 [N皇后问题](/2025/05/07/算法刷题/LeetCode-51-N皇后/) 的延伸。不同的是，这道题只需要返回不同解决方案的**数量**，而不需要返回具体的解决方案。

@@ -1,16 +1,17 @@
 ---
-title: "LeetCode 146 - LRU 缓存"
+title: LeetCode 146 - LRU 缓存
 date: 2025-04-27 11:06:28
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 哈希
-  - 链表
-  - Medium
-  - LeetCode
+- 哈希
+- 链表
+- Medium
+- LeetCode
+- Hot100
 ---
-
 ## 问题描述
 
 请你设计并实现一个满足 LRU (最近最少使用) 缓存约束的数据结构。

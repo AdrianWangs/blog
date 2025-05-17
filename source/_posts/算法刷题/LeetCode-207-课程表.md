@@ -1,19 +1,20 @@
 ---
-title: "LeetCode 207 - 课程表（Course Schedule）"
+title: LeetCode 207 - 课程表（Course Schedule）
 date: 2025-05-03 21:49:36
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 图
-  - 拓扑排序
-  - 深度优先搜索
-  - 广度优先搜索
-  - Medium
-  - LeetCode
-description: "本文介绍了课程表问题的两种解法：BFS拓扑排序和DFS检测环。通过判断课程依赖关系构成的图是否存在环，来确定是否能够完成所有课程的学习。"
+- 图
+- 拓扑排序
+- 深度优先搜索
+- 广度优先搜索
+- Medium
+- LeetCode
+- Hot100
+description: 本文介绍了课程表问题的两种解法：BFS拓扑排序和DFS检测环。通过判断课程依赖关系构成的图是否存在环，来确定是否能够完成所有课程的学习。
 ---
-
 ## 问题描述
 
 你这个学期必须选修 `numCourses` 门课程，记为 `0` 到 `numCourses - 1`。

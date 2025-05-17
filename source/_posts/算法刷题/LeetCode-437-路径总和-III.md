@@ -1,19 +1,20 @@
 ---
-title: "❌ LeetCode 437 - 路径总和 III (Path Sum III)"
+title: ❌ LeetCode 437 - 路径总和 III (Path Sum III)
 date: 2025-04-30 16:43:12
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 深度优先搜索
-  - 前缀和
-  - 哈希
-  - Medium
-  - LeetCode
-  - ❌错题集
+- 二叉树
+- 深度优先搜索
+- 前缀和
+- 哈希
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
 ---
-
 ## 问题描述
 
 给定一个二叉树的根节点 `root` 和一个整数 `targetSum`，求该二叉树里节点值之和等于 `targetSum` 的**路径**的数目。

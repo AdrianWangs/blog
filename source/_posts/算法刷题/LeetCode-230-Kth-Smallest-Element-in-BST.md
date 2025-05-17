@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 230 - 二叉搜索树中第K小的元素（Kth Smallest Element in a BST）"
+title: LeetCode 230 - 二叉搜索树中第K小的元素（Kth Smallest Element in a BST）
 date: 2025-04-29 19:34:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 二叉搜索树
-  - 深度优先搜索
-  - 递归
-  - Medium
-  - LeetCode
+- 二叉树
+- 二叉搜索树
+- 深度优先搜索
+- 递归
+- Medium
+- LeetCode
+- Hot100
 ---
 ## 问题描述
 

@@ -1,19 +1,20 @@
 ---
-title: 'LeetCode 45 - 跳跃游戏 II (Jump Game II)'
+title: LeetCode 45 - 跳跃游戏 II (Jump Game II)
 date: 2025-05-15 12:30:45
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 贪心算法
-  - 动态规划
-  - 广度优先搜索
-  - 数组
-  - Medium
-  - LeetCode
-description: '详解LeetCode第45题跳跃游戏II，通过贪心算法、动态规划和BFS三种方法分析如何高效求解最少跳跃次数问题，重点探讨贪心算法的实现技巧及优化思路'
+- 贪心算法
+- 动态规划
+- 广度优先搜索
+- 数组
+- Medium
+- LeetCode
+- Hot100
+description: 详解LeetCode第45题跳跃游戏II，通过贪心算法、动态规划和BFS三种方法分析如何高效求解最少跳跃次数问题，重点探讨贪心算法的实现技巧及优化思路
 ---
-
 ## 问题描述
 
 给定一个长度为 n 的 0 索引整数数组 nums。初始位置为 nums[0]。

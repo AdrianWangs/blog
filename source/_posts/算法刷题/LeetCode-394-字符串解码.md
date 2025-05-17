@@ -1,17 +1,18 @@
 ---
-title: 'LeetCode 394 - 字符串解码 (String Decode)'
+title: LeetCode 394 - 字符串解码 (String Decode)
 date: 2025-05-11 19:52:30
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 栈
-  - 字符串
-  - Medium
-  - LeetCode
-description: '详细解析LeetCode第394题字符串解码，通过栈辅助实现，并提供优化思路和代码。'
+- 栈
+- 字符串
+- Medium
+- LeetCode
+- Hot100
+description: 详细解析LeetCode第394题字符串解码，通过栈辅助实现，并提供优化思路和代码。
 ---
-
 ## 问题描述
 
 给定一个经过编码的字符串，返回它解码后的字符串。

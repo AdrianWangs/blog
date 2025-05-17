@@ -1,19 +1,20 @@
 ---
-title: "LeetCode 300: 最长递增子序列 - 动态规划与贪心优化"
+title: 'LeetCode 300: 最长递增子序列 - 动态规划与贪心优化'
 date: 2025-05-17 16:12:25
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 动态规划
-  - 贪心算法
-  - 二分查找
-  - 数组
-  - Medium
-  - LeetCode
-description: "详细解析 LeetCode 300 '最长递增子序列' 问题的动态规划解法和更优的贪心算法结合二分查找的思路，并提供带有注释的 Go 语言实现。"
+- 动态规划
+- 贪心算法
+- 二分查找
+- 数组
+- Medium
+- LeetCode
+- Hot100
+description: 详细解析 LeetCode 300 '最长递增子序列' 问题的动态规划解法和更优的贪心算法结合二分查找的思路，并提供带有注释的 Go 语言实现。
 ---
-
 ## 问题描述
 
 给定一个整数数组 `nums` ，找到其中最长严格递增子序列的长度。

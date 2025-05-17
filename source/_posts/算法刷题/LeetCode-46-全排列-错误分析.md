@@ -1,16 +1,18 @@
 ---
-title: "❌ LeetCode 46 - 全排列（Permutations）错误分析"
+title: ❌ LeetCode 46 - 全排列（Permutations）错误分析
 date: 2025-05-05 20:49:04
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 回溯
-  - 深度优先搜索
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "分析在Go语言实现全排列时的常见错误：切片复制的误区及其正确实现方法"
+- 回溯
+- 深度优先搜索
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 分析在Go语言实现全排列时的常见错误：切片复制的误区及其正确实现方法
 ---
 ## 问题描述
 

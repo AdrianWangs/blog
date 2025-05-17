@@ -1,13 +1,15 @@
 ---
-title: 'LeetCode 48 - 旋转图像（Rotate Image）'
+title: LeetCode 48 - 旋转图像（Rotate Image）
 date: 2025-04-19 22:48:32
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 矩阵
-  - Medium
+- 数组
+- 矩阵
+- Medium
+- Hot100
 ---
 ## 问题描述
 

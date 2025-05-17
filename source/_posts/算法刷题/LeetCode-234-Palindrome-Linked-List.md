@@ -1,13 +1,15 @@
 ---
-title: "LeetCode 234 - 回文链表（Palindrome Linked List）"
+title: LeetCode 234 - 回文链表（Palindrome Linked List）
 date: 2025-04-21 18:16:22
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - 双指针
-  - Easy
+- 链表
+- 双指针
+- Easy
+- Hot100
 ---
 ## Problem Description
 

@@ -1,18 +1,19 @@
 ---
-title: "❌ LeetCode 74 - 搜索二维矩阵 - 错误分析"
+title: ❌ LeetCode 74 - 搜索二维矩阵 - 错误分析
 date: 2025-05-08 14:14:21
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二分查找
-  - 矩阵
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "详细分析在使用二分查找解决矩阵搜索问题时的常见错误，包括边界条件处理错误、索引计算问题和搜索策略选择不当等错误点"
+- 二分查找
+- 矩阵
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 详细分析在使用二分查找解决矩阵搜索问题时的常见错误，包括边界条件处理错误、索引计算问题和搜索策略选择不当等错误点
 ---
-
 ## 问题描述
 
 [LeetCode 74 - 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)是一个中等难度的二分查找问题。

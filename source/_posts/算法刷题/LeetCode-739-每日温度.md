@@ -1,17 +1,18 @@
 ---
-title: 'LeetCode 739 - 每日温度 (Daily Temperatures)'
+title: LeetCode 739 - 每日温度 (Daily Temperatures)
 date: 2025-05-12 21:26:58
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 栈
-  - 单调栈
-  - Medium
-  - LeetCode
-description: '详细解析 LeetCode 739 题「每日温度」的解题思路，使用单调栈巧妙解决，并探讨代码优化，让你的代码更简洁。'
+- 栈
+- 单调栈
+- Medium
+- LeetCode
+- Hot100
+description: 详细解析 LeetCode 739 题「每日温度」的解题思路，使用单调栈巧妙解决，并探讨代码优化，让你的代码更简洁。
 ---
-
 ## 问题描述
 
 给定一个整数数组 `temperatures`，表示每天的温度。你需要返回一个数组 `answer`，其中 `answer[i]` 是指对于第 `i` 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 `0` 来代替。

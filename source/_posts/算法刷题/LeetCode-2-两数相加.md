@@ -1,12 +1,14 @@
 ---
-title: "LeetCode 2 - 两数相加（Add Two Numbers）"
+title: LeetCode 2 - 两数相加（Add Two Numbers）
 date: 2025-04-23 15:02:33
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - Medium
+- 链表
+- Medium
+- Hot100
 ---
 ## 问题描述
 

@@ -1,18 +1,19 @@
 ---
-title: "LeetCode 35 - 搜索插入位置与Go语言二分搜索全解析"
+title: LeetCode 35 - 搜索插入位置与Go语言二分搜索全解析
 date: 2025-05-08 10:39:16
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二分查找
-  - 数组
-  - Easy
-  - LeetCode
-  - Go
-description: "深入剖析LeetCode 35题及Go语言中的二分搜索函数，包括sort包中的各类二分搜索API、常见变体与应用场景，帮助读者全面掌握二分搜索技巧。"
+- 二分查找
+- 数组
+- Easy
+- LeetCode
+- Go
+- Hot100
+description: 深入剖析LeetCode 35题及Go语言中的二分搜索函数，包括sort包中的各类二分搜索API、常见变体与应用场景，帮助读者全面掌握二分搜索技巧。
 ---
-
 ## 问题描述
 
 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。

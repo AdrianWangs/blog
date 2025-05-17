@@ -1,18 +1,19 @@
 ---
-title: 'LeetCode 763 - 划分字母区间（Partition Labels）'
+title: LeetCode 763 - 划分字母区间（Partition Labels）
 date: 2025-05-16 14:30:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 贪心
-  - 双指针
-  - 哈希表
-  - Medium
-  - LeetCode
-description: 'LeetCode 763 划分字母区间题解，使用贪心算法和双指针技术，通过记录字符最后出现位置实现最优划分，时间复杂度O(n)，空间复杂度O(1)。'
+- 贪心
+- 双指针
+- 哈希表
+- Medium
+- LeetCode
+- Hot100
+description: LeetCode 763 划分字母区间题解，使用贪心算法和双指针技术，通过记录字符最后出现位置实现最优划分，时间复杂度O(n)，空间复杂度O(1)。
 ---
-
 ## 问题描述
 
 给你一个字符串 `s`，要求将这个字符串划分为尽可能多的片段，同一字母最多出现在一个片段中。返回一个表示每个字符串片段的长度的列表。

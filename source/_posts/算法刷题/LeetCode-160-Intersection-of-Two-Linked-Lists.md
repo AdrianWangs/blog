@@ -1,15 +1,17 @@
 ---
-title: "LeetCode 160 - 相交链表（Intersection of Two Linked Lists）"
+title: LeetCode 160 - 相交链表（Intersection of Two Linked Lists）
 date: 2025-04-20 23:19:20
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - 双指针
-  - 哈希
-  - Easy
-  - ❌错题集
+- 链表
+- 双指针
+- 哈希
+- Easy
+- ❌错题集
+- Hot100
 ---
 ## Problem Description
 

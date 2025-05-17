@@ -1,17 +1,18 @@
 ---
-title: "LeetCode 153 - 寻找旋转排序数组中的最小值"
+title: LeetCode 153 - 寻找旋转排序数组中的最小值
 date: 2025-05-10 13:25:30
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二分查找
-  - 数组
-  - Medium
-  - LeetCode
-description: "本文详细分析了寻找旋转排序数组最小值的两种二分查找解法，包括传统二分实现和Go的sort.Search函数实现，并剖析了它们的边界处理和算法原理。"
+- 二分查找
+- 数组
+- Medium
+- LeetCode
+- Hot100
+description: 本文详细分析了寻找旋转排序数组最小值的两种二分查找解法，包括传统二分实现和Go的sort.Search函数实现，并剖析了它们的边界处理和算法原理。
 ---
-
 ## 问题描述
 
 给你一个元素值**互不相同**的数组 `nums`，它原来是一个升序排列的数组，并按照下面的情形进行了多次旋转：

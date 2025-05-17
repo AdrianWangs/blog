@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 139. 单词拆分：小白也能看懂的动态规划解法"
+title: LeetCode 139. 单词拆分：小白也能看懂的动态规划解法
 date: 2025-05-17 15:08:31
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 动态规划
-  - 字符串
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "详细解析 LeetCode 139 题`单词拆分`的动态规划解法。通过清晰的步骤、示例和代码注释，帮助初学者理解如何使用 DP 判断字符串是否可以由字典中的单词拼接而成。"
+- 动态规划
+- 字符串
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 详细解析 LeetCode 139 题`单词拆分`的动态规划解法。通过清晰的步骤、示例和代码注释，帮助初学者理解如何使用 DP 判断字符串是否可以由字典中的单词拼接而成。
 ---
 ## 题目描述
 

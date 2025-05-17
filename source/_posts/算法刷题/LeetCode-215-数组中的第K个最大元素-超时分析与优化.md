@@ -1,18 +1,19 @@
 ---
-title: '❌ LeetCode 215 - 数组中的第K个最大元素 (超时分析与优化)'
+title: ❌ LeetCode 215 - 数组中的第K个最大元素 (超时分析与优化)
 date: 2025-05-13 16:07:14
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 快速选择
-  - 数组
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: '对 LeetCode 215 题 “数组中的第K个最大元素” 的 Quick Select 解法进行超时分析，并提供优化后的正确题解，强调了算法关键点和可读性。'
+- 快速选择
+- 数组
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 对 LeetCode 215 题 “数组中的第K个最大元素” 的 Quick Select 解法进行超时分析，并提供优化后的正确题解，强调了算法关键点和可读性。
 ---
-
 ## 问题描述
 
 给定整数数组 `nums` 和整数 `k`，请返回数组中第 `k` 个最大的元素。

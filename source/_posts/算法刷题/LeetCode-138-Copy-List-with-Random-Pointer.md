@@ -1,17 +1,18 @@
 ---
-title: "LeetCode 138 - 随机链表的复制 (Copy List with Random Pointer)"
+title: LeetCode 138 - 随机链表的复制 (Copy List with Random Pointer)
 date: 2025-04-25 15:27:03
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - Medium
-  - 哈希
-  - 迭代
-  - ❌错题集
+- 链表
+- Medium
+- 哈希
+- 迭代
+- ❌错题集
+- Hot100
 ---
-
 ## 问题描述
 
 给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。

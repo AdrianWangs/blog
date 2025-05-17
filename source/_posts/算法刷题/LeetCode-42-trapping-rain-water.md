@@ -1,15 +1,17 @@
 ---
 title: LeetCode 42 - 接雨水（Trapping Rain Water）
-date: 2025-04-18T17:56:00
+date: 2025-04-18 17:56:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 双指针
-  - 单调栈
-  - 动态规划
-  - Hard
+- 数组
+- 双指针
+- 单调栈
+- 动态规划
+- Hard
+- Hot100
 ---
 ## 问题描述
 

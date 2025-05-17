@@ -1,14 +1,16 @@
 ---
-title: "LeetCode 206 - 反转链表（Reverse Linked List）"
+title: LeetCode 206 - 反转链表（Reverse Linked List）
 date: 2025-04-21 11:31:21
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - 递归
-  - 迭代
-  - Easy
+- 链表
+- 递归
+- 迭代
+- Easy
+- Hot100
 ---
 ## 问题描述
 

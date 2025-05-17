@@ -1,15 +1,17 @@
 ---
-title: "LeetCode 51 - N皇后（N-Queens）"
+title: LeetCode 51 - N皇后（N-Queens）
 date: 2025-05-07 17:22:35
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 回溯
-  - 深度优先搜索
-  - Hard
-  - LeetCode
-description: "详解N皇后问题的回溯解法，通过三个布尔数组高效检测攻击路径，利用对角线数学特性快速剪枝，时间复杂度O(N!)，空间复杂度O(N)"
+- 回溯
+- 深度优先搜索
+- Hard
+- LeetCode
+- Hot100
+description: 详解N皇后问题的回溯解法，通过三个布尔数组高效检测攻击路径，利用对角线数学特性快速剪枝，时间复杂度O(N!)，空间复杂度O(N)
 ---
 ## 问题描述
 

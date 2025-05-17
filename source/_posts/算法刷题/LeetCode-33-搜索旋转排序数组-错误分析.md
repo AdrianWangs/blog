@@ -1,17 +1,18 @@
 ---
-title: "❌ LeetCode 33 - 搜索旋转排序数组错误分析"
+title: ❌ LeetCode 33 - 搜索旋转排序数组错误分析
 date: 2025-05-08 20:30:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二分查找
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "分析在旋转排序数组中查找旋转点的常见错误，以及更优雅高效的解法"
+- 二分查找
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 分析在旋转排序数组中查找旋转点的常见错误，以及更优雅高效的解法
 ---
-
 ## 问题描述
 
 [搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/) 是一个经典的二分查找变种问题：

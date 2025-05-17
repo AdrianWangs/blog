@@ -1,18 +1,19 @@
 ---
-title: "LeetCode 25: K 个一组翻转链表（Reverse Nodes in k-Group）"
+title: 'LeetCode 25: K 个一组翻转链表（Reverse Nodes in k-Group）'
 date: 2025-04-24 19:39:38
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - 递归
-  - 迭代
-  - Hard
-  - LeetCode
-  - ❌错题集
+- 链表
+- 递归
+- 迭代
+- Hard
+- LeetCode
+- ❌错题集
+- Hot100
 ---
-
 ## 问题描述
 
 给你一个链表，每 k 个节点一组进行翻转，请你返回修改后的链表。

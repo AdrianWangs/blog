@@ -1,14 +1,16 @@
 ---
 title: LeetCode 41 - 缺失的第一个正数（First Missing Positive）
-date: 2025-04-18T10:00:00.000Z
+date: 2025-04-18 10:00:00+00:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 哈希
-  - Hard
-  - ❌错题集
+- 数组
+- 哈希
+- Hard
+- ❌错题集
+- Hot100
 ---
 ## 问题描述
 

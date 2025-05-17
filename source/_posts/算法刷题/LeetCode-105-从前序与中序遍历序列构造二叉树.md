@@ -1,16 +1,19 @@
 ---
-title: "LeetCode 105 - 从前序与中序遍历序列构造二叉树（Construct Binary Tree from Preorder and Inorder Traversal）"
+title: LeetCode 105 - 从前序与中序遍历序列构造二叉树（Construct Binary Tree from Preorder and Inorder
+  Traversal）
 date: 2025-04-30 11:15:40
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 递归
-  - 分治
-  - 哈希
-  - Medium
-  - LeetCode
+- 二叉树
+- 递归
+- 分治
+- 哈希
+- Medium
+- LeetCode
+- Hot100
 ---
 ## 问题描述
 

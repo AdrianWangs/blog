@@ -1,18 +1,19 @@
 ---
-title: 'LeetCode 295 - 数据流的中位数（Find Median from Data Stream）'
+title: LeetCode 295 - 数据流的中位数（Find Median from Data Stream）
 date: 2025-05-14 20:32:32
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 堆
-  - 优先队列
-  - Hard
-  - 数据结构设计
-  - LeetCode
-description: '使用两个堆（最大堆与最小堆）巧妙维护数据流的中位数，实现了 O(log n) 的插入和 O(1) 的查询效率，并通过数据平衡策略确保中位数快速获取。'
+- 堆
+- 优先队列
+- Hard
+- 数据结构设计
+- LeetCode
+- Hot100
+description: 使用两个堆（最大堆与最小堆）巧妙维护数据流的中位数，实现了 O(log n) 的插入和 O(1) 的查询效率，并通过数据平衡策略确保中位数快速获取。
 ---
-
 ## 问题描述
 
 中位数是有序整数列表中的中间值。如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值。

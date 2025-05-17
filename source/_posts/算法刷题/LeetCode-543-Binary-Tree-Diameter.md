@@ -1,15 +1,17 @@
 ---
-title: "❌ LeetCode 543 - 二叉树的直径"
+title: ❌ LeetCode 543 - 二叉树的直径
 date: 2025-04-29 10:00:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 深度优先搜索
-  - Easy
-  - LeetCode
-  - ❌错题集
+- 二叉树
+- 深度优先搜索
+- Easy
+- LeetCode
+- ❌错题集
+- Hot100
 ---
 ## 问题描述
 

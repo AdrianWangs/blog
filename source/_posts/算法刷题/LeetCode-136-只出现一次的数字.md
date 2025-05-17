@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 136 - 只出现一次的数字（Single Number）"
+title: LeetCode 136 - 只出现一次的数字（Single Number）
 date: 2025-05-10 22:26:03
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 位运算
-  - 数组
-  - 哈希
-  - Easy
-  - LeetCode
-description: "详解LeetCode第136题'只出现一次的数字'的三种解法：异或位运算法、哈希表法和排序法，着重解释异或运算原理及适用场景"
+- 位运算
+- 数组
+- 哈希
+- Easy
+- LeetCode
+- Hot100
+description: 详解LeetCode第136题'只出现一次的数字'的三种解法：异或位运算法、哈希表法和排序法，着重解释异或运算原理及适用场景
 ---
 ## 问题描述
 

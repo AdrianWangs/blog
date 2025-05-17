@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 78 - 子集（Subsets）"
+title: LeetCode 78 - 子集（Subsets）
 date: 2025-05-06 13:07:10
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 回溯
-  - 位运算
-  - Medium
-  - LeetCode
-description: "详解LeetCode第78题子集问题的两种解法：基于位运算的迭代法和基于回溯的DFS递归法，分析其时间复杂度和空间复杂度以及各自优缺点"
+- 数组
+- 回溯
+- 位运算
+- Medium
+- LeetCode
+- Hot100
+description: 详解LeetCode第78题子集问题的两种解法：基于位运算的迭代法和基于回溯的DFS递归法，分析其时间复杂度和空间复杂度以及各自优缺点
 ---
 ## 问题描述
 

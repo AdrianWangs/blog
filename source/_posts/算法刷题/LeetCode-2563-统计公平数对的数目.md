@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 2563 - 统计公平数对的数目（Count the Number of Fair Pairs）"
+title: LeetCode 2563 - 统计公平数对的数目（Count the Number of Fair Pairs）
 date: 2025-04-20 13:18:36
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 双指针
-  - 二分查找
-  - 排序
-  - LeetCode
-  - Medium
+- 数组
+- 双指针
+- 二分查找
+- 排序
+- LeetCode
+- Medium
+- Hot100
 ---
 ## 问题描述
 

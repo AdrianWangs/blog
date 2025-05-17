@@ -1,19 +1,20 @@
 ---
-title: "LeetCode 208 - 实现 Trie (前缀树)"
+title: LeetCode 208 - 实现 Trie (前缀树)
 date: 2025-05-05 20:12:06
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数据结构
-  - 树
-  - Trie
-  - 字符串
-  - Medium
-  - LeetCode
-description: "详解Trie前缀树的实现原理、常见优化策略以及Go语言高效实现方法，包含时空复杂度分析和性能优化技巧"
+- 数据结构
+- 树
+- Trie
+- 字符串
+- Medium
+- LeetCode
+- Hot100
+description: 详解Trie前缀树的实现原理、常见优化策略以及Go语言高效实现方法，包含时空复杂度分析和性能优化技巧
 ---
-
 ## 问题描述
 
 Trie（发音类似 "try"）或者说前缀树，是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补全和拼写检查。

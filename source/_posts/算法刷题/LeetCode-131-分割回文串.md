@@ -1,19 +1,20 @@
 ---
-title: "LeetCode 131 - 分割回文串（Palindrome Partitioning）"
+title: LeetCode 131 - 分割回文串（Palindrome Partitioning）
 date: 2025-05-06 08:30:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 回溯
-  - 动态规划
-  - 深度优先搜索
-  - Medium
-  - LeetCode
-  - ❌错题集
-description: "本文详细介绍了LeetCode 131分割回文串问题的两种解法：预处理DP+回溯和记忆化搜索+回溯，对比分析两种方法的优缺点并提供了时间复杂度和空间复杂度分析。"
+- 回溯
+- 动态规划
+- 深度优先搜索
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
+description: 本文详细介绍了LeetCode 131分割回文串问题的两种解法：预处理DP+回溯和记忆化搜索+回溯，对比分析两种方法的优缺点并提供了时间复杂度和空间复杂度分析。
 ---
-
 ## 问题描述
 
 给你一个字符串 `s`，请你将 `s` 分割成一些子串，使每个子串都是**回文串**。返回 `s` 所有可能的分割方案。

@@ -1,18 +1,19 @@
 ---
-title: "❌ LeetCode 114 - 二叉树展开为链表"
+title: ❌ LeetCode 114 - 二叉树展开为链表
 date: 2025-04-29 20:08:43
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 树
-  - 深度优先搜索
-  - 递归
-  - Medium
-  - LeetCode
-  - ❌错题集
+- 树
+- 深度优先搜索
+- 递归
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
 ---
-
 ## 问题描述
 
 给你二叉树的根结点 root ，请你将它展开为一个单链表：

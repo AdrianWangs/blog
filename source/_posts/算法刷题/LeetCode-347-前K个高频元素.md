@@ -1,17 +1,18 @@
 ---
-title: 'LeetCode 347 - 前 K 个高频元素 (Top K Frequent Elements)'
+title: LeetCode 347 - 前 K 个高频元素 (Top K Frequent Elements)
 date: 2025-05-13 16:00:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 堆
-  - 哈希表
-  - Medium
-  - LeetCode
-description: '本文详细介绍了 LeetCode 347 题“前 K 个高频元素”的解题思路，并重点讲解了如何在 Go 语言中使用 heap（优先队列）来解决此问题。'
+- 堆
+- 哈希表
+- Medium
+- LeetCode
+- Hot100
+description: 本文详细介绍了 LeetCode 347 题“前 K 个高频元素”的解题思路，并重点讲解了如何在 Go 语言中使用 heap（优先队列）来解决此问题。
 ---
-
 ## 问题描述
 
 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。

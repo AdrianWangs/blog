@@ -1,17 +1,19 @@
 ---
-title: "LeetCode 169 - 多数元素（Majority Element）"
+title: LeetCode 169 - 多数元素（Majority Element）
 date: 2025-05-10 22:49:48
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 数组
-  - 哈希表
-  - 分治
-  - 摩尔投票
-  - Easy
-  - LeetCode
-description: "详解四种解决多数元素问题的方法：哈希表计数法、排序法、分治法和摩尔投票算法，全面分析各种解法的时间复杂度和空间复杂度"
+- 数组
+- 哈希表
+- 分治
+- 摩尔投票
+- Easy
+- LeetCode
+- Hot100
+description: 详解四种解决多数元素问题的方法：哈希表计数法、排序法、分治法和摩尔投票算法，全面分析各种解法的时间复杂度和空间复杂度
 ---
 ## 问题描述
 

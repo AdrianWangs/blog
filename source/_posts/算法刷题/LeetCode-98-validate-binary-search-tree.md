@@ -1,16 +1,18 @@
 ---
-title: "❌ LeetCode 98 - 验证二叉搜索树 (Validate Binary Search Tree)"
+title: ❌ LeetCode 98 - 验证二叉搜索树 (Validate Binary Search Tree)
 date: 2025-04-29 15:14:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 深度优先搜索
-  - 递归
-  - Medium
-  - LeetCode
-  - ❌错题集
+- 二叉树
+- 深度优先搜索
+- 递归
+- Medium
+- LeetCode
+- ❌错题集
+- Hot100
 ---
 ## 问题描述
 

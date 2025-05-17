@@ -1,16 +1,18 @@
 ---
-title: "LeetCode 22 - 括号生成（Generate Parentheses）"
+title: LeetCode 22 - 括号生成（Generate Parentheses）
 date: 2025-05-06 19:11:23
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 回溯
-  - 深度优先搜索
-  - 动态规划
-  - Medium
-  - LeetCode
-description: "本文详细讲解了LeetCode第22题括号生成问题的解决方案，通过回溯算法（深度优先搜索）和动态规划两种方法，生成所有可能的有效括号组合。"
+- 回溯
+- 深度优先搜索
+- 动态规划
+- Medium
+- LeetCode
+- Hot100
+description: 本文详细讲解了LeetCode第22题括号生成问题的解决方案，通过回溯算法（深度优先搜索）和动态规划两种方法，生成所有可能的有效括号组合。
 ---
 ## 问题描述
 

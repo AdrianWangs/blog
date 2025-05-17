@@ -1,16 +1,17 @@
 ---
-title: "LeetCode 148 - 排序链表（Sort List）"
+title: LeetCode 148 - 排序链表（Sort List）
 date: 2025-04-26 10:30:00
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 链表
-  - 归并排序
-  - 排序
-  - Medium
+- 链表
+- 归并排序
+- 排序
+- Medium
+- Hot100
 ---
-
 ## 问题描述
 
 给你链表的头结点 `head`，请将其按 **升序** 排列并返回 **排序后的链表**。

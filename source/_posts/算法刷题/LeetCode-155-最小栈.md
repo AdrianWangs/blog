@@ -1,17 +1,18 @@
 ---
-title: 'LeetCode 155 - 最小栈 (Min Stack)'
+title: LeetCode 155 - 最小栈 (Min Stack)
 date: 2025-05-11 16:52:46
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 栈
-  - 设计
-  - Easy
-  - LeetCode
-description: '设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。'
+- 栈
+- 设计
+- Easy
+- LeetCode
+- Hot100
+description: 设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
 ---
-
 ## 问题描述
 
 设计一个支持 `push` ，`pop` ，`top` 操作，并能在常数时间内检索到最小元素的栈。

@@ -1,17 +1,18 @@
 ---
-title: "LeetCode 124 - 二叉树中的最大路径和（Binary Tree Maximum Path Sum）"
+title: LeetCode 124 - 二叉树中的最大路径和（Binary Tree Maximum Path Sum）
 date: 2025-05-02 15:22:09
 categories:
-  - 算法刷题
-  - LeetCode
+- 算法刷题
+- LeetCode
+- Hot100
 tags:
-  - 二叉树
-  - 深度优先搜索
-  - 递归
-  - Hard
-  - LeetCode
-  - ❌错题集
-
+- 二叉树
+- 深度优先搜索
+- 递归
+- Hard
+- LeetCode
+- ❌错题集
+- Hot100
 ---
 {% note danger %}
 **重点难题**：本题是二叉树路径问题中的经典难题，需要理解后序遍历与递归返true回值的巧妙设计。
