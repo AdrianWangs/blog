@@ -66,6 +66,7 @@ comments: true
 
 ### 双指针
 
+- [LeetCode 75 - 颜色分类 (Sort Colors)](/2025/05/21/算法刷题/LeetCode-75-颜色分类/) - LeetCode 75 颜色分类题解，使用双指针原地排序包含0、1、2的数组。
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
 - [LeetCode 42: 接雨水（Trapping Rain Water）](/2025/04/18/算法刷题/LeetCode-42-trapping-rain-water/) - 使用双指针、动态规划和单调栈三种方法解决
 - [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/算法刷题/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
@@ -109,7 +110,7 @@ comments: true
 
 - [LeetCode 72 - 编辑距离 (Edit Distance)](/2025/05/21/算法刷题/LeetCode-72-编辑距离/) - 详解 LeetCode 72 题编辑距离的动态规划解法，包括状态定义、状态转移方程和代码实现。
 - [LeetCode 1143 - 最长公共子序列 (Longest Common Subsequence)](/2025/05/20/算法刷题/LeetCode-1143-最长公共子序列/) - LeetCode 1143 最长公共子序列问题详解，使用动态规划思路解决，并提供 Go 语言的实现代码和复杂度分析。
-- ❌ [LeetCode 5 - 最长回文子串：动态规划填表顺序错误分析](/2025/05/20/算法刷题/LeetCode-5-最长回文子串错误分析/) - 详细分析 LeetCode 第 5 题“最长回文子串”动态规划解法的常见填表顺序错误，并提供正确的思路与实现。
+- ❌ [LeetCode 5 - 最长回文子串：动态规划填表顺序错误分析](/2025/05/20/算法刷题/LeetCode-5-最长回文子串错误分析/) - 详细分析 LeetCode 第 5 题"最长回文子串"动态规划解法的常见填表顺序错误，并提供正确的思路与实现。
 - ❌ [LeetCode 32 - 最长有效括号：动态规划思路错题分析](/2025/05/18/算法刷题/leetcode-32-longest-valid-parentheses-dp-error-analysis/) - 详细分析 LeetCode 32 题 '最长有效括号' 动态规划解法中一个常见的状态转移错误，并提供正确的思路和代码。
 - [LeetCode 416 - 分割等和子集 (Partition Equal Subset Sum)](/2025/05/17/算法刷题/LeetCode-416-分割等和子集/) - LeetCode 416 分割等和子集问题详解，使用动态规划（0/1 背包问题）解决。
 - [LeetCode 152 - 乘积最大子数组 (Maximum Product Subarray)](/2025/05/17/算法刷题/LeetCode-152-乘积最大子数组/) - LeetCode 152 乘积最大子数组的解题思路、代码实现和复杂度分析。
