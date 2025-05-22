@@ -52,7 +52,7 @@ comments: true
 
 ### 数组操作
 
-- [LeetCode 31: 下一个排列 (Next Permutation)](/2025/05/22/leetcode-31-next-permutation/) - 详解 LeetCode 31 题"下一个排列"的解题思路与 Go 语言实现。
+- [LeetCode 31: 下一个排列 (Next Permutation)](/2025/05/22/算法刷题/leetcode-31-next-permutation/) - 详解 LeetCode 31 题"下一个排列"的解题思路与 Go 语言实现。
 - [❌ LeetCode 215: 数组中的第 K 个最大元素](/2025/05/13/算法刷题/LeetCode-215-数组中的第K个最大元素-超时分析与优化/) - 分析 Quick Select 算法的超时原因，并提供针对重复元素和分区优化的正确实现
 - [LeetCode 45: 跳跃游戏 II (Jump Game II)](/2025/05/15/算法刷题/LeetCode-45-跳跃游戏-II/) - 通过贪心算法高效解决最少跳跃次数问题，详细分析贪心策略的原理与实现
 - [LeetCode 169: 多数元素（Majority Element）](/2025/05/10/算法刷题/LeetCode-169-多数元素/) - 使用摩尔投票算法高效找出数组中的多数元素
@@ -67,8 +67,8 @@ comments: true
 
 ### 双指针
 
-- [LeetCode 287 - 寻找重复数](/2025/05/22/LeetCode-287-寻找重复数/) - 详细解析 LeetCode 287 "寻找重复数"，利用快慢指针（Floyd 判圈算法）在 O(n) 时间和 O(1) 空间内找到重复数。
-- [LeetCode 75 - 颜色分类 (Sort Colors)](/2025/05/21/算法刷题/LeetCode-75-颜色分类/) - LeetCode 75 颜色分类题解，使用双指针原地排序包含0、1、2的数组。
+- [LeetCode 287 - 寻找重复数](/2025/05/22/算法刷题/LeetCode-287-寻找重复数/) - 详细解析 LeetCode 287 "寻找重复数"，利用快慢指针（Floyd 判圈算法）在 O(n) 时间和 O(1) 空间内找到重复数。
+- [LeetCode 75 - 颜色分类 (Sort Colors)](/2025/05/21/算法刷题/LeetCode-75-颜色分类/) - LeetCode 75 颜色分类题解，使用双指针原地排序包含 0、1、2 的数组。
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
 - [LeetCode 42: 接雨水（Trapping Rain Water）](/2025/04/18/算法刷题/LeetCode-42-trapping-rain-water/) - 使用双指针、动态规划和单调栈三种方法解决
 - [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/算法刷题/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
