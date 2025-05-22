@@ -52,6 +52,7 @@ comments: true
 
 ### 数组操作
 
+- [LeetCode 31: 下一个排列 (Next Permutation)](/2025/05/22/leetcode-31-next-permutation/) - 详解 LeetCode 31 题"下一个排列"的解题思路与 Go 语言实现。
 - [❌ LeetCode 215: 数组中的第 K 个最大元素](/2025/05/13/算法刷题/LeetCode-215-数组中的第K个最大元素-超时分析与优化/) - 分析 Quick Select 算法的超时原因，并提供针对重复元素和分区优化的正确实现
 - [LeetCode 45: 跳跃游戏 II (Jump Game II)](/2025/05/15/算法刷题/LeetCode-45-跳跃游戏-II/) - 通过贪心算法高效解决最少跳跃次数问题，详细分析贪心策略的原理与实现
 - [LeetCode 169: 多数元素（Majority Element）](/2025/05/10/算法刷题/LeetCode-169-多数元素/) - 使用摩尔投票算法高效找出数组中的多数元素
