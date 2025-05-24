@@ -67,6 +67,7 @@ comments: true
 
 ### 双指针
 
+- [LeetCode 80 - 删除有序数组中的重复项 II](/2025/05/24/算法刷题/LeetCode-80-删除有序数组中的重复项-II/) - 使用双指针技术解决有序数组去重问题，允许每个元素最多出现两次，原地修改数组实现 O(1) 空间复杂度
 - [LeetCode 287 - 寻找重复数](/2025/05/22/算法刷题/LeetCode-287-寻找重复数/) - 详细解析 LeetCode 287 "寻找重复数"，利用快慢指针（Floyd 判圈算法）在 O(n) 时间和 O(1) 空间内找到重复数。
 - [LeetCode 75 - 颜色分类 (Sort Colors)](/2025/05/21/算法刷题/LeetCode-75-颜色分类/) - LeetCode 75 颜色分类题解，使用双指针原地排序包含 0、1、2 的数组。
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
