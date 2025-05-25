@@ -4,7 +4,7 @@ date: 2025-05-16 18:00:00
 categories:
   - 八股文
   - MySQL
-  - 索引
+  - 锁
 tags:
   - MySQL
   - 索引
