@@ -16,7 +16,6 @@ description: '详细分析了MySQL单表2000W条数据建议值的来源与实�
 
 我们经常听说，单表数据量不要超过 2000W，否则性能会下降。这个"2000W"的建议值是否真的可靠？它的依据是什么？本文将通过分析 MySQL 的存储结构、B+树索引特性，以及实际测试来探讨这个问题。
 
-> 本文参考自小林 coding 的文章：[MySQL 单表不要超过 2000W 行，靠谱吗？](https://raw.githubusercontent.com/xiaolincoder/CS-Base/refs/heads/main/mysql/index/2000w.md)
 
 ## **实验**
 
