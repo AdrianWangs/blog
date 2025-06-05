@@ -11,6 +11,12 @@ comments: true
 
 ## 算法类型
 
+### 哈希表
+
+- [LeetCode 49 - 字母异位词分组（Group Anagrams）](/2025/06/05/算法刷题/LeetCode-49-字母异位词分组/) - 详解基于排序和计数两种方法解决字母异位词分组问题，分析Go语言中数组作为哈希表键的特性 **[面试经典150]**
+- [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的 LRU 缓存
+- [LeetCode 41: 缺失的第一个正数（First Missing Positive）](/2025/04/18/算法刷题/LeetCode-41-first-missing-positive/) - ❌ 使用原地哈希解决的 Hard 难度问题
+
 ### 字符串与模式匹配
 
 - [❌ LeetCode 76 - 最小覆盖子串（Minimum Window Substring）](/2025/06/03/算法刷题/LeetCode-76-最小覆盖子串-错误分析/) - 深入分析最小覆盖子串问题的滑动窗口解法，通过错误分析帮助理解双指针技巧的正确使用方式 **[面试经典150]**
@@ -69,11 +75,6 @@ comments: true
 - [LeetCode 48: 旋转图像（Rotate Image）](/2025/04/19/算法刷题/LeetCode-48-Rotate-Image/) - 矩阵顺时针旋转 90 度的高效实现
 - [LeetCode 54: 螺旋矩阵（Spiral Matrix）](/2025/04/19/算法刷题/LeetCode-54-Spiral-Matrix/) - ❌ 螺旋顺序遍历矩阵的解题思路与错误分析
 - [LeetCode 73: 矩阵置零（Matrix Zeroes）](/2025/04/19/算法刷题/leetcode-73-matrix-zeroes/) - ❌ 原地算法实现矩阵置零的多种方法
-
-### 哈希表
-
-- [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的 LRU 缓存
-- [LeetCode 41: 缺失的第一个正数（First Missing Positive）](/2025/04/18/算法刷题/LeetCode-41-first-missing-positive/) - ❌ 使用原地哈希解决的 Hard 难度问题
 
 ### 双指针
 
