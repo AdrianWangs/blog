@@ -13,6 +13,7 @@ comments: true
 
 ### 哈希表
 
+- [LeetCode 128 - 最长连续序列：一个循环引发的性能血案](/2025/06/06/LeetCode-128-最长连续序列/) - 通过对比两种循环方式，揭示一个细节如何导致性能天差地别，避免超时。
 - [LeetCode 49 - 字母异位词分组（Group Anagrams）](/2025/06/05/算法刷题/LeetCode-49-字母异位词分组/) - 详解基于排序和计数两种方法解决字母异位词分组问题，分析Go语言中数组作为哈希表键的特性 **[面试经典150]**
 - [LeetCode 146: LRU 缓存](/2025/04/27/算法刷题/LeetCode-146-LRU-Cache/) - 哈希表和双向链表结合实现高效的 LRU 缓存
 - [LeetCode 41: 缺失的第一个正数（First Missing Positive）](/2025/04/18/算法刷题/LeetCode-41-first-missing-positive/) - ❌ 使用原地哈希解决的 Hard 难度问题
