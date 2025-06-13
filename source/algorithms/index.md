@@ -93,12 +93,13 @@ comments: true
 
 ### 二分查找
 
+- [LeetCode 69 - x 的平方根（Sqrt(x)）](/2025/06/13/算法刷题/LeetCode-69-x的平方根/) - 使用二分查找算法求解整数平方根问题，核心思路是在[0,x]范围内二分搜索，时间复杂度O(log x)，是一道经典的二分查找应用题目 **[面试经典150]**
 - [LeetCode 4: 寻找两个正序数组的中位数（Median of Two Sorted Arrays）](/2025/05/11/算法刷题/LeetCode-4-寻找两个正序数组的中位数/) - 深入理解二分思想解决两个有序数组中位数问题
 - [❌ LeetCode 33: 搜索旋转排序数组（Search in Rotated Sorted Array）](/2025/05/08/算法刷题/LeetCode-33-搜索旋转排序数组-错误分析/) - 分析旋转排序数组中查找旋转点的错误及其优雅解法
 - [❌ LeetCode 74: 搜索二维矩阵（Search a 2D Matrix）](/2025/05/08/算法刷题/LeetCode-74-搜索二维矩阵-错误分析/) - 分析二分查找在矩阵搜索中的边界条件处理错误
 - [LeetCode 35: 搜索插入位置（Search Insert Position）](/2025/05/08/算法刷题/LeetCode-35-搜索插入位置/) - Go 语言中二分搜索函数全解析与应用场景详解
 - [LeetCode 240: 搜索二维矩阵 II（Search a 2D Matrix II）](/2025/04/20/算法刷题/LeetCode-240-Search-a-2D-Matrix-II/) - 角落搜索法、二分查找法和分治法三种解法比较
-- [LeetCode 2563: 统计公平数对的数目（Count the Number of Fair Pairs）](/2025/04/20/算法刷题/LeetCode-2563-统计公平数对的数目/) - 利用排序和二分查找高效计算满足条件的数对
+- [LeetCode 2563: 统计公平数目的数目（Count the Number of Fair Pairs）](/2025/04/20/算法刷题/LeetCode-2563-统计公平数对的数目/) - 利用排序和二分查找高效计算满足条件的数对
 - [LeetCode 153: 寻找旋转排序数组中的最小值](/2025/05/10/算法刷题/LeetCode-153-寻找旋转排序数组中的最小值/) - 使用传统二分和 Go 的 sort.Search 解决
 
 ### 排序
