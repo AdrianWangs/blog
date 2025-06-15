@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Golang 目录更新提醒
+
+当在 `source/_posts/八股文/GOLANG/` 目录或其任何子目录下创建或修改任何 Golang 相关文章后，请务必更新主要的 Golang 目录索引文件。
+
+**需要更新的索引文件:**
+
+*   `[source/golang/index.md](mdc:hexo-blog/source/golang/index.md)`
+
+**操作步骤:**
+
+1.  打开 `[source/golang/index.md](mdc:hexo-blog/source/golang/index.md)` 文件。
+2.  根据新文章的内容和分类，在合适的位置添加一个指向新文章的链接。
+    *   链接格式通常为：`- [文章标题](mdc:hexo-blog/八股文/GOLANG/分类/文章名) - 简短描述`
+    *   例如：`- [Goroutine 基础](mdc:hexo-blog/八股文/GOLANG/并发编程/Goroutine/Goroutine基础) - Go 协程的创建和使用`
+3.  确保格式与现有条目一致。
+4.  检查分类是否正确，必要时创建新的分类部分。
+
+**目标:**
+
+确保 Golang 知识库的目录索引始终保持最新，方便读者导航和查找信息。
+
+**注意事项:**
+
+- 新文章链接应该添加到相应的分类下
+- 保持链接描述简洁明了
+- 确保链接路径正确无误
+- 如果是重要的面试题目，可以在描述中标注

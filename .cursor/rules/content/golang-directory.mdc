@@ -1,0 +1,104 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Golang 文章目录结构
+
+本文档定义了博客中 Golang 相关文章的目录结构和组织方式。
+
+## 基本目录结构
+
+Golang 技术文章应按照以下目录结构进行组织：
+
+```
+source/_posts/八股文/GOLANG/
+├── 基础知识/         # Go 语言基础概念
+│   ├── 语言特性/     # 变量、数据类型、数组切片等
+│   ├── 函数与方法/   # 函数定义、方法接收者、接口
+│   └── 错误处理/     # 错误处理机制、panic 和 recover
+├── 并发编程/         # Go 并发编程
+│   ├── Goroutine/    # 协程相关
+│   ├── Channel/      # 通道相关
+│   └── 同步原语/     # Mutex、WaitGroup、Once 等
+├── 内存管理/         # 内存管理和垃圾回收
+│   ├── 垃圾回收/     # GC 算法、内存分配器
+│   └── 内存模型/     # 内存对齐、逃逸分析
+├── 性能优化/         # 性能分析和优化
+│   ├── 性能分析/     # pprof、基准测试
+│   └── 优化技巧/     # 字符串优化、切片优化
+├── 标准库/           # Go 标准库
+│   ├── 网络编程/     # HTTP、TCP 编程
+│   └── 并发工具/     # Context、sync.Pool
+└── 工程实践/         # 实际项目经验
+    ├── 设计模式/     # Go 设计模式实现
+    └── 最佳实践/     # 代码规范、项目结构
+```
+
+## 文章命名规范
+
+- 文件名应使用中文，清晰表达文章主题
+- 同一主题的多篇文章可以使用数字编号，如：`Goroutine基础.md`、`Goroutine调度器.md`
+- 复合词之间可以使用连字符，如：`HTTP客户端.md`、`sync.Pool.md`
+
+## 分类和标签
+
+### 分类设置
+
+所有 Golang 文章应至少包含以下分类路径：
+```yaml
+categories:
+  - 八股文
+  - GOLANG
+  - [具体分类，如：基础知识、并发编程、内存管理]
+```
+
+### 标签设置
+
+标签应包含：
+```yaml
+tags:
+  - GOLANG
+  - [具体特性，如：Goroutine、Channel、GC、接口等]
+```
+
+## 添加新文章到目录
+
+添加新的 Golang 文章时，应遵循以下步骤：
+
+1. 确定文章所属的分类目录
+2. 使用 Hexo 创建新文章：`hexo new post "八股文/GOLANG/[分类]/[文章名]"`
+3. 在文章 Front-matter 中设置正确的分类和标签
+4. 文章创建后会自动生成在对应目录
+5. 将文章链接添加到 [Golang 知识库](mdc:hexo-blog/source/golang/index.md) 索引中
+
+## 更新主菜单
+
+Golang 相关内容的菜单项已经添加到 `_config.vivia.yml` 中：
+
+```yaml
+menu:
+  首页: /
+  Leetcode题解: /algorithms
+  MySQL: /mysql
+  Redis: /redis
+  Golang: /golang  # Golang 菜单项
+  归档: /archives
+  关于我: /about
+```
+
+## 内容组织原则
+
+1. **由浅入深**：从基础语法到高级特性，再到工程实践
+2. **理论实践结合**：每个知识点都要有代码示例和实际应用场景
+3. **面试导向**：重点关注面试常问的知识点和深度问题
+4. **持续更新**：随着 Go 版本更新，及时更新相关内容
+
+## 参考资源
+
+- [Go 官方文档](mdc:hexo-blog/https:/golang.org/doc)
+- [Go 语言圣经](mdc:hexo-blog/https:/books.studygolang.com/gopl-zh)
+- [Effective Go](mdc:hexo-blog/https:/golang.org/doc/effective_go.html)
+- [Go 内存模型](mdc:hexo-blog/https:/golang.org/ref/mem)
+
+Golang 目录可通过以下网址访问：https://adrianwangs.github.io/golang/

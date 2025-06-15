@@ -1,0 +1,187 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Golang 文章模板
+
+本文档提供了 Golang 文章的通用模板，包括内容结构和格式要求。
+
+## 基本结构
+
+每篇 Golang 相关文章应遵循以下基本结构：
+
+```markdown
+---
+title: [文章标题]
+date: YYYY-MM-DD HH:MM:SS
+categories:
+  - 八股文
+  - GOLANG
+  - [具体分类，如：基础知识、并发编程、内存管理]
+tags:
+  - GOLANG
+  - [具体特性，如：Goroutine、Channel、GC、接口等]
+description: [文章简短描述，会显示在文章列表中]
+---
+
+## 概述
+
+简要介绍本文主题的背景、意义和在 Go 语言中的重要性。
+
+## 核心概念
+
+详细解释相关的核心概念和术语定义。
+
+## 语法与用法
+
+提供相关的语法说明和基本用法示例。
+
+```go
+// Go 代码示例
+package main
+
+import "fmt"
+
+func main() {
+    // 示例代码
+    fmt.Println("Hello, Go!")
+}
+```
+
+## 底层原理
+
+深入分析该特性的底层实现原理和机制（如适用）。
+
+## 最佳实践
+
+总结该特性使用的最佳实践和注意事项。
+
+### 正确用法
+
+```go
+// 推荐的写法
+func goodExample() {
+    // 代码示例
+}
+```
+
+### 常见错误
+
+```go
+// 不推荐的写法
+func badExample() {
+    // 错误示例及说明
+}
+```
+
+## 性能考虑
+
+分析该特性的性能影响和优化建议（如适用）。
+
+## 实际应用场景
+
+列举该特性在实际项目中的应用场景和示例。
+
+## 面试要点
+
+总结与该主题相关的常见面试问题和关键答案。
+
+### 常见问题
+
+1. **问题1**: 问题描述
+   - **答案**: 详细回答
+
+2. **问题2**: 问题描述
+   - **答案**: 详细回答
+
+## 参考资料
+
+- [Go 官方文档相关页面](mdc:hexo-blog/https:/golang.org/doc)
+- 其他参考资料
+```
+
+## 内容要求
+
+1. **准确性**：内容必须准确，参考 Go 官方文档和权威资料
+2. **深度**：深入分析原理，不仅介绍"是什么"，还要解释"为什么"和"如何实现"
+3. **实用性**：提供实际可用的代码示例和最佳实践
+4. **面试导向**：重点关注面试常问的知识点
+5. **结构清晰**：使用合理的标题层级，保持文章结构清晰
+
+## 代码示例要求
+
+1. **完整性**：代码示例应该是完整可运行的
+2. **注释**：关键代码应包含详细注释
+3. **格式化**：遵循 Go 代码规范，使用 `gofmt` 格式化
+4. **语言标识**：代码块必须标识语言类型为 `go`
+
+```go
+// 示例：带注释的完整代码
+package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func main() {
+    var wg sync.WaitGroup
+    
+    // 启动 3 个 goroutine
+    for i := 0; i < 3; i++ {
+        wg.Add(1)
+        go func(id int) {
+            defer wg.Done()
+            fmt.Printf("Goroutine %d is running\n", id)
+        }(i)
+    }
+    
+    // 等待所有 goroutine 完成
+    wg.Wait()
+    fmt.Println("All goroutines completed")
+}
+```
+
+## 图片要求
+
+1. 图片应存放在与文章同名的目录中，例如 `Goroutine基础.md` 的图片应存放在 `Goroutine基础/` 目录下
+2. 图片命名规则：使用时间戳作为文件名，例如 `1745568387988.png`
+3. 在文章中引用图片时使用相对路径，例如：`![图片说明](mdc:hexo-blog/Goroutine基础/1745568387988.png)`
+
+## 性能分析
+
+如涉及性能相关内容，应包含：
+
+1. **基准测试**：提供相关的 benchmark 代码
+2. **性能对比**：不同实现方式的性能对比
+3. **内存分析**：内存使用情况分析（如适用）
+
+```go
+// 基准测试示例
+func BenchmarkExample(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        // 测试代码
+    }
+}
+```
+
+## Go 版本说明
+
+1. 明确说明内容适用的 Go 版本
+2. 如有版本差异，需要特别说明
+3. 推荐使用最新稳定版本的特性
+
+## 交叉引用
+
+适当引用其他相关文章，形成知识网络：
+
+```markdown
+相关文章：
+- [Goroutine 调度器](mdc:hexo-blog/八股文/GOLANG/并发编程/Goroutine/Goroutine调度器)
+- [Channel 基础](mdc:hexo-blog/八股文/GOLANG/并发编程/Channel/Channel基础)
+```
+
+## 更新目录提醒
+
+每次创建新文章后，必须更新 [Golang 知识库](mdc:hexo-blog/source/golang/index.md) 索引页面，添加相应的链接。
