@@ -130,6 +130,8 @@ menu: # Links in the navigation bar
   Leetcode题解: /algorithms || fa fa-book
   MySQL: /mysql || fa fa-database
   Redis: /redis || fa fa-fire
+  计算机网络: /network || fa fa-globe
+  Golang: /golang || fa fa-brands fa-golang
   # 算法刷题: /categories/算法刷题
   归档: /archives || fa fa-archive
   关于我: /about || fa fa-user

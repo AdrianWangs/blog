@@ -4,6 +4,7 @@ menu: # Links in the navigation bar
   Leetcode题解: /algorithms
   MySQL: /mysql
   Redis: /redis
+  计算机网络: /network
   Golang: /golang
   # 算法刷题: /categories/算法刷题
   归档: /archives
