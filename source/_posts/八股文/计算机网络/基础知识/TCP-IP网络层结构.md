@@ -63,7 +63,7 @@
 
 ### TCP协议详解
 
-**TCP（Transmission Control Protocol，传输控制协议）**是一个面向连接的、可靠的传输协议。
+**TCP**（**Transmission Control Protocol，传输控制协议**）是一个面向连接的、可靠的传输协议。
 
 #### TCP的关键特性：
 
@@ -132,7 +132,7 @@
 
 ### IP协议详解
 
-**IP协议（Internet Protocol）**是网络层的核心协议，提供无连接的数据报服务。
+**IP协议**（**Internet Protocol**）是网络层的核心协议，提供无连接的数据报服务。
 
 #### IP报文结构：
 
@@ -151,7 +151,7 @@ IP协议将传输层的数据作为载荷，加上IP头部形成IP数据报：
 
 #### IP分片机制：
 
-当IP数据报大小超过链路的**MTU（Maximum Transmission Unit）**时，需要进行分片：
+当IP数据报大小超过链路的**MTU**（**Maximum Transmission Unit**）时，需要进行分片：
 - **以太网MTU通常为1500字节**
 - 大的IP数据报被分割成多个小片段
 - 每个片段都有独立的IP头部
