@@ -115,6 +115,7 @@ comments: true
 
 ### 二叉树
 
+- [LeetCode 222 - 完全二叉树的节点个数（Count Complete Tree Nodes）](/2025/06/17/算法刷题/LeetCode-222-完全二叉树的节点个数/) - 利用完全二叉树的性质，通过计算左右子树高度来优化节点计数，时间复杂度O(log²n)的高效解法 **[面试经典 150]**
 - [LeetCode 112 - 路径总和（Path Sum）](/2025/06/15/算法刷题/LeetCode-112-路径总和/) - 使用递归和深度优先搜索解决二叉树路径求和问题，详细解析递归思路和边界条件处理
 - [LeetCode 117 - 填充每个节点的下一个右侧节点指针 II（Populating Next Right Pointers in Each Node II）](/2025/06/15/算法刷题/LeetCode-117-填充每个节点的下一个右侧节点指针-ii/) - 详解三种解法：哈希表 DFS、层序遍历 BFS、O(1)空间优化。通过图解和代码详细分析如何为二叉树每个节点填充下一个右侧节点指针 **[面试经典 150]**
 - [❌ LeetCode 124: 二叉树中的最大路径和（Binary Tree Maximum Path Sum）](/2025/05/02/算法刷题/LeetCode-124-Binary-Tree-Maximum-Path-Sum/) - 后序遍历与递归返回值设计解决树路径问题
