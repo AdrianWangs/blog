@@ -22,7 +22,7 @@ Go（又称 Golang）是由 Google 开发的一种静态强类型、编译型、
 ### 并发编程
 
 - **Goroutine**
-  
+  - [深入理解Go语言并发调度器GMP模型](/2025/06/17/八股文/Go语言/GMP/GMP/) - 全面解析Go语言GMP调度器模型的核心原理、设计思想和调度场景，深入理解Goroutine、Machine和Processor的协作机制，掌握Go并发编程的底层实现
 
 - **Channel**
 
