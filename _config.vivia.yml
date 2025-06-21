@@ -6,6 +6,7 @@ menu: # Links in the navigation bar
   Redis: /redis
   计算机网络: /network
   Golang: /golang
+  面试经验: /interview
   # 算法刷题: /categories/算法刷题
   归档: /archives
   关于我: /about

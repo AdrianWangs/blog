@@ -35,6 +35,10 @@ alwaysApply: true
 - [系统设计文章模板](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/content/system-design-post-template.mdc) - 系统设计文章模板
 - [幂等性文章模板](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/hexo-blog/.cursor/rules/content/idempotency-article-template.mdc) - 幂等性文章专用模板
 
+## 面试经验内容指南
+- [面试经验文章模板](mdc:hexo-blog/.cursor/rules/content/interview-experience-template.mdc) - 面试经验文章模板
+- [面试经验目录](mdc:hexo-blog/.cursor/rules/content/interview-directory.mdc) - 面试经验文章目录结构
+
 ## 快速链接
 - [Hexo 配置](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/hexo-blog/_config.yml) - 主 Hexo 配置文件
 - [Vivia 主题配置](mdc:hexo-blog/hexo-blog/hexo-blog/hexo-blog/hexo-blog/_config.vivia.yml) - 主题特定配置
