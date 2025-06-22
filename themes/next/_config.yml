@@ -127,14 +127,13 @@ darkmode: true
 
 menu: # Links in the navigation bar
   首页: / || fa fa-home
-  Leetcode题解: /algorithms || fa fa-book
+  全部文章: /archives || fa fa-th-list
+  面试经验: /interview || fa fa-briefcase
+  Golang: /golang || fa fa-brands fa-golang
   MySQL: /mysql || fa fa-database
   Redis: /redis || fa fa-fire
   计算机网络: /network || fa fa-globe
-  Golang: /golang || fa fa-brands fa-golang
-  面试经验: /interview || fa fa-briefcase
-  # 算法刷题: /categories/算法刷题
-  归档: /archives || fa fa-archive
+  Leetcode题解: /algorithms || fa fa-book
   关于我: /about || fa fa-user
 
 
