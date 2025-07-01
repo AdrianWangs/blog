@@ -41,6 +41,7 @@ comments: true
 
 ### 树结构与前缀树
 
+- [LeetCode 212 - 单词搜索 II（Word Search II）](/2025/07/01/算法刷题/LeetCode-212-单词搜索-ii/) - 使用字典树(Trie)优化的单词搜索问题，通过DFS遍历二维字符网格同时匹配字典树中的单词，实现高效的多单词搜索算法 **[面试经典 150]**
 - [LeetCode 211 - 添加与搜索单词-数据结构设计（Design Add and Search Words Data Structure）](/2025/06/29/算法刷题/LeetCode-211-添加与搜索单词-数据结构设计/) - 使用字典树(Trie)实现支持通配符搜索的单词字典，关键在于递归DFS处理'.'字符的所有可能匹配 **[面试经典 150]**
 - [LeetCode 208: 实现 Trie 前缀树](/2025/05/05/算法刷题/LeetCode-208-实现-Trie-前缀树/) - Trie 前缀树实现优化与空间复杂度分析
 
