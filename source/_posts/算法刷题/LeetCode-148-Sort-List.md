@@ -1,6 +1,6 @@
 ---
 title: LeetCode 148 - 排序链表（Sort List）
-date: 2025-04-26 10:30:00
+date: 2025-07-03 10:30:00
 categories:
 - 算法刷题
 - LeetCode
@@ -243,6 +243,147 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 | 优点 | 常数空间复杂度 | 代码简洁易懂 |
 | 缺点 | 实现较复杂 | 需要额外的递归栈空间 |
 | 推荐度 | ★★★★★ | ★★★★☆ |
+
+## 错误分析与总结
+
+在尝试实现自底向上归并排序时，我遇到了几个典型的链表操作边界问题。以下是我的错误代码和具体分析，希望能帮助我（以及他人）避免重蹈覆辙。
+
+### 初始错误代码
+
+```go
+func sortList(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	dummyHead := &ListNode{}
+	dummyHead.Next = head
+	length := 0
+	cur := head
+	for cur != nil {
+		cur = cur.Next
+		length++
+	}
+
+	for k := 1; k < length; k <<= 1 {
+		prev, cur := dummyHead, dummyHead.Next
+		for cur != nil {
+			head1 := cur
+			// 这里应该是1开始
+			for i := 0; i < k && cur.Next != nil; i++ {
+				cur = cur.Next
+			}
+			head2 := cur.Next
+			cur.Next = nil
+
+			// 可能会带来cur = nil
+			cur = head2
+
+			for i := 0; i < k && cur != nil && cur.Next != nil; i++ {
+				cur = cur.Next
+			}
+
+			var next *ListNode
+			if cur != nil {
+				next = cur.Next
+				cur.Next = nil
+			}
+
+			prev.Next = mergeSorted(head1, head2)
+
+			for prev.Next != nil {
+				prev = prev.Next
+			}
+			// 这里没必要加，因为后面的处理完自然会加上
+			prev.Next = next
+			cur = next
+		}
+	}
+	return dummyHead.Next
+}
+
+func mergeSorted(head1, head2 *ListNode) *ListNode {
+	dummyHead := &ListNode{}
+	cur := dummyHead
+	for head1 != nil && head2 != nil {
+		if head1.Val < head2.Val {
+			cur.Next = head1
+			head1 = head1.Next
+		} else {
+			cur.Next = head2
+			head2 = head2.Next
+		}
+		cur = cur.Next
+	}
+	if head1 != nil {
+		cur.Next = head1
+	} else {
+		cur.Next = head2
+	}
+	return dummyHead.Next
+}
+```
+
+### 错误点分析
+
+我在代码注释中标记了几个疑点，经过分析，主要有两个核心错误：
+
+#### 1. 子链表切分错误
+
+**问题所在**：
+```go
+// ...
+head1 := cur
+// 这里应该是1开始
+for i := 0; i < k && cur.Next != nil; i++ {
+    cur = cur.Next
+}
+head2 := cur.Next
+cur.Next = nil
+// ...
+```
+用于切分长度为 `k` 的子链表的循环 `for i := 0; i < k && ...` 执行了 `k` 次，这使得 `cur` 指针前进了 `k` 步。正确的做法是，从 `head1` 开始，指针需要前进 `k-1` 步才能到达长度为 `k` 的子链表的尾部。
+
+**原因分析**：
+当子链表长度为 `k` 时，我们需要找到第 `k` 个节点作为尾部。如果 `cur` 初始指向第 1 个节点，那么前进 `k-1` 步后，`cur` 会指向第 `k` 个节点。而 `for i := 0; i < k` 这个循环会执行 `k` 次，导致 `cur` 指向了第 `k+1` 个节点，这是不正确的。例如，当 `k=1` 时，循环会执行一次，`cur` 前进了一步，导致切分出的 `head1` 包含了两个节点，而我们期望的是一个节点。
+
+**正确实现**：
+循环应该从 `1` 开始，到 `k` 结束（不包括 `k`），即循环 `k-1` 次。
+```go
+// 正确的切分逻辑
+curr := head1
+for i := 1; i < k && curr != nil && curr.Next != nil; i++ {
+    curr = curr.Next
+}
+// 此时 curr 是第一个子链表的尾节点
+head2 := curr.Next
+curr.Next = nil // 断开
+```
+
+#### 2. 对链表连接方式的误解
+
+**问题所在**：
+```go
+//...
+for prev.Next != nil {
+    prev = prev.Next
+}
+// 我曾认为这里没必要加，因为后面的处理完自然会加上
+prev.Next = next
+cur = next
+```
+我曾认为 `prev.Next = next` 这一行是多余的，理由是在下一次循环中，`prev.Next` 会被 `mergeSorted` 的结果自然覆盖。
+
+**原因分析**：
+这个想法是错误的。在 `for cur != nil` 的整个循环过程中，我们需要维护一个指向 **已排序部分尾部** 的指针 `prev`，并将后续处理好的片段依次连接到它后面。
+
+我写的 `prev.Next = next` 这行代码本身是一种有效的连接方式，它确保在处理下一对子链表 *之前*，将刚合并完的链表与后面还未处理的链表部分先连接起来，从而保证链表的完整性。我的错误在于，我误以为这行代码是多余的，如果将其删除，那么在处理完最后一对子链表后，如果原始链表长度不是2的幂，剩余的尾部 `next` 就会丢失。
+
+**正确逻辑**：
+正确的做法是在 `for cur != nil` 循环中，始终维护 `prev` 作为已处理部分的尾巴。
+1.  `prev.Next = mergedList` 将新合并的链表接在 `prev` 后面。
+2.  然后 `prev` 自身前进到新合并链表的尾部（`while (prev.Next != nil) { prev = prev.Next; }`）。
+3.  `cur` 更新为 `next`，开始下一对子链表的处理。
+在下一次循环中，`prev.Next = mergedList` 会再次将新的合并结果连接到更新后的 `prev` 之后，从而将所有部分串联起来。我的代码实现了类似的效果，但我的注释却反映了我对这个关键连接步骤的误解。
 
 ## 复杂度分析
 
