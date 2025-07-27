@@ -98,6 +98,12 @@ comments: true
 - [LeetCode 287 - 寻找重复数](/2025/05/22/算法刷题/LeetCode-287-寻找重复数/) - 详细解析 LeetCode 287 "寻找重复数"，利用快慢指针（Floyd 判圈算法）在 O(n) 时间和 O(1) 空间内找到重复数。
 - [LeetCode 75 - 颜色分类 (Sort Colors)](/2025/05/21/算法刷题/LeetCode-75-颜色分类/) - LeetCode 75 颜色分类题解，使用双指针原地排序包含 0、1、2 的数组。
 - [LeetCode 234: 回文链表（Palindrome Linked List）](/2025/04/21/算法刷题/LeetCode-234-Palindrome-Linked-List/) - 判断链表是否为回文结构的多种解法与优化分析
+
+### 滑动窗口
+
+- [LeetCode 239 - 滑动窗口最大值（Sliding Window Maximum）](/2025/07/26/LeetCode-239-滑动窗口最大值/) - 使用单调队列解决滑动窗口最大值问题，通过维护递减队列来高效获取每个窗口的最大值，时间复杂度O(n)，空间复杂度O(k) **[面试经典 150]**
+- [❌ LeetCode 76 - 最小覆盖子串（Minimum Window Substring）](/2025/06/03/算法刷题/LeetCode-76-最小覆盖子串-错误分析/) - 深入分析最小覆盖子串问题的滑动窗口解法，通过错误分析帮助理解双指针技巧的正确使用方式 **[面试经典 150]**
+- [LeetCode 30 - 串联所有单词的子串（Substring with Concatenation of All Words）](/2025/06/02/算法刷题/LeetCode-30-串联所有单词的子串/) - 深入分析滑动窗口优化解法，对比暴力解法和滑动窗口的时间复杂度差异，解答为什么滑动窗口能显著提升性能 **[面试经典 150]**
 - [LeetCode 42: 接雨水（Trapping Rain Water）](/2025/04/18/算法刷题/LeetCode-42-trapping-rain-water/) - 使用双指针、动态规划和单调栈三种方法解决
 - [❌ LeetCode 160: 相交链表（Intersection of Two Linked Lists）](/2025/04/20/算法刷题/LeetCode-160-Intersection-of-Two-Linked-Lists/) - 寻找两个链表交点的多种方法与解法分析
 
