@@ -22,6 +22,7 @@ jobs:
       # 安装 Hexo 的依赖库
       - name: Setup Hexo Dependencies
         run: |
+          npm install undici@5.28.4
           npm install hexo-cli -g
           npm install hexo-deployer-git --save
           npm install
