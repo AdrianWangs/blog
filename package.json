@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "colorjs.io": "^0.5.2",
-    "hexo": "^7.0.0",
+    "hexo": "^8.1.1",
     "hexo-asset-image": "github:xcodebuild/hexo-asset-image",
     "hexo-butterfly-git-gitcalendar": "^1.1.0",
     "hexo-deployer-git": "^4.0.0",
