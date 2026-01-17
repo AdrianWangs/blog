@@ -1,0 +1,28 @@
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 2147483640;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.reading-progress.is-visible {
+  opacity: 1;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--main, #49b1f5), #34d399);
+  box-shadow: 0 0 10px rgba(73, 177, 245, 0.35);
+  transition: width 0.08s linear;
+}
+
+[data-theme="dark"] .reading-progress-bar {
+  box-shadow: 0 0 10px rgba(73, 177, 245, 0.45);
+}
+

@@ -1,0 +1,28 @@
+@media screen and (min-width: 900px) {
+  #rightside #font-size-toggle {
+    position: relative;
+  }
+
+  #rightside #font-size-toggle .fs-badge {
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    font-size: 10px;
+    line-height: 1;
+    opacity: 0.9;
+    font-weight: 700;
+  }
+
+  html.fs-md #article-container,
+  html.fs-md .post-content {
+    font-size: 1.15em;
+    line-height: 1.85;
+  }
+
+  html.fs-lg #article-container,
+  html.fs-lg .post-content {
+    font-size: 1.3em;
+    line-height: 1.9;
+  }
+}
+
