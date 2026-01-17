@@ -1,0 +1,717 @@
+# --------------------------------------
+# Hexo Butterfly Theme Configuration
+# 从 NexT 主题迁移配置
+# --------------------------------------
+
+# --------------------------------------
+# Navigation Settings
+# --------------------------------------
+
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  全部文章: /archives || fas fa-th-list
+  面试经验: /interview || fas fa-briefcase
+  Golang: /golang || fab fa-golang
+  MySQL: /mysql || fas fa-database
+  Redis: /redis || fas fa-fire
+  计算机网络: /network || fas fa-globe
+  Leetcode题解: /algorithms || fas fa-book
+  关于我: /about || fas fa-user
+
+# --------------------------------------
+# Code Blocks Settings
+# --------------------------------------
+
+code_blocks:
+  theme: light
+  macStyle: true
+  height_limit: false
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
+
+# Social media links
+social:
+  fab fa-github: https://github.com/AdrianWangs || Github || '#24292e'
+  fas fa-envelope: mailto:wyz17601402786@gmail.com || Email || '#4a7dbe'
+
+# --------------------------------------
+# Image Settings
+# --------------------------------------
+
+favicon: /images/favicon-32x32-next.png
+
+avatar:
+  img: https://avatars.githubusercontent.com/u/72337244
+  effect: false
+
+disable_top_img: false
+default_top_img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
+index_img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
+archive_img:
+tag_img:
+tag_per_img:
+category_img:
+category_per_img:
+footer_img: false
+background: "#f8fafc"
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: false
+  subtitle: 'Page Not Found'
+  background:
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# --------------------------------------
+# Index page settings
+# --------------------------------------
+
+index_site_info_top:
+index_top_img_height:
+
+subtitle:
+  enable: true
+  effect: true
+  typed_option:
+  source: false
+  sub:
+    - 一个完全由AI生成，但是内容高质量的Blog
+
+index_layout: 3
+
+index_post_content:
+  method: 1
+  length: 150
+
+# --------------------------------------
+# Post Settings
+# --------------------------------------
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+reward:
+  enable: false
+  text:
+  QR_code:
+
+post_edit:
+  enable: false
+  url:
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+post_pagination: 1
+
+noticeOutdate:
+  enable: false
+  style: flat
+  limit_day: 365
+  position: top
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2024
+  copyright:
+    enable: true
+    version: true
+  custom_text:
+
+# --------------------------------------
+# Aside Settings
+# --------------------------------------
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: left
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 一个完全由AI生成，但是内容高质量的Blog
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/AdrianWangs
+  card_announcement:
+    enable: true
+    content: 欢迎来到 Adrian Wang 的博客！
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_newest_comments:
+    enable: false
+    sort_order:
+    limit: 6
+    storage: 10
+    avatar: true
+  card_categories:
+    enable: true
+    limit: 0
+    expand: true
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: true
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: YYYY年MM月
+    order: -1
+    limit: 8
+    sort_order:
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: 'date'
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+    runtime_date:
+
+# --------------------------------------
+# Bottom right button
+# --------------------------------------
+
+rightside_bottom:
+
+translate:
+  enable: false
+  default: 繁
+  defaultEncoding: 2
+  translateDelay: 0
+  msgToTraditionalChinese: '繁'
+  msgToSimplifiedChinese: '簡'
+
+readmode: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+  start:
+  end:
+
+rightside_scroll_percent: true
+
+rightside_item_order:
+  enable: false
+  hide:
+  show:
+
+rightside_config_animation: true
+
+# --------------------------------------
+# Global Settings
+# --------------------------------------
+
+anchor:
+  auto_update: false
+  click_to_scroll: false
+
+photofigcaption: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 150
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# --------------------------------------
+# Math
+# --------------------------------------
+
+math:
+  use: mathjax
+  per_page: false
+  hide_scrollbar: false
+
+  mathjax:
+    enableMenu: true
+    tags: none
+
+  katex:
+    copy_tex: false
+
+# --------------------------------------
+# Search
+# --------------------------------------
+
+search:
+  use: local_search
+  placeholder: 搜索文章
+
+  algolia_search:
+    hitsPerPage: 6
+
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: false
+      hitsPerPage: 8
+    CDN:
+
+  docsearch:
+    appId:
+    apiKey:
+    indexName:
+    option:
+
+# --------------------------------------
+# Share System
+# --------------------------------------
+
+share:
+  use:
+
+  sharejs:
+    sites: facebook,x,wechat,weibo,qq
+
+  addtoany:
+    item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
+
+# --------------------------------------
+# Comments System
+# --------------------------------------
+
+comments:
+  use: Gitalk
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
+
+disqus:
+  shortname:
+  apikey:
+
+disqusjs:
+  shortname:
+  apikey:
+  option:
+
+livere:
+  uid:
+
+gitalk:
+  client_id: Ov23ctYPrSZhEEiMSWnG
+  client_secret: 868a26bca9ec039212bdc83e05c4420b6077e9f4
+  repo: blog-comments
+  owner: AdrianWangs
+  admin: AdrianWangs
+  option:
+    language: zh-CN
+    distractionFreeMode: true
+
+valine:
+  appId:
+  appKey:
+  avatar: monsterid
+  serverURLs:
+  bg:
+  visitor: false
+  option:
+
+waline:
+  serverURL:
+  bg:
+  pageview: false
+  option:
+
+utterances:
+  repo:
+  issue_term: pathname
+  light_theme: github-light
+  dark_theme: photon-dark
+  js:
+  option:
+
+facebook_comments:
+  app_id:
+  user_id:
+  pageSize: 10
+  order_by: social
+  lang: en_US
+
+twikoo:
+  envId:
+  region:
+  visitor: false
+  option:
+
+giscus:
+  repo:
+  repo_id:
+  category_id:
+  light_theme: light
+  dark_theme: dark
+  js:
+  option:
+
+remark42:
+  host:
+  siteId:
+  option:
+
+artalk:
+  server:
+  site:
+  visitor: false
+  option:
+
+# --------------------------------------
+# Chat Services
+# --------------------------------------
+
+chat:
+  use:
+  rightside_button: false
+  button_hide_show: false
+
+chatra:
+  id:
+
+tidio:
+  public_key:
+
+crisp:
+  website_id:
+
+# --------------------------------------
+# Analysis
+# --------------------------------------
+
+baidu_analytics:
+google_analytics:
+cloudflare_analytics:
+microsoft_clarity:
+
+umami_analytics:
+  enable: false
+  serverURL:
+  script_name: script.js
+  website_id:
+  option:
+  UV_PV:
+    site_uv: false
+    site_pv: false
+    page_pv: false
+    token:
+
+google_tag_manager:
+  tag_id:
+  domain:
+
+# --------------------------------------
+# Advertisement
+# --------------------------------------
+
+google_adsense:
+  enable: false
+  auto_ads: true
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client:
+  enable_page_level_ads: true
+
+ad:
+  index:
+  aside:
+  post:
+
+# --------------------------------------
+# Verification
+# --------------------------------------
+
+site_verification:
+
+# --------------------------------------
+# Beautify / Effect
+# --------------------------------------
+
+theme_color:
+  enable: true
+  main: "#0ea5e9"
+  paginator: "#0ea5e9"
+  button_hover: "#38bdf8"
+  text_selection: "#0ea5e9"
+  link_color: "#0284c7"
+  meta_color: "#64748b"
+  hr_color: "#e2e8f0"
+  code_foreground: "#0891b2"
+  code_background: "rgba(14, 165, 233, .06)"
+  toc_color: "#0ea5e9"
+  blockquote_padding_color: "#0ea5e9"
+  blockquote_background_color: "#0ea5e9"
+  scrollbar_color: "#0ea5e9"
+  meta_theme_color_light: "ffffff"
+  meta_theme_color_dark: "#0f172a"
+
+category_ui:
+tag_ui:
+
+rounded_corners_ui: true
+text_align_justify: true
+
+mask:
+  header: true
+  footer: true
+
+preloader:
+  enable: true
+  source: 1
+  pace_css_url:
+
+enter_transitions: true
+display_mode: light
+
+beautify:
+  enable: false
+  field: post
+  title_prefix_icon:
+  title_prefix_icon_color:
+
+font:
+  global_font_size:
+  code_font_size:
+  font_family:
+  code_font_family:
+
+blog_title_font:
+  font_link:
+  font_family:
+
+hr_icon:
+  enable: true
+  icon:
+  icon_top:
+
+activate_power_mode:
+  enable: false
+  colorful: true
+  shake: true
+  mobile: false
+
+# Background effects
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
+canvas_fluttering_ribbon:
+  enable: false
+  mobile: false
+
+canvas_nest:
+  enable: false
+  color: '0,0,255'
+  opacity: 0.7
+  zIndex: -1
+  count: 99
+  mobile: false
+
+fireworks:
+  enable: false
+  zIndex: 9999
+  mobile: false
+
+click_heart:
+  enable: false
+  mobile: false
+
+clickShowText:
+  enable: false
+  text:
+  fontSize: 15px
+  random: false
+  mobile: false
+
+# --------------------------------------
+# Lightbox Settings
+# --------------------------------------
+
+lightbox: fancybox
+
+# --------------------------------------
+# Tag Plugins settings
+# --------------------------------------
+
+series:
+  enable: false
+  orderBy: 'title'
+  order: 1
+  number: true
+
+abcjs:
+  enable: false
+  per_page: true
+
+mermaid:
+  enable: true
+  code_write: true
+  theme:
+    light: forest
+    dark: dark
+
+chartjs:
+  enable: false
+  fontColor:
+    light: 'rgba(0, 0, 0, 0.8)'
+    dark: 'rgba(255, 255, 255, 0.8)'
+  borderColor:
+    light: 'rgba(0, 0, 0, 0.1)'
+    dark: 'rgba(255, 255, 255, 0.2)'
+  scale_ticks_backdropColor:
+    light: 'transparent'
+    dark: 'transparent'
+
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+# --------------------------------------
+# Other Settings
+# --------------------------------------
+
+pjax:
+  enable: false
+  exclude:
+
+aplayerInject:
+  enable: false
+  per_page: true
+
+snackbar:
+  enable: false
+  position: bottom-left
+  bg_light: '#49b1f5'
+  bg_dark: '#1f1f1f'
+
+instantpage: false
+
+lazyload:
+  enable: true
+  native: false
+  field: site
+  placeholder:
+  blur: false
+
+pwa:
+  enable: false
+  manifest:
+  apple_touch_icon:
+  favicon_32_32:
+  favicon_16_16:
+  mask_icon:
+
+Open_Graph_meta:
+  enable: true
+  option:
+
+structured_data:
+  enable: false
+  alternate_name:
+
+css_prefix: true
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/category-tree.css">
+  bottom:
+    - <script defer src="/js/echarts-theme-adapter.js"></script>
+    - <script defer src="/js/category-tree.js"></script>
+
+# CDN Settings
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  version: true
+  custom_format:
+  option:

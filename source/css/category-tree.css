@@ -1,0 +1,396 @@
+.category-tree-widget {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 头部样式优化 */
+.ct-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--hr-border, #f0f0f0);
+  background: var(--card-bg, #fff);
+  transition: padding 0.3s;
+}
+
+.ct-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--font-color, #4c4948);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ct-title i {
+  color: var(--main, #49b1f5);
+  font-size: 16px;
+}
+
+/* 操作按钮优化 */
+.ct-actions {
+  display: flex;
+  gap: 6px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.category-tree-widget:hover .ct-actions {
+  opacity: 1;
+}
+
+.ct-actions button,
+.ct-close-fullwidth {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--font-color, #999);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ct-actions button:hover,
+.ct-close-fullwidth:hover {
+  color: var(--main, #49b1f5);
+  background: rgba(73, 177, 245, 0.1);
+  transform: scale(1.1);
+}
+
+/* 列表区域 */
+.ct-root {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  max-height: 400px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* 滚动条美化 */
+.ct-root::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ct-root::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ct-root::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.ct-root::-webkit-scrollbar-thumb:hover {
+  background: var(--main, #49b1f5);
+}
+
+/* 列表项样式 */
+.ct-item {
+  list-style: none;
+  position: relative;
+}
+
+.ct-item-inner {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+  margin: 1px 0;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.ct-item-inner:hover {
+  background: rgba(73, 177, 245, 0.08);
+}
+
+/* 展开箭头 */
+.ct-toggle {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #999;
+  flex-shrink: 0;
+  margin-right: 2px;
+  transition: color 0.2s;
+  z-index: 2;
+}
+
+.ct-item-inner:hover .ct-toggle {
+  color: var(--main, #49b1f5);
+}
+
+.ct-toggle i {
+  font-size: 10px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ct-item.has-children.expanded > .ct-item-inner > .ct-toggle i {
+  transform: rotate(90deg);
+  color: var(--main, #49b1f5);
+}
+
+.ct-toggle.ct-leaf {
+  color: transparent;
+  pointer-events: none;
+}
+
+/* 链接样式 */
+.ct-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: var(--font-color, #555);
+  font-size: 14px;
+  padding: 2px 0;
+  transition: color 0.2s;
+}
+
+.ct-item-inner:hover .ct-link {
+  color: var(--main, #49b1f5);
+}
+
+.ct-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+/* 数量标签 */
+.ct-count {
+  font-size: 12px;
+  color: #bbb;
+  background: rgba(0,0,0,0.03);
+  padding: 0 6px;
+  border-radius: 8px;
+  margin-left: 8px;
+  flex-shrink: 0;
+  min-width: 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.ct-item-inner:hover .ct-count {
+  color: var(--main, #49b1f5);
+  background: rgba(73, 177, 245, 0.1);
+}
+
+/* 子菜单容器 */
+.ct-children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.ct-item.expanded > .ct-children {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+/* --- 树形连接线 (Tree Guides) --- */
+.ct-children .ct-item {
+  position: relative;
+}
+
+/* 垂直线 */
+.ct-children .ct-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* 这里的 left 会根据层级动态调整，但在 CSS 中很难动态计算，所以我们用伪元素在 item-inner 上做文章 */
+  width: 1px;
+  background: transparent; /* 默认不显示，我们在 item-inner 里画线 */
+}
+
+/* 更好的连接线实现方式：在 ct-item-inner 上画辅助线 */
+.ct-children .ct-item-inner::before {
+  content: '';
+  position: absolute;
+  left: -9px; /* 相对于 padding-left 的偏移 */
+  top: -8px; /* 向上延伸到父级 */
+  bottom: 50%; /* 延伸到当前项的一半高度 */
+  width: 1px;
+  background-color: transparent;
+  border-left: 1px dashed #e0e0e0;
+  z-index: 1;
+}
+
+/* 只有当不是第一层时才显示连接线 */
+.ct-item[data-level="1"] > .ct-item-inner::before,
+.ct-item[data-level="2"] > .ct-item-inner::before,
+.ct-item[data-level="3"] > .ct-item-inner::before,
+.ct-item[data-level="4"] > .ct-item-inner::before,
+.ct-item[data-level="5"] > .ct-item-inner::before {
+  display: block;
+}
+
+.ct-item[data-level="0"] > .ct-item-inner::before {
+  display: none;
+}
+
+/* 修复最后一项的连接线 */
+.ct-item:last-child > .ct-item-inner::before {
+  bottom: 50%;
+  border-left: 1px dashed #e0e0e0;
+  height: auto;
+}
+
+/* 全屏遮罩 - 恢复高斯模糊，增加质感 */
+.ct-fullwidth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2147483000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  pointer-events: auto;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 全屏模式窗口 */
+.category-tree-widget.fullwidth-mode {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(0.95) !important;
+  width: 85vw !important;
+  max-width: 900px !important;
+  max-height: 85vh !important;
+  z-index: 2147483001 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 12px !important;
+  opacity: 0;
+  animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+  border: 1px solid rgba(0,0,0,0.05);
+  
+  /* 关键修复：设置不透明背景，防止内容穿透 */
+  background-color: #ffffff !important; 
+  pointer-events: auto;
+}
+
+/* 全屏模式下隐藏其他可能干扰的元素 */
+body.ct-modal-open #rightside,
+body.ct-modal-open #chatra, 
+body.ct-modal-open .tidio-chat-widget,
+body.ct-modal-open #gitter-chat-embed,
+body.ct-modal-open .gitter-chat-embed {
+  display: none !important;
+  z-index: -1 !important;
+}
+
+@keyframes popIn {
+  to { 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.category-tree-widget.fullwidth-mode .ct-root {
+  max-height: calc(85vh - 70px);
+  padding: 15px 20px;
+}
+
+.category-tree-widget.fullwidth-mode .ct-header {
+  padding: 16px 24px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.category-tree-widget.fullwidth-mode .ct-title {
+  font-size: 18px;
+}
+
+.category-tree-widget.fullwidth-mode .ct-item-inner {
+  padding: 8px 16px;
+  margin: 2px 0;
+}
+
+.category-tree-widget.fullwidth-mode .ct-name {
+  font-size: 15px;
+}
+
+/* --- 暗色模式适配 --- */
+[data-theme="dark"] .category-tree-widget {
+  background: var(--card-bg, #1d1e22);
+  border: 1px solid #2c2d31;
+}
+
+[data-theme="dark"] .ct-header {
+  border-bottom-color: #2c2d31;
+  background: #1d1e22;
+}
+
+[data-theme="dark"] .ct-title {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .ct-link {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .ct-item-inner:hover {
+  background: rgba(73, 177, 245, 0.15);
+}
+
+[data-theme="dark"] .ct-item-inner:hover .ct-link {
+  color: #fff;
+}
+
+[data-theme="dark"] .ct-count {
+  background: rgba(255,255,255,0.05);
+  color: #777;
+}
+
+[data-theme="dark"] .ct-root::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+[data-theme="dark"] .ct-children .ct-item-inner::before {
+  border-left-color: #444;
+}
+
+[data-theme="dark"] .ct-fullwidth-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .category-tree-widget.fullwidth-mode {
+  border: 1px solid #333;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5) !important;
+  background-color: #1d1e22 !important; /* 确保暗色模式下也是不透明背景 */
+}
+
+[data-theme="dark"] .category-tree-widget.fullwidth-mode .ct-header {
+  background: #25262a;
+}
