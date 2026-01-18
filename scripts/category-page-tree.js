@@ -88,6 +88,35 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
     const day = String(d.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
+
+  const escapeHtml = (str) => {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/\n/g, ' ')
+      .replace(/\r/g, '');
+  };
+
+  const getPostTags = (post) => {
+    if (!post.tags || !post.tags.length) return '';
+    const tagNames = [];
+    post.tags.forEach(tag => {
+      tagNames.push(tag.name);
+    });
+    return tagNames.join(',');
+  };
+
+  const getPostDescription = (post) => {
+    if (post.description) return post.description;
+    if (post.excerpt) {
+      return post.excerpt.replace(/<[^>]+>/g, '').substring(0, 150);
+    }
+    return '';
+  };
   
   const getSubCategories = (parentCat) => {
     const subs = [];
@@ -97,6 +126,31 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
       }
     });
     return subs.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+  };
+
+  const renderPostItem = (post) => {
+    const title = post.title || '无标题';
+    const dateStr = formatDate(post.date);
+    const description = escapeHtml(getPostDescription(post));
+    const tags = escapeHtml(getPostTags(post));
+    const cover = post.cover || '';
+    
+    return `
+      <a class="cpt-post-item" 
+         href="/${post.path}" 
+         title="${escapeHtml(title)}"
+         data-title="${escapeHtml(title)}"
+         data-date="${dateStr}"
+         data-description="${description}"
+         data-tags="${tags}"
+         data-cover="${cover}">
+        <span class="cpt-post-date">
+          <i class="far fa-calendar-alt"></i>
+          ${dateStr}
+        </span>
+        <span class="cpt-post-title">${escapeHtml(title)}</span>
+      </a>
+    `;
   };
   
   const renderCategorySection = (cat, level = 0) => {
@@ -123,17 +177,7 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
     if (catPosts.length > 0) {
       html += `<div class="cpt-posts-list">`;
       catPosts.forEach(post => {
-        const title = post.title || '无标题';
-        const dateStr = formatDate(post.date);
-        html += `
-          <a class="cpt-post-item" href="/${post.path}" title="${title}">
-            <span class="cpt-post-date">
-              <i class="far fa-calendar-alt"></i>
-              ${dateStr}
-            </span>
-            <span class="cpt-post-title">${title}</span>
-          </a>
-        `;
+        html += renderPostItem(post);
       });
       html += `</div>`;
     }
@@ -183,17 +227,7 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
         <div class="cpt-posts-list">
     `;
     directPosts.forEach(post => {
-      const title = post.title || '无标题';
-      const dateStr = formatDate(post.date);
-      treeHtml += `
-        <a class="cpt-post-item" href="/${post.path}" title="${title}">
-          <span class="cpt-post-date">
-            <i class="far fa-calendar-alt"></i>
-            ${dateStr}
-          </span>
-          <span class="cpt-post-title">${title}</span>
-        </a>
-      `;
+      treeHtml += renderPostItem(post);
     });
     treeHtml += `
         </div>
@@ -209,6 +243,7 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
   treeHtml += `
       </div>
     </div>
+    <div class="cpt-preview-tooltip" id="cpt-preview-tooltip"></div>
   `;
   
   const categoryPageRegex = /<div[^>]*id=["']category["'][^>]*>[\s\S]*?<div[^>]*class=["'][^"']*article-sort-title[^"']*["'][^>]*>[^<]*<\/div>\s*(<div[^>]*class=["'][^"']*article-sort["'][^>]*>[\s\S]*?<\/div>)/;
@@ -223,6 +258,9 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
       str = str.replace(simpleRegex, treeHtml + '<div class="article-sort" style="display:none;">');
     }
   }
+  
+  const paginationRegex = /<nav[^>]*id=["']pagination["'][^>]*>[\s\S]*?<\/nav>/gi;
+  str = str.replace(paginationRegex, '<!-- pagination hidden by category-page-tree -->');
   
   return str;
 });

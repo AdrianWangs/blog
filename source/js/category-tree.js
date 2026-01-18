@@ -268,6 +268,135 @@
         saveCptExpandedState(state);
       });
     }
+
+    initPostPreview(pageTree);
+  }
+
+  function initPostPreview(container) {
+    const tooltip = document.getElementById('cpt-preview-tooltip');
+    if (!tooltip) return;
+
+    const postItems = container.querySelectorAll('.cpt-post-item');
+    let hideTimeout = null;
+    let currentItem = null;
+
+    const showTooltip = (item, e) => {
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+
+      currentItem = item;
+
+      const title = item.dataset.title || '';
+      const date = item.dataset.date || '';
+      const description = item.dataset.description || '';
+      const tags = item.dataset.tags || '';
+      const cover = item.dataset.cover || '';
+
+      let coverHtml = '';
+      if (cover && cover !== 'false') {
+        coverHtml = `<img class="cpt-preview-cover" src="${cover}" alt="${title}" onerror="this.parentElement.innerHTML='<div class=\\'cpt-preview-no-cover\\'><i class=\\'fas fa-file-alt\\'></i></div>'">`;
+      } else {
+        coverHtml = `<div class="cpt-preview-no-cover"><i class="fas fa-file-alt"></i></div>`;
+      }
+
+      let tagsHtml = '';
+      if (tags) {
+        const tagList = tags.split(',').filter(t => t.trim());
+        if (tagList.length > 0) {
+          tagsHtml = `<div class="cpt-preview-tags">${tagList.slice(0, 5).map(t => `<span class="cpt-preview-tag">${t.trim()}</span>`).join('')}</div>`;
+        }
+      }
+
+      let descriptionHtml = '';
+      if (description) {
+        descriptionHtml = `<div class="cpt-preview-description">${description}</div>`;
+      }
+
+      tooltip.innerHTML = `
+        ${coverHtml}
+        <div class="cpt-preview-content">
+          <div class="cpt-preview-title">${title}</div>
+          <div class="cpt-preview-meta">
+            <span><i class="far fa-calendar-alt"></i>${date}</span>
+          </div>
+          ${descriptionHtml}
+          ${tagsHtml}
+        </div>
+        <div class="cpt-preview-footer">
+          <i class="fas fa-mouse-pointer"></i>
+          <span>点击查看详情</span>
+        </div>
+      `;
+
+      positionTooltip(item, e);
+      tooltip.classList.add('visible');
+    };
+
+    const hideTooltip = () => {
+      hideTimeout = setTimeout(() => {
+        tooltip.classList.remove('visible');
+        currentItem = null;
+      }, 150);
+    };
+
+    const positionTooltip = (item, e) => {
+      const rect = item.getBoundingClientRect();
+      const tooltipWidth = 320;
+      const tooltipHeight = tooltip.offsetHeight || 300;
+      const padding = 15;
+
+      let left = rect.right + padding;
+      let top = rect.top;
+
+      if (left + tooltipWidth > window.innerWidth - padding) {
+        left = rect.left - tooltipWidth - padding;
+      }
+
+      if (left < padding) {
+        left = rect.left;
+        top = rect.bottom + padding;
+      }
+
+      if (top + tooltipHeight > window.innerHeight - padding) {
+        top = window.innerHeight - tooltipHeight - padding;
+      }
+
+      if (top < padding) {
+        top = padding;
+      }
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    };
+
+    postItems.forEach(item => {
+      item.addEventListener('mouseenter', (e) => {
+        showTooltip(item, e);
+      });
+
+      item.addEventListener('mouseleave', () => {
+        hideTooltip();
+      });
+
+      item.addEventListener('mousemove', (e) => {
+        if (currentItem === item && tooltip.classList.contains('visible')) {
+          positionTooltip(item, e);
+        }
+      });
+    });
+
+    tooltip.addEventListener('mouseenter', () => {
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+    });
+
+    tooltip.addEventListener('mouseleave', () => {
+      hideTooltip();
+    });
   }
 
   function initAll() {

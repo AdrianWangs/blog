@@ -735,3 +735,156 @@ body.ct-modal-open .gitter-chat-embed {
     padding-left: 12px;
   }
 }
+
+/* ============================================
+   文章悬浮预览样式 (Post Preview Tooltip)
+   ============================================ */
+
+.cpt-preview-tooltip {
+  position: fixed;
+  z-index: 9999;
+  width: 320px;
+  max-width: 90vw;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.98);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cpt-preview-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.cpt-preview-cover {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.cpt-preview-no-cover {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(135deg, var(--main, #49b1f5) 0%, #7c3aed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cpt-preview-no-cover i {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cpt-preview-content {
+  padding: 16px;
+}
+
+.cpt-preview-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color, #333);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cpt-preview-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.cpt-preview-meta i {
+  margin-right: 4px;
+}
+
+.cpt-preview-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.cpt-preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cpt-preview-tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: rgba(73, 177, 245, 0.1);
+  color: var(--main, #49b1f5);
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.cpt-preview-footer {
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.02);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cpt-preview-footer i {
+  color: var(--main, #49b1f5);
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .cpt-preview-tooltip {
+  background: var(--card-bg, #1d1e22);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .cpt-preview-title {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .cpt-preview-meta {
+  color: #777;
+}
+
+[data-theme="dark"] .cpt-preview-description {
+  color: #999;
+}
+
+[data-theme="dark"] .cpt-preview-tag {
+  background: rgba(73, 177, 245, 0.15);
+}
+
+[data-theme="dark"] .cpt-preview-footer {
+  background: rgba(255, 255, 255, 0.02);
+  border-top-color: rgba(255, 255, 255, 0.05);
+  color: #666;
+}
+
+/* 移动端不显示悬浮预览 */
+@media screen and (max-width: 768px) {
+  .cpt-preview-tooltip {
+    display: none !important;
+  }
+}
