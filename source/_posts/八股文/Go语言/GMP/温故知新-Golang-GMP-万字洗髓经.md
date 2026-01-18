@@ -40,7 +40,7 @@ tags:
 
 ### 1.1 从线程到协程
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image.png)
+![image_1.png](温故知新-Golang-GMP-万字洗髓经/image_1.png)
 
 `线程（Thread）`与`协程（Coroutine）`是并发编程中的经典概念：
 
@@ -51,7 +51,7 @@ tags:
 
 ### 1.2 从协程到 goroutine
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 1.png)
+![image_2.png](温故知新-Golang-GMP-万字洗髓经/image_2.png)
 
 golang 是一门天然支持协程的语言，goroutine 是其对协程的本土化实现，并且在原生协程的基础上做了很大的优化改进.
 
@@ -94,7 +94,7 @@ golang 是一门天然支持协程的语言，goroutine 是其对协程的本土
 > 当我们把 gmp 理解为一个任务调度系统，那么 p 就是这个系统中的”中枢“，当其和作为”引擎“ 的 m 结合后，才会引导“引擎”进入 gmp 的运行模式；同时 p 也是这个系统中存储“任务”的“容器”，为“引擎”提供了用于执行的任务资源.
 > 
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 2.png)
+![image_3.png](温故知新-Golang-GMP-万字洗髓经/image_3.png)
 
 结合上图可以看到，承载 g 的容器分为两个部分：
 
@@ -122,7 +122,7 @@ golang 是一门天然支持协程的语言，goroutine 是其对协程的本土
 
 （1）内存管理
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 3.png)
+![image_4.png](温故知新-Golang-GMP-万字洗髓经/image_4.png)
 
 golang 的内存管理模块主要继承自 TCMalloc（Thread-Caching-Malloc）的设计思路，其中由契合 gmp 模型做了因地制宜的适配改造，为每个 p 准备了一份私有的高速缓存——mcache，能够无锁化地完成一部分 p 本地的内存分配操作.
 
@@ -131,7 +131,7 @@ golang 的内存管理模块主要继承自 TCMalloc（Thread-Caching-Malloc）�
 
 （2）并发工具
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 4.png)
+![image_5.png](温故知新-Golang-GMP-万字洗髓经/image_5.png)
 
 在 golang 中的并发工具（例如锁 mutex、通道 channel 等）均契合 gmp 作了适配改造，保证在执行阻塞操作时，会将`阻塞粒度限制在 g（goroutine）而非 m（thread）的粒度`，使得`阻塞与唤醒操作都属于用户态行为`，无需内核的介入，同时一个 g 的阻塞也完全不会影响 m 下其他 g 的运行.
 
@@ -145,7 +145,7 @@ golang 的内存管理模块主要继承自 TCMalloc（Thread-Caching-Malloc）�
 
 （3）io 多路复用
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 5.png)
+![image_6.png](温故知新-Golang-GMP-万字洗髓经/image_6.png)
 
 在设计 io 模型时，golang 采用了 linux 系统提供的 epoll 多路复用技术，然而为了因为 epoll_wait 操作而引起 m（thread）粒度的阻塞，golang 专门设计一套 netpoll 机制，使用用户态的 gopark 指令实现阻塞操作，使用非阻塞 epoll_wait 结合用户态的 goready 指令实现唤醒操作，从而将 io 行为也控制在 g 粒度，很好地契合了 gmp 调度体系.
 
@@ -160,7 +160,7 @@ golang 的内存管理模块主要继承自 TCMalloc（Thread-Caching-Malloc）�
 
 ### 2.1 g 详设
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 6.png)
+![image_7.png](温故知新-Golang-GMP-万字洗髓经/image_7.png)
 
 `g （goroutine）`的类型声明如下，其中包含如下核心成员字段：
 
@@ -221,7 +221,7 @@ type g struct{
 
 ### 2.2 m 详设
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 7.png)
+![image_8.png](温故知新-Golang-GMP-万字洗髓经/image_8.png)
 
 `m（machine）`是 go 对 thread 的抽象，其类定义代码中包含如下核心成员：
 
@@ -256,7 +256,7 @@ type m struct{
 
 ### 2.3 p 详设
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 8.png)
+![image_9.png](温故知新-Golang-GMP-万字洗髓经/image_9.png)
 
 `p （processor）`是 gmp 中的调度器，其类定义代码中包含如下核心成员字段：
 
@@ -306,7 +306,7 @@ type p struct{
 
 ### 2.4 schedt 详设
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 9.png)
+![image_10.png](温故知新-Golang-GMP-万字洗髓经/image_10.png)
 
 `schedt 是全局共享的资源模块`，在访问前需要加全局锁：
 
@@ -371,7 +371,7 @@ func main(){
 
 2）g
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 10.png)
+![image_11.png](温故知新-Golang-GMP-万字洗髓经/image_11.png)
 
 除了 main 函数这个特例之外，所有用户通过 go func(){...} 操作启动的 goroutine，都会以 g 的形式进入到 gmp 架构当中.
 
@@ -467,7 +467,7 @@ retry:
 
 ### 3.2 g0 与 g
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 11.png)
+![image_12.png](温故知新-Golang-GMP-万字洗髓经/image_12.png)
 
 在每个 m 中会有一个与之伴生的 g0，其任务就是不断寻找可执行的 g. 所以对一个 m 来说，其运行周期就是处在 g0 与 g 之间轮换交替的过程中.
 
@@ -561,7 +561,7 @@ func execute(gp *g, inheritTime bool){
 
 1）主流程
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 12.png)
+![image_13.png](温故知新-Golang-GMP-万字洗髓经/image_13.png)
 
 findRunnable 方法声明于 runtime/proc.go 中，其核心步骤包括：：
 
@@ -860,7 +860,7 @@ func stopm(){
 
 ### 4.1 结束让渡
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 13.png)
+![image_14.png](温故知新-Golang-GMP-万字洗髓经/image_14.png)
 
 当 g 执行结束时，会正常退出，并将执行权切换回到 g0.
 
@@ -910,7 +910,7 @@ func goexit0(gp *g){
 
 ### 4.2 主动让渡
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 14.png)
+![image_15.png](温故知新-Golang-GMP-万字洗髓经/image_15.png)
 
 主动让渡指的是由用户手动调用 runtime.Gosched 方法让出 g 所持有的执行权. 在 Gosched 方法中，会通过 mcall 指令切换至 g0，并由 g0 执行 gosched_m 方法，其中包含如下步骤：
 
@@ -951,7 +951,7 @@ func goschedImpl(gp *g){
 
 ### 4.3 阻塞让渡
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 15.png)
+![image_16.png](温故知新-Golang-GMP-万字洗髓经/image_16.png)
 
 阻塞让渡指的是 g 在执行过程中所依赖的外部条件没有达成，需要进入阻塞等待的状态（waiting），直到条件达成后才能完成将状态重新更新为就绪态（runnable）.
 
@@ -1023,13 +1023,13 @@ func ready(gp *g, traceskip int, next bool){
 
 ## 5 抢占设计
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 16.png)
+![image_17.png](温故知新-Golang-GMP-万字洗髓经/image_17.png)
 
 最后是关于“抢占”的流程介绍，抢占和让渡有相同之处，都表示由 g->g0 的流转过程，但区别在于，让渡是由 g 主动发起的（第一人称），而抢占则是由外力干预（sysmon thread）发起的（第三人称）.
 
 ### 5.1 监控线程
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 17.png)
+![image_18.png](温故知新-Golang-GMP-万字洗髓经/image_18.png)
 
 在 go 程序运行时，会启动一个全局唯一的监控线程——sysmon thread，其负责定时执行监控工作，主要包括：
 
@@ -1082,7 +1082,7 @@ func sysmon(){
 
 系统调用是 m（thread）粒度的，在执行期间会导致整个 m 暂时不可用，所以此时的抢占处理思路是，将发起 syscall 的 g 和 m 绑定，但是解除 p 与 m 的绑定关系，使得此期间 p 存在和其他 m 结合的机会.
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 18.png)
+![image_19.png](温故知新-Golang-GMP-万字洗髓经/image_19.png)
 
 在发起系统调用时，会执行位于 runtime/proc.go 的 reentersyscall 方法，此方法核心步骤包括：
 
@@ -1175,7 +1175,7 @@ func exitsyscall0(gp *g){
 }
 ```
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 19.png)
+![image_20.png](温故知新-Golang-GMP-万字洗髓经/image_20.png)
 
 我们将视角切回到 sysmon thread 中的 retake 方法，此处会遍历每个 p，并针对正在发起系统调用的 p 执行如下检查逻辑：
 
@@ -1238,7 +1238,7 @@ func handoffp(_p_ *p) {
 
 1）发起抢占
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 20.png)
+![image_21.png](温故知新-Golang-GMP-万字洗髓经/image_21.png)
 
 在 retake 方法中，会检测到哪些 p 中运行一个 g 的时长超过了 10 ms，然后对其发起抢占操作（preemtone）：
 
@@ -1316,7 +1316,7 @@ func signalM(mp *m, sig int){
 
 2）协作式抢占
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 21.png)
+![image_22.png](温故知新-Golang-GMP-万字洗髓经/image_22.png)
 
 对于运行中的 g，在栈空间不足时，会切换至 g0 调用 newstack 方法执行栈空间扩张操作，在该流程中预留了一个检查桩点，当其中发现 g 已经被打上抢占标记时，就会主动配合执行让渡操作：
 
@@ -1373,7 +1373,7 @@ func goschedImpl(gp *g){
 
 3）非协作式抢占
 
-![image.png](温故知新-Golang-GMP-万字洗髓经/image 22.png)
+![image_23.png](温故知新-Golang-GMP-万字洗髓经/image_23.png)
 
 为了弥补协作式抢占的不足，go 1.14 中引入了基于信号量实现的非协作式抢占机制.
 
