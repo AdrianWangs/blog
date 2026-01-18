@@ -394,3 +394,344 @@ body.ct-modal-open .gitter-chat-embed {
 [data-theme="dark"] .category-tree-widget.fullwidth-mode .ct-header {
   background: #25262a;
 }
+
+/* ============================================
+   分类页树形展示样式 (Category Page Tree)
+   ============================================ */
+
+.category-page-tree {
+  margin-bottom: 30px;
+}
+
+.cpt-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.cpt-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cpt-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--card-bg, #fff);
+  color: var(--font-color, #4c4948);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cpt-actions button:hover {
+  background: var(--main, #49b1f5);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(73, 177, 245, 0.3);
+}
+
+.cpt-actions button i {
+  font-size: 12px;
+}
+
+.cpt-tree-content {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cpt-direct-posts {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--hr-border, #eee);
+}
+
+.cpt-direct-posts-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color, #4c4948);
+}
+
+.cpt-direct-posts-header i {
+  color: var(--main, #49b1f5);
+}
+
+.cpt-category-section {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cpt-category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(73, 177, 245, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.cpt-category-header:hover {
+  background: rgba(73, 177, 245, 0.12);
+}
+
+.cpt-category-header .cpt-toggle {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main, #49b1f5);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cpt-category-header .cpt-toggle i {
+  font-size: 12px;
+}
+
+.cpt-category-header[data-expanded="false"] .cpt-toggle {
+  transform: rotate(-90deg);
+}
+
+.cpt-category-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--font-color, #4c4948);
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.cpt-category-link:hover {
+  color: var(--main, #49b1f5);
+}
+
+.cpt-category-link i {
+  color: var(--main, #49b1f5);
+  font-size: 16px;
+}
+
+.cpt-category-name {
+  flex: 1;
+}
+
+.cpt-category-count {
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 10px;
+  border-radius: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.cpt-category-content {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease,
+              padding 0.3s ease;
+  max-height: 2000px;
+  opacity: 1;
+  padding: 8px 0 8px 20px;
+}
+
+.cpt-category-header[data-expanded="false"] + .cpt-category-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 0 0 20px;
+}
+
+.cpt-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.cpt-post-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--font-color, #555);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.cpt-post-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--main, #49b1f5);
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+
+.cpt-post-item:hover {
+  background: rgba(73, 177, 245, 0.08);
+}
+
+.cpt-post-item:hover::before {
+  height: 60%;
+}
+
+.cpt-post-item:hover .cpt-post-title {
+  color: var(--main, #49b1f5);
+}
+
+.cpt-post-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #999;
+  flex-shrink: 0;
+  min-width: 110px;
+}
+
+.cpt-post-date i {
+  font-size: 12px;
+}
+
+.cpt-post-title {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cpt-subcategories {
+  margin-top: 8px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(73, 177, 245, 0.2);
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .cpt-actions button {
+  background: var(--card-bg, #1d1e22);
+  color: #a0a0a0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .cpt-actions button:hover {
+  background: var(--main, #49b1f5);
+  color: #fff;
+}
+
+[data-theme="dark"] .cpt-tree-content {
+  background: var(--card-bg, #1d1e22);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .cpt-direct-posts {
+  border-bottom-color: #333;
+}
+
+[data-theme="dark"] .cpt-direct-posts-header {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .cpt-category-header {
+  background: rgba(73, 177, 245, 0.1);
+}
+
+[data-theme="dark"] .cpt-category-header:hover {
+  background: rgba(73, 177, 245, 0.18);
+}
+
+[data-theme="dark"] .cpt-category-link {
+  color: #c0c0c0;
+}
+
+[data-theme="dark"] .cpt-category-count {
+  background: rgba(255, 255, 255, 0.08);
+  color: #888;
+}
+
+[data-theme="dark"] .cpt-post-item {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .cpt-post-item:hover {
+  background: rgba(73, 177, 245, 0.12);
+}
+
+[data-theme="dark"] .cpt-post-date {
+  color: #666;
+}
+
+[data-theme="dark"] .cpt-subcategories {
+  border-left-color: rgba(73, 177, 245, 0.3);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+  .cpt-header {
+    justify-content: center;
+  }
+  
+  .cpt-actions button span {
+    display: none;
+  }
+  
+  .cpt-actions button {
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .cpt-tree-content {
+    padding: 15px;
+  }
+  
+  .cpt-category-header {
+    padding: 10px 12px;
+  }
+  
+  .cpt-post-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+  }
+  
+  .cpt-post-date {
+    min-width: auto;
+    font-size: 12px;
+  }
+  
+  .cpt-post-title {
+    white-space: normal;
+  }
+  
+  .cpt-subcategories {
+    padding-left: 12px;
+  }
+}

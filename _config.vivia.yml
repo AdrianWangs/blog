@@ -4,8 +4,12 @@ menu: # Links in the navigation bar
   Leetcode题解: /algorithms
   MySQL: /mysql
   Redis: /redis
+  ElasticSearch: /elasticsearch
   计算机网络: /network
   Golang: /golang
+  架构: /architecture
+  AI: /ai
+  工具: /tools
   面试经验: /interview
   # 算法刷题: /categories/算法刷题
   归档: /archives

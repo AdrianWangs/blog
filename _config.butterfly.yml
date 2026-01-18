@@ -16,12 +16,18 @@ nav:
 menu:
   首页: / || fas fa-home
   全部文章: /archives || fas fa-th-list
-  面试经验: /interview || fas fa-briefcase
-  Golang: /golang || fab fa-golang
-  MySQL: /mysql || fas fa-database
-  Redis: /redis || fas fa-fire
-  计算机网络: /network || fas fa-globe
+  八股文:
+    Golang: /golang || fab fa-golang
+    MySQL: /mysql || fas fa-database
+    Redis: /redis || fas fa-fire
+    计算机网络: /network || fas fa-globe
+    操作系统: /operating-system || fas fa-microchip
+    架构: /architecture || fas fa-sitemap
+    AI: /ai || fas fa-robot
+    ElasticSearch: /elasticsearch || fas fa-search
   Leetcode题解: /algorithms || fas fa-book
+  工具: /tools || fas fa-tools
+  面试经验: /interview || fas fa-briefcase
   关于我: /about || fas fa-user
 
 # --------------------------------------
