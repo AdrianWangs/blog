@@ -29,8 +29,11 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
       childCategories.push(cat);
     }
   });
-  
-  if (childCategories.length === 0) return str;
+
+  const categoryMap = new Map();
+  categories.forEach(cat => {
+    categoryMap.set(cat._id, cat);
+  });
   
   const getAllDescendantPosts = (category) => {
     const result = [];
@@ -127,6 +130,50 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
     });
     return subs.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
   };
+
+  const buildBreadcrumb = (category) => {
+    if (!category) return '';
+    const chain = [];
+    let current = category;
+    while (current) {
+      chain.push(current);
+      if (!current.parent) break;
+      current = categoryMap.get(current.parent);
+      if (!current) break;
+    }
+    chain.reverse();
+    let html = `<nav class="cpt-breadcrumb" aria-label="breadcrumb">`;
+    html += `<a class="cpt-breadcrumb-link" href="/categories/">分类</a>`;
+    chain.forEach((cat, index) => {
+      html += `<span class="cpt-breadcrumb-sep">/</span>`;
+      const name = escapeHtml(cat.name || '');
+      if (index === chain.length - 1) {
+        html += `<span class="cpt-breadcrumb-current">${name}</span>`;
+      } else {
+        html += `<a class="cpt-breadcrumb-link" href="/${cat.path}">${name}</a>`;
+      }
+    });
+    html += `</nav>`;
+    return html;
+  };
+
+  const injectBreadcrumb = (content, breadcrumbHtml) => {
+    if (!breadcrumbHtml) return content;
+    const titleBlockRegex = /<div[^>]*class=["'][^"']*article-sort-title[^"']*["'][^>]*>[\s\S]*?<\/div>/;
+    if (titleBlockRegex.test(content)) {
+      return content.replace(titleBlockRegex, breadcrumbHtml);
+    }
+    const categoryStartRegex = /<div[^>]*id=["']category["'][^>]*>/;
+    if (categoryStartRegex.test(content)) {
+      return content.replace(categoryStartRegex, match => match + breadcrumbHtml);
+    }
+    return content;
+  };
+
+  const breadcrumbHtml = buildBreadcrumb(currentCategory);
+  if (childCategories.length === 0) {
+    return injectBreadcrumb(str, breadcrumbHtml);
+  }
 
   const renderPostItem = (post) => {
     const title = post.title || '无标题';
@@ -262,5 +309,5 @@ hexo.extend.filter.register('after_render:html', function(str, data) {
   const paginationRegex = /<nav[^>]*id=["']pagination["'][^>]*>[\s\S]*?<\/nav>/gi;
   str = str.replace(paginationRegex, '<!-- pagination hidden by category-page-tree -->');
   
-  return str;
+  return injectBreadcrumb(str, breadcrumbHtml);
 });

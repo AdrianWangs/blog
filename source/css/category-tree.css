@@ -403,6 +403,36 @@ body.ct-modal-open .gitter-chat-embed {
   margin-bottom: 30px;
 }
 
+.cpt-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0 10px 14px;
+  font-size: 13px;
+  color: var(--font-color, #4c4948);
+}
+
+.cpt-breadcrumb-link {
+  color: var(--main, #49b1f5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cpt-breadcrumb-link:hover {
+  color: var(--main, #49b1f5);
+  text-decoration: underline;
+}
+
+.cpt-breadcrumb-sep {
+  color: #bbb;
+}
+
+.cpt-breadcrumb-current {
+  color: var(--font-color, #4c4948);
+  font-weight: 600;
+}
+
 .cpt-header {
   display: flex;
   justify-content: flex-end;
@@ -635,6 +665,22 @@ body.ct-modal-open .gitter-chat-embed {
 }
 
 /* 暗色模式适配 */
+[data-theme="dark"] .cpt-breadcrumb {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .cpt-breadcrumb-link {
+  color: var(--main, #49b1f5);
+}
+
+[data-theme="dark"] .cpt-breadcrumb-sep {
+  color: #666;
+}
+
+[data-theme="dark"] .cpt-breadcrumb-current {
+  color: #c0c0c0;
+}
+
 [data-theme="dark"] .cpt-actions button {
   background: var(--card-bg, #1d1e22);
   color: #a0a0a0;
