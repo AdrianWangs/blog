@@ -14,17 +14,38 @@ index 0be9dec..aa31e93 100644
          const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
  
          const renderFn = mermaid.render(mermaidID, mermaidDefinition)
-@@ -42,10 +43,10 @@ script.
- 
-     const loadMermaid = () => {
-       if (!{theme.mermaid.code_write}) codeToMermaid()
+@@ -28,6 +28,22 @@ script.
+      })
+    }
+
+    const preToMermaid = () => {
+      const preMermaidEle = document.querySelectorAll('pre.mermaid')
+      if (preMermaidEle.length === 0) return
+
+      preMermaidEle.forEach(ele => {
+        const preEle = document.createElement('pre')
+        preEle.className = 'mermaid-src'
+        preEle.hidden = true
+        preEle.textContent = ele.textContent
+        const newEle = document.createElement('div')
+        newEle.className = 'mermaid-wrap'
+        newEle.appendChild(preEle)
+        ele.replaceWith(newEle)
+      })
+    }
+
+@@ -42,10 +58,11 @@ script.
+
+    const loadMermaid = () => {
+      preToMermaid()
+      if (!{theme.mermaid.code_write}) codeToMermaid()
 -      const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
 -      if ($mermaid.length === 0) return
 +      const mermaidNodes = document.querySelectorAll('#article-container .mermaid-wrap')
 +      if (mermaidNodes.length === 0) return
- 
+
 -      const runMermaidFn = () => runMermaid($mermaid)
 +      const runMermaidFn = () => runMermaid(mermaidNodes)
-       btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
-       window.loadMermaid ? runMermaidFn() : btf.getScript('!{url_for(theme.asset.mermaid)}').then(runMermaidFn)
-     }
+      btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+      window.loadMermaid ? runMermaidFn() : btf.getScript('!{url_for(theme.asset.mermaid)}').then(runMermaidFn)
+    }
