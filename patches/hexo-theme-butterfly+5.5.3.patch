@@ -1,0 +1,30 @@
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug b/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
+index 0be9dec..aa31e93 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
+@@ -10,8 +10,9 @@ script.
+         if (!config.theme) {
+           config.theme = theme
+         }
+-        const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+-        const mermaidID = `mermaid-${index}`
++        // Avoid `$` in inline scripts: MathJax filter may treat it as TeX delimiter and corrupt output
++        const mermaidThemeConfig = '%%{init: ' + JSON.stringify(config) + '}%%\n'
++        const mermaidID = 'mermaid-' + index
+         const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+ 
+         const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+@@ -42,10 +43,10 @@ script.
+ 
+     const loadMermaid = () => {
+       if (!{theme.mermaid.code_write}) codeToMermaid()
+-      const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+-      if ($mermaid.length === 0) return
++      const mermaidNodes = document.querySelectorAll('#article-container .mermaid-wrap')
++      if (mermaidNodes.length === 0) return
+ 
+-      const runMermaidFn = () => runMermaid($mermaid)
++      const runMermaidFn = () => runMermaid(mermaidNodes)
+       btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+       window.loadMermaid ? runMermaidFn() : btf.getScript('!{url_for(theme.asset.mermaid)}').then(runMermaidFn)
+     }

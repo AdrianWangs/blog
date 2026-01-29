@@ -6,6 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "postinstall": "patch-package",
     "server": "hexo server",
     "git-commit": "git add . && git commit -m",
     "git-push": "git push origin main",
@@ -43,5 +44,8 @@
     "js-yaml": "^4.1.0",
     "moment": "^2.30.1",
     "stylus": "^0.64.0"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.0"
   }
 }
