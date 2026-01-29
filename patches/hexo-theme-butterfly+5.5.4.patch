@@ -1,20 +1,19 @@
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug b/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
-index 0be9dec..be67ae3 100644
+index f1d26b0..91ad316 100644
 --- a/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/third-party/math/mermaid.pug
-@@ -10,8 +10,9 @@ script.
+@@ -274,8 +274,8 @@ script.
          if (!config.theme) {
            config.theme = theme
          }
 -        const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
 -        const mermaidID = `mermaid-${index}`
-+        // Avoid `$` in inline scripts: MathJax filter may treat it as TeX delimiter and corrupt output
 +        const mermaidThemeConfig = '%%{init: ' + JSON.stringify(config) + '}%%\n'
 +        const mermaidID = 'mermaid-' + index
          const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
  
          const renderFn = mermaid.render(mermaidID, mermaidDefinition)
-@@ -40,12 +41,29 @@ script.
+@@ -308,12 +308,29 @@ script.
        })
      }
  
