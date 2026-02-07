@@ -4,7 +4,7 @@ date: 2025-06-06 10:35:29
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 数学
 tags:
   - 双指针
   - 数学

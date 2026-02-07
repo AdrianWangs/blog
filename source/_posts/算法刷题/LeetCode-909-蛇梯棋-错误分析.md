@@ -4,7 +4,7 @@ date: 2025-06-23 22:26:30
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 模拟
   - 错题集
 tags:
   - BFS

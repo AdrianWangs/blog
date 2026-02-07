@@ -4,7 +4,7 @@ date: 2025-05-11 19:52:30
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 栈
 tags:
 - 栈
 - 字符串

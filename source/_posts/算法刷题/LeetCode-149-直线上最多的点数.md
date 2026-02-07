@@ -4,7 +4,7 @@ date: 2025-07-20 18:20:53
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 数学
 tags:
   - 几何
   - 哈希表

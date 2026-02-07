@@ -4,7 +4,7 @@ date: 2025-05-28 22:27:44
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 字符串
 tags:
   - 字符串
   - KMP算法

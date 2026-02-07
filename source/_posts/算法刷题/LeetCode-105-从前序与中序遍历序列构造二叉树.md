@@ -5,7 +5,7 @@ date: 2025-04-30 11:15:40
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 树
 tags:
 - 二叉树
 - 递归

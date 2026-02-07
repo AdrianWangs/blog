@@ -2,8 +2,8 @@
 title: Model Context Protocol (MCP) 介绍
 date: 2025-04-23 11:46:39
 categories:
-  - 前沿技术
   - AI工程
+  - MCP
 tags:
   - MCP
   - LLM

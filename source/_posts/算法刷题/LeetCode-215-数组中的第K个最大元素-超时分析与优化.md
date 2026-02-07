@@ -4,7 +4,7 @@ date: 2025-05-13 16:07:14
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 模拟
 tags:
 - 快速选择
 - 数组

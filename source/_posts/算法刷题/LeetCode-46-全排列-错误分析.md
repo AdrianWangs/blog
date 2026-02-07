@@ -4,7 +4,7 @@ date: 2025-05-05 20:49:04
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 回溯
 tags:
 - 回溯
 - 深度优先搜索

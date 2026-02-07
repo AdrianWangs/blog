@@ -4,7 +4,7 @@ date: 2025-05-16 14:30:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 贪心
 tags:
 - 贪心
 - 双指针

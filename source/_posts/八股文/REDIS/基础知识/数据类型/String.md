@@ -4,7 +4,6 @@ date: 2025-5-10 15:03:00
 categories:
   - 八股文
   - Redis
-  - 基础知识
   - 数据类型
 tags:
   - Redis

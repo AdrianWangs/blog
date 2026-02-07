@@ -4,7 +4,7 @@ date: 2025-04-29 15:14:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 树
 tags:
 - 二叉树
 - 深度优先搜索

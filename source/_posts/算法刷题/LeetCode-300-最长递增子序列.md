@@ -4,7 +4,7 @@ date: 2025-05-17 16:12:25
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 动态规划
 tags:
 - 动态规划
 - 贪心算法

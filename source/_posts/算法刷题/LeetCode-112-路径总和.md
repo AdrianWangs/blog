@@ -4,6 +4,7 @@ date: 2025-06-15 15:19:10
 categories:
   - 算法刷题
   - LeetCode
+  - 树
 tags:
   - 二叉树
   - 递归

@@ -4,7 +4,7 @@ date: 2025-05-06 13:07:10
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 回溯
 tags:
 - 数组
 - 回溯

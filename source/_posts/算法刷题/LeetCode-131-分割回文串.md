@@ -4,7 +4,7 @@ date: 2025-05-06 08:30:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 动态规划
 tags:
 - 回溯
 - 动态规划

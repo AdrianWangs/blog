@@ -4,7 +4,7 @@ date: 2025-05-11 16:52:46
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 栈
 tags:
 - 栈
 - 设计

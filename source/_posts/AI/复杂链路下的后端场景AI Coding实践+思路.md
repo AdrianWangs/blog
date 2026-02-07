@@ -2,8 +2,8 @@
 title: '复杂链路下的后端场景AI Coding实践+思路'
 date: 2025-06-20 10:00:00
 categories:
-  - AI
   - AI工程
+  - AI Coding
 tags:
   - AI Coding
   - 后端开发

@@ -4,7 +4,7 @@ date: 2025-04-22 18:46:22
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 链表
 tags:
 - 链表
 - 双指针

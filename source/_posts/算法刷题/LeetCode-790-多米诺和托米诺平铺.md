@@ -4,7 +4,7 @@ date: 2025-05-06 12:21:52
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 动态规划
 tags:
 - 动态规划
 - Medium

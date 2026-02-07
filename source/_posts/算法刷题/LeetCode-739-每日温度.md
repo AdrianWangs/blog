@@ -4,7 +4,7 @@ date: 2025-05-12 21:26:58
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 栈
 tags:
 - 栈
 - 单调栈

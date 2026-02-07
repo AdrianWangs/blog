@@ -4,7 +4,7 @@ date: 2025-06-29 16:04:36
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 模拟
 tags:
   - 字典树
   - Trie

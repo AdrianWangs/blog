@@ -4,7 +4,7 @@ date: 2025-05-30 17:00:00
 categories:
   - 八股文
   - Redis
-  - 基础知识
+  - 持久化
 tags:
   - Redis
   - RDB

@@ -4,7 +4,7 @@ date: 2025-04-24 09:59:05
 categories:
   - 八股文
   - MySQL
-  - 基础知识
+  - 存储原理
 tags:
   - MySQL
   - 记录存储方式

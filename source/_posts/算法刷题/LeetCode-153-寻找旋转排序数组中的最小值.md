@@ -4,7 +4,7 @@ date: 2025-05-10 13:25:30
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 二分查找
 tags:
 - 二分查找
 - 数组

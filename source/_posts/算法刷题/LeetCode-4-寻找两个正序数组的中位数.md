@@ -4,7 +4,7 @@ date: 2025-05-11 10:00:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 模拟
 tags:
 - LeetCode
 - Hard

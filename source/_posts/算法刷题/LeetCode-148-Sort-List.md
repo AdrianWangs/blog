@@ -4,7 +4,7 @@ date: 2025-07-03 10:30:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 链表
 tags:
 - 链表
 - 归并排序

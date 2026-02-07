@@ -4,7 +4,7 @@ date: 2025-05-17 21:40:00 # Placeholder, will be updated by a subsequent call if
 categories:
   - 算法刷题
   - LeetCode
-  - Hot100
+  - 动态规划
 tags:
   - 动态规划
   - 背包问题

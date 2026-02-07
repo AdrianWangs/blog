@@ -4,7 +4,7 @@ date: 2025-06-13 21:02:30
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 二分查找
 tags:
   - 二分查找
   - Easy

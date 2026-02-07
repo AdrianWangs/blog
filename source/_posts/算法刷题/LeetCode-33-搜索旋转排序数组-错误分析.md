@@ -4,7 +4,7 @@ date: 2025-05-08 20:30:00
 categories:
 - 算法刷题
 - LeetCode
-- Hot100
+- 二分查找
 tags:
 - 二分查找
 - Medium

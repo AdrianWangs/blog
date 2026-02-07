@@ -4,7 +4,7 @@ date: 2025-06-16 19:43:07
 categories:
   - 算法刷题
   - LeetCode
-  - 面试经典150
+  - 树
 tags:
   - 二叉搜索树
   - 栈
