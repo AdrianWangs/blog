@@ -3,11 +3,11 @@ title: Redis 字符串（String）数据类型详解
 date: 2025-5-10 15:03:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据类型
 tags:
-  - REDIS
+  - Redis
   - 数据类型
   - 字符串
 description: 详细介绍 Redis 字符串（String）数据类型的实现原理、内存布局、使用场景及最佳实践

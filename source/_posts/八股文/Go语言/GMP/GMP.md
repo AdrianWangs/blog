@@ -6,7 +6,7 @@ categories:
   - Go语言
   - GMP
 tags:
-  - Go
+  - Go语言
   - 并发编程
   - GMP模型
   - Goroutine

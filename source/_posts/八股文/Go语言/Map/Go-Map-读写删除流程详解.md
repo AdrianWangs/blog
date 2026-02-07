@@ -1,8 +1,8 @@
 ---
-title: '技术八股: Go Map 读写删除流程详解'
+title: '八股文: Go Map 读写删除流程详解'
 date: 2025-06-16 20:56:03
 categories:
-  - 技术八股
+  - 八股文
   - Go语言
 tags:
   - Go语言

@@ -1,3 +1,19 @@
+---
+title: '复杂链路下的后端场景AI Coding实践+思路'
+date: 2025-06-20 10:00:00
+categories:
+  - AI
+  - AI工程
+tags:
+  - AI Coding
+  - 后端开发
+  - 工程效率
+  - Trae
+  - Skills
+  - SubAgent
+description: '介绍复杂链路下的后端开发场景中，如何选择和使用 Slash Command、SubAgent、Skill 三种工具，提升 AI Coding 效率'
+---
+
 # 复杂链路下的后端场景AI Coding实践+思路
 
 在日常后端开发中，我经常面对这样的场景：

@@ -3,7 +3,7 @@ title: "Redis 数据类型：Set 集合详解与妙用"
 date: "2025-05-10 23:08:52"
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据类型
 tags:

@@ -3,11 +3,11 @@ title: 'Redis 数据结构：SDS 详解'
 date: 2025-05-18 19:55:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据结构
 tags:
-  - REDIS
+  - Redis
   - SDS
   - 数据结构
 description: '深入理解 Redis 中的动态字符串（SDS）的实现原理、优势以及与传统 C 字符串的区别，探索为什么 Redis 选择 SDS 而不是 C 语言原生字符串。'

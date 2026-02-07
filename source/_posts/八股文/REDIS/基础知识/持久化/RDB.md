@@ -3,7 +3,7 @@ title: "Redis RDB 快照持久化：原理、优化与混合持久化"
 date: 2025-05-30 17:00:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
 tags:
   - Redis

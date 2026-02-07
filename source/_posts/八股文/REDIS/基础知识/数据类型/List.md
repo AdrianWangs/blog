@@ -4,11 +4,11 @@ date: 2025-05-10 15:11:44
 update: 2026-01-29 16:35:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据类型
 tags:
-  - REDIS
+  - Redis
   - 数据库
   - 八股文
   - 数据类型

@@ -3,7 +3,7 @@ title: "Redis 数据类型：Hash详解"
 date: 2025-05-10 23:02:07
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据类型
 tags:

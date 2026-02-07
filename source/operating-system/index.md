@@ -13,7 +13,7 @@ comments: true
 
 ### 网络系统
 
-- [I/O多路复用详解 - select/poll/epoll原理与对比](/2025/07/02/技术八股-I-O多路复用详解-select-poll-epoll原理与对比/) - 深入解析I/O多路复用技术原理，详细对比select、poll、epoll的实现机制、性能差异及应用场景
+- [I/O多路复用详解 - select/poll/epoll原理与对比](/2025/07/02/八股文/操作系统/网络系统/IO多路复用/) - 深入解析I/O多路复用技术原理，详细对比select、poll、epoll的实现机制、性能差异及应用场景
 
 
 

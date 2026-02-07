@@ -3,11 +3,11 @@ title: 'Redis 数据结构：ListPack 详解'
 date: 2025-05-27 16:46:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据结构
 tags:
-  - REDIS
+  - Redis
   - ListPack
   - 数据结构
   - 压缩列表

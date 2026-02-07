@@ -3,7 +3,7 @@ title: "Redis 数据类型：Zset (有序集合) 深度解析与实战"
 date: "2025-05-10 23:15:52"
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据类型
 tags:

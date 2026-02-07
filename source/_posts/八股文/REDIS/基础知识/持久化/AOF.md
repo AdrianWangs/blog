@@ -3,7 +3,7 @@ title: "Redis AOF 持久化详解：就像给数据库写日记一样简单"
 date: 2025-05-30 16:00:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
 tags:
   - Redis

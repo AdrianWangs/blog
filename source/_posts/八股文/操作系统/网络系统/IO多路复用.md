@@ -1,5 +1,5 @@
 ---
-title: "技术八股: I/O多路复用详解 - select/poll/epoll原理与对比"
+title: "八股文: I/O多路复用详解 - select/poll/epoll原理与对比"
 date: 2025-07-02 10:34:29
 categories:
   - 八股文

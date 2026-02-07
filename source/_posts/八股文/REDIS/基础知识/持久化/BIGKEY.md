@@ -3,7 +3,7 @@ title: "Redis 大Key对持久化性能的影响分析与优化策略"
 date: 2025-05-30 18:00:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
 tags:
   - Redis

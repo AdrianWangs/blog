@@ -3,10 +3,10 @@ title: 'Redis BitMap及其他高级数据类型详解'
 date: 2025-05-14 23:56:54
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
 tags:
-  - REDIS
+  - Redis
   - 数据类型
   - Bitmap
   - HyperLogLog

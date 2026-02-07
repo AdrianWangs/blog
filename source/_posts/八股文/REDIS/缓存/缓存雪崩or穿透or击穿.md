@@ -3,10 +3,10 @@ title: Redis 缓存雪崩、穿透、击穿问题详解与解决方案
 date: 2025-06-08 21:53:38
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 缓存
 tags:
-  - REDIS
+  - Redis
   - 缓存
   - 缓存雪崩
   - 缓存穿透

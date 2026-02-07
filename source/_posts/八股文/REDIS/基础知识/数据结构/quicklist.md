@@ -3,11 +3,11 @@ title: 'Redis 数据结构：QuickList 详解'
 date: 2025-05-27 15:36:00
 categories:
   - 八股文
-  - REDIS
+  - Redis
   - 基础知识
   - 数据结构
 tags:
-  - REDIS
+  - Redis
   - QuickList
   - 数据结构
   - 链表
